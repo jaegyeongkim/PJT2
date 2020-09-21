@@ -1,0 +1,562 @@
+[
+	{
+		"EyeId": "1",
+		"Eye": "용안",
+		"picture": [
+			"./Coronation/male/eye/01.png",
+			"./Coronation/female/eye/01.png"
+		],
+		"Content": [
+			"위엄",
+			"사리분명",
+			"의리",
+			"신의",
+			"관직"
+		]
+	},
+	{
+		"EyeId": "2",
+		"Eye": "서봉안",
+		"picture": [
+			"./Coronation/male/eye/02.png",
+			"./Coronation/female/eye/02.png"
+		],
+		"Content": [
+			"부유",
+			"온화",
+			"명성",
+			"관직"
+		]
+	},
+	{
+		"EyeId": "3",
+		"Eye": "공작안",
+		"picture": [
+			"./Coronation/male/eye/03.png",
+			"./Coronation/female/eye/03.png"
+		],
+		"Content": [
+			"온순",
+			"총명",
+			"소박",
+			"청렴"
+		]
+	},
+	{
+		"EyeId": "4",
+		"Eye": "우안",
+		"picture": [
+			"./Coronation/male/eye/04.png",
+			"./Coronation/female/eye/04.png"
+		],
+		"Content": [
+			"성실",
+			"근면",
+			"부유",
+			"기백"
+		]
+	},
+	{
+		"EyeId": "5",
+		"Eye": "사안",
+		"picture": [
+			"./Coronation/male/eye/05.png",
+			"./Coronation/female/eye/05.png"
+		],
+		"Content": [
+			"간교",
+			"사기",
+			"사나움",
+			"지혜",
+			"불신",
+			"끈기",
+			"승부욕"
+		]
+	},
+	{
+		"EyeId": "6",
+		"Eye": "마안",
+		"picture": [
+			"./Coronation/male/eye/06.png",
+			"./Coronation/female/eye/06.png"
+		],
+		"Content": [
+			"가난",
+			"우직",
+			"관대",
+			"고생"
+		]
+	},
+	{
+		"EyeId": "7",
+		"Eye": "호안",
+		"picture": [
+			"./Coronation/male/eye/07.png",
+			"./Coronation/female/eye/07.png"
+		],
+		"Content": [
+			"부유",
+			"강직",
+			"침착"
+		]
+	},
+	{
+		"EyeId": "8",
+		"Eye": "사자안",
+		"picture": [
+			"./Coronation/male/eye/08.png",
+			"./Coronation/female/eye/08.png"
+		],
+		"Content": [
+			"충성",
+			"효심",
+			"정조",
+			"호탕",
+			"절제",
+			"인품"
+		]
+	},
+	{
+		"EyeId": "9",
+		"Eye": "하안",
+		"picture": [
+			"./Coronation/male/eye/09.png",
+			"./Coronation/female/eye/09.png"
+		],
+		"Content": [
+			"부유",
+			"신중",
+			"공경",
+			"인품"
+		]
+	},
+	{
+		"EyeId": "10",
+		"Eye": "저안",
+		"picture": [
+			"./Coronation/male/eye/10.png",
+			"./Coronation/female/eye/10.png"
+		],
+		"Content": [
+			"저독적",
+			"다혈질",
+			"욕심",
+			"구설"
+		]
+	},
+	{
+		"EyeId": "11",
+		"Eye": "도화안",
+		"picture": [
+			"./Coronation/male/eye/11.png",
+			"./Coronation/female/eye/11.png"
+		],
+		"Content": [
+			"유혹",
+			"음란",
+			"바람",
+			"유흥",
+			"향락"
+		]
+	},
+	{
+		"EyeId": "12",
+		"Eye": "음양안",
+		"picture": [
+			"./Coronation/male/eye/12.png",
+			"./Coronation/female/eye/12.png"
+		],
+		"Content": [
+			"부유",
+			"눈치",
+			"권모술수",
+			"거짓"
+		]
+	},
+	{
+		"EyeId": "13",
+		"Eye": "취안",
+		"picture": [
+			"./Coronation/male/eye/13.png",
+			"./Coronation/female/eye/13.png"
+		],
+		"Content": [
+			"실패",
+			"뻔뻔함",
+			"문란",
+			"도박",
+			"오락",
+			"유흥"
+		]
+	},
+	{
+		"EyeId": "14",
+		"Eye": "낭목",
+		"picture": [
+			"./Coronation/male/eye/14.png",
+			"./Coronation/female/eye/14.png"
+		],
+		"Content": [
+			"부유",
+			"탐욕",
+			"흉폭"
+		]
+	},
+	{
+		"EyeId": "15",
+		"Eye": "아안",
+		"picture": [
+			"./Coronation/male/eye/15.png",
+			"./Coronation/female/eye/15.png"
+		],
+		"Content": [
+			"선함",
+			"건전",
+			"온순",
+			"인정베품"
+		]
+	},
+	{
+		"EyeId": "16",
+		"Eye": "봉안",
+		"picture": [
+			"./Coronation/male/eye/16.png",
+			"./Coronation/female/eye/16.png"
+		],
+		"Content": [
+			"총명",
+			"관대",
+			"포용",
+			"통솔"
+		]
+	},
+	{
+		"EyeId": "17",
+		"Eye": "수봉안",
+		"picture": [
+			"./Coronation/male/eye/17.png",
+			"./Coronation/female/eye/17.png"
+		],
+		"Content": [
+			"온유",
+			"공정",
+			"너그러움",
+			"아량"
+		]
+	},
+	{
+		"EyeId": "18",
+		"Eye": "명봉안",
+		"picture": [
+			"./Coronation/male/eye/18.png",
+			"./Coronation/female/eye/18.png"
+		],
+		"Content": [
+			"현달",
+			"귀함",
+			"명망",
+			"부유"
+		]
+	},
+	{
+		"EyeId": "19",
+		"Eye": "녹안",
+		"picture": [
+			"./Coronation/male/eye/19.png",
+			"./Coronation/female/eye/19.png"
+		],
+		"Content": [
+			"성급",
+			"의리",
+			"불안",
+			"우유부단",
+			"동정",
+			"자비심"
+		]
+	},
+	{
+		"EyeId": "20",
+		"Eye": "웅안",
+		"picture": [
+			"./Coronation/male/eye/20.png",
+			"./Coronation/female/eye/20.png"
+		],
+		"Content": [
+			"용맹",
+			"굳셈",
+			"거침",
+			"배짱",
+			"어리석음"
+		]
+	},
+	{
+		"EyeId": "21",
+		"Eye": "어안",
+		"picture": [
+			"./Coronation/male/eye/21.png",
+			"./Coronation/female/eye/21.png"
+		],
+		"Content": [
+			"허약",
+			"무기력"
+		]
+	},
+	{
+		"EyeId": "22",
+		"Eye": "원앙안",
+		"picture": [
+			"./Coronation/male/eye/22.png",
+			"./Coronation/female/eye/22.png"
+		],
+		"Content": [
+			"부유",
+			"음란"
+		]
+	},
+	{
+		"EyeId": "23",
+		"Eye": "후안",
+		"picture": [
+			"./Coronation/male/eye/23.png",
+			"./Coronation/female/eye/23.png"
+		],
+		"Content": [
+			"근심",
+			"고심",
+			"부유"
+		]
+	},
+	{
+		"EyeId": "24",
+		"Eye": "원안",
+		"picture": [
+			"./Coronation/male/eye/24.png",
+			"./Coronation/female/eye/24.png"
+		],
+		"Content": [
+			"의리",
+			"교활",
+			"의심",
+			"질투",
+			"허영",
+			"영악",
+			"재주",
+			"재치"
+		]
+	},
+	{
+		"EyeId": "25",
+		"Eye": "양안",
+		"picture": [
+			"./Coronation/male/eye/25.png",
+			"./Coronation/female/eye/25.png"
+		],
+		"Content": [
+			"멍청"
+		]
+	},
+	{
+		"EyeId": "26",
+		"Eye": "해안",
+		"picture": [
+			"./Coronation/male/eye/26.png",
+			"./Coronation/female/eye/26.png"
+		],
+		"Content": [
+			"완고",
+			"포악",
+			"불효",
+			"허풍",
+			"방랑",
+			"고독"
+		]
+	},
+	{
+		"EyeId": "27",
+		"Eye": "학안",
+		"picture": [
+			"./Coronation/male/eye/27.png",
+			"./Coronation/female/eye/27.png"
+		],
+		"Content": [
+			"청렴",
+			"부유",
+			"공정",
+			"중책"
+		]
+	},
+	{
+		"EyeId": "28",
+		"Eye": "복서안",
+		"picture": [
+			"./Coronation/male/eye/28.png",
+			"./Coronation/female/eye/28.png"
+		],
+		"Content": [
+			"청렴대귀",
+			"신의",
+			"온화",
+			"인심",
+			"지혜"
+		]
+	},
+	{
+		"EyeId": "29",
+		"Eye": "노사안",
+		"picture": [
+			"./Coronation/male/eye/29.png",
+			"./Coronation/female/eye/29.png"
+		],
+		"Content": [
+			"가난",
+			"어짐",
+			"온화",
+			"지혜",
+			"총명",
+			"청렴"
+		]
+	},
+	{
+		"EyeId": "30",
+		"Eye": "귀안",
+		"picture": [
+			"./Coronation/male/eye/30.png",
+			"./Coronation/female/eye/30.png"
+		],
+		"Content": [
+			"행운",
+			"꾀",
+			"장수"
+		]
+	},
+	{
+		"EyeId": "31",
+		"Eye": "관형안",
+		"picture": [
+			"./Coronation/male/eye/31.png",
+			"./Coronation/female/eye/31.png"
+		],
+		"Content": [
+			"현달",
+			"인덕"
+		]
+	},
+	{
+		"EyeId": "32",
+		"Eye": "안안",
+		"picture": [
+			"./Coronation/male/eye/32.png",
+			"./Coronation/female/eye/32.png"
+		],
+		"Content": [
+			"의로움",
+			"착실",
+			"온화",
+			"총명",
+			"현명",
+			"낭만",
+			"사교적",
+			"호감"
+		]
+	},
+	{
+		"EyeId": "33",
+		"Eye": "합안",
+		"picture": [
+			"./Coronation/male/eye/33.png",
+			"./Coronation/female/eye/33.png"
+		],
+		"Content": [
+			"총명",
+			"부덕",
+			"허황",
+			"음란",
+			"게으름",
+			"지혜"
+		]
+	},
+	{
+		"EyeId": "34",
+		"Eye": "묘안",
+		"picture": [
+			"./Coronation/male/eye/34.png",
+			"./Coronation/female/eye/34.png"
+		],
+		"Content": [
+			"온화",
+			"총명",
+			"책임"
+		]
+	},
+	{
+		"EyeId": "35",
+		"Eye": "상안",
+		"picture": [
+			"./Coronation/male/eye/35.png",
+			"./Coronation/female/eye/35.png"
+		],
+		"Content": [
+			"복",
+			"수명",
+			"지혜",
+			"총명",
+			"포용력",
+			"화합",
+			"자수성가"
+		]
+	},
+	{
+		"EyeId": "36",
+		"Eye": "자고안",
+		"picture": [
+			"./Coronation/male/eye/36.png",
+			"./Coronation/female/eye/36.png"
+		],
+		"Content": [
+			"가난",
+			"눈치",
+			"경솔",
+			"고생"
+		]
+	},
+	{
+		"EyeId": "37",
+		"Eye": "작안",
+		"picture": [
+			"./Coronation/male/eye/37.png",
+			"./Coronation/female/eye/37.png"
+		],
+		"Content": [
+			"부유",
+			"신의",
+			"충성심"
+		]
+	},
+	{
+		"EyeId": "38",
+		"Eye": "난안",
+		"picture": [
+			"./Coronation/male/eye/38.png",
+			"./Coronation/female/eye/38.png"
+		],
+		"Content": [
+			"부유",
+			"관직"
+		]
+	},
+	{
+		"EyeId": "39",
+		"Eye": "연목",
+		"picture": [
+			"./Coronation/male/eye/39.png",
+			"./Coronation/female/eye/39.png"
+		],
+		"Content": [
+			"가난",
+			"성실",
+			"재주",
+			"급함",
+			"신용"
+		]
+	}
+]
