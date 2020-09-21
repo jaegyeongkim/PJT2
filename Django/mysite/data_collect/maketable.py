@@ -1,5 +1,6 @@
 import pandas as pd
 from pandas import DataFrame as df
+import json
 
 eyebrow = df(
     data={
@@ -63,7 +64,6 @@ eyebrow = df(
             ]
         }
     )
-print(eyebrow)
 
 eye = df(
     data={
@@ -157,7 +157,6 @@ eye = df(
             ]
         }
     )
-print(eye)
 
 nose = df(
     data={
@@ -221,7 +220,6 @@ nose = df(
             ]
         }
     )
-print(nose)
 
 mouse = df(
     data={
@@ -269,4 +267,16 @@ mouse = df(
             ]
         }
     )
-print(mouse)
+
+eyebrow_dict = eyebrow.to_dict(orient='records')
+eye_dict = eye.to_dict(orient='records')
+nose_dict = nose.to_dict(orient='records')
+mouse_dict = mouse.to_dict(orient='records')
+with open('./datas/eyebrow.json', 'w', encoding='utf-8') as eyebrow_data:
+    json.dump(eyebrow_dict, eyebrow_data, ensure_ascii = False, indent='\t')
+with open('./datas/eye.json', 'w', encoding='utf-8') as eye_data:
+    json.dump(eye_dict, eye_data, ensure_ascii = False, indent='\t')
+with open('./datas/nose.json', 'w', encoding='utf-8') as nose_data:
+    json.dump(nose_dict, nose_data, ensure_ascii = False, indent='\t')
+with open('./datas/mouse.json', 'w', encoding='utf-8') as mouse_data:
+    json.dump(mouse_dict, mouse_data, ensure_ascii = False, indent='\t')
