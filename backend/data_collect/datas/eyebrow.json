@@ -1,0 +1,325 @@
+[
+	{
+		"EyebrowId": "1",
+		"Eyebrow": "검미",
+		"picture": [
+			"./Coronation/male/eyebrow/01.png",
+			"./Coronation/female/eyebrow/01.png"
+		],
+		"Content": [
+			"강인",
+			"권위",
+			"지혜",
+			"관직"
+		]
+	},
+	{
+		"EyebrowId": "2",
+		"Eyebrow": "신월미",
+		"picture": [
+			"./Coronation/male/eyebrow/02.png",
+			"./Coronation/female/eyebrow/02.png"
+		],
+		"Content": [
+			"부유",
+			"원만",
+			"사교",
+			"지혜",
+			"선함"
+		]
+	},
+	{
+		"EyebrowId": "3",
+		"Eyebrow": "용미",
+		"picture": [
+			"./Coronation/male/eyebrow/03.png",
+			"./Coronation/female/eyebrow/03.png"
+		],
+		"Content": [
+			"부유",
+			"귀인",
+			"강직",
+			"충실"
+		]
+	},
+	{
+		"EyebrowId": "4",
+		"Eyebrow": "청수미",
+		"picture": [
+			"./Coronation/male/eyebrow/04.png",
+			"./Coronation/female/eyebrow/04.png"
+		],
+		"Content": [
+			"총명",
+			"지혜",
+			"선함"
+		]
+	},
+	{
+		"EyebrowId": "5",
+		"Eyebrow": "팔자미",
+		"picture": [
+			"./Coronation/male/eyebrow/05.png",
+			"./Coronation/female/eyebrow/05.png"
+		],
+		"Content": [
+			"장수",
+			"부유",
+			"고독"
+		]
+	},
+	{
+		"EyebrowId": "6",
+		"Eyebrow": "일자미",
+		"picture": [
+			"./Coronation/male/eyebrow/06.png",
+			"./Coronation/female/eyebrow/06.png"
+		],
+		"Content": [
+			"어진",
+			"의로움",
+			"부귀",
+			"장수",
+			"고독"
+		]
+	},
+	{
+		"EyebrowId": "7",
+		"Eyebrow": "단촉수미",
+		"picture": [
+			"./Coronation/male/eyebrow/07.png",
+			"./Coronation/female/eyebrow/07.png"
+		],
+		"Content": [
+			"효심",
+			"신의",
+			"영웅",
+			"충성",
+			"장수"
+		]
+	},
+	{
+		"EyebrowId": "8",
+		"Eyebrow": "대단촉미",
+		"picture": [
+			"./Coronation/male/eyebrow/08.png",
+			"./Coronation/female/eyebrow/08.png"
+		],
+		"Content": [
+			"간악",
+			"부유",
+			"사기"
+		]
+	},
+	{
+		"EyebrowId": "9",
+		"Eyebrow": "경청미",
+		"picture": [
+			"./Coronation/male/eyebrow/09.png",
+			"./Coronation/female/eyebrow/09.png"
+		],
+		"Content": [
+			"신의",
+			"예의"
+		]
+	},
+	{
+		"EyebrowId": "10",
+		"Eyebrow": "와잠미",
+		"picture": [
+			"./Coronation/male/eyebrow/10.png",
+			"./Coronation/female/eyebrow/10.png"
+		],
+		"Content": [
+			"총명",
+			"관직",
+			"처세술",
+			"기교",
+			"눈치"
+		]
+	},
+	{
+		"EyebrowId": "11",
+		"Eyebrow": "호미",
+		"picture": [
+			"./Coronation/male/eyebrow/11.png",
+			"./Coronation/female/eyebrow/11.png"
+		],
+		"Content": [
+			"부유",
+			"장수",
+			"냉정",
+			"담력",
+			"정직",
+			"명예"
+		]
+	},
+	{
+		"EyebrowId": "12",
+		"Eyebrow": "사자미",
+		"picture": [
+			"./Coronation/male/eyebrow/12.png",
+			"./Coronation/female/eyebrow/12.png"
+		],
+		"Content": [
+			"독선적",
+			"관직"
+		]
+	},
+	{
+		"EyebrowId": "13",
+		"Eyebrow": "첨도미",
+		"picture": [
+			"./Coronation/male/eyebrow/13.png",
+			"./Coronation/female/eyebrow/13.png"
+		],
+		"Content": [
+			"거침",
+			"날카로움",
+			"간교",
+			"욕심"
+		]
+	},
+	{
+		"EyebrowId": "14",
+		"Eyebrow": "유엽미",
+		"picture": [
+			"./Coronation/male/eyebrow/14.png",
+			"./Coronation/female/eyebrow/14.png"
+		],
+		"Content": [
+			"출세",
+			"명성",
+			"대범",
+			"정의",
+			"신의"
+		]
+	},
+	{
+		"EyebrowId": "15",
+		"Eyebrow": "소추미",
+		"picture": [
+			"./Coronation/male/eyebrow/15.png",
+			"./Coronation/female/eyebrow/15.png"
+		],
+		"Content": [
+			"부유",
+			"표리부동"
+		]
+	},
+	{
+		"EyebrowId": "16",
+		"Eyebrow": "소소추미",
+		"picture": [
+			"./Coronation/male/eyebrow/16.png",
+			"./Coronation/female/eyebrow/16.png"
+		],
+		"Content": [
+			"성공"
+		]
+	},
+	{
+		"EyebrowId": "17",
+		"Eyebrow": "나한미",
+		"picture": [
+			"./Coronation/male/eyebrow/17.png",
+			"./Coronation/female/eyebrow/17.png"
+		],
+		"Content": [
+			"옹졸",
+			"우유부단"
+		]
+	},
+	{
+		"EyebrowId": "18",
+		"Eyebrow": "전청후소미",
+		"picture": [
+			"./Coronation/male/eyebrow/18.png",
+			"./Coronation/female/eyebrow/18.png"
+		],
+		"Content": [
+			"관직",
+			"부유"
+		]
+	},
+	{
+		"EyebrowId": "19",
+		"Eyebrow": "소산미",
+		"picture": [
+			"./Coronation/male/eyebrow/19.png",
+			"./Coronation/female/eyebrow/19.png"
+		],
+		"Content": [
+			"부유",
+			"성급",
+			"줏대없음"
+		]
+	},
+	{
+		"EyebrowId": "20",
+		"Eyebrow": "황박미",
+		"picture": [
+			"./Coronation/male/eyebrow/20.png",
+			"./Coronation/female/eyebrow/20.png"
+		],
+		"Content": [
+			"역마살",
+			"가난"
+		]
+	},
+	{
+		"EyebrowId": "21",
+		"Eyebrow": "교가미",
+		"picture": [
+			"./Coronation/male/eyebrow/21.png",
+			"./Coronation/female/eyebrow/21.png"
+		],
+		"Content": [
+			"가정분란",
+			"가난"
+		]
+	},
+	{
+		"EyebrowId": "22",
+		"Eyebrow": "귀미",
+		"picture": [
+			"./Coronation/male/eyebrow/22.png",
+			"./Coronation/female/eyebrow/22.png"
+		],
+		"Content": [
+			"도적",
+			"간교",
+			"사기",
+			"악함",
+			"표리부동",
+			"실패",
+			"도벽"
+		]
+	},
+	{
+		"EyebrowId": "23",
+		"Eyebrow": "간단미",
+		"picture": [
+			"./Coronation/male/eyebrow/23.png",
+			"./Coronation/female/eyebrow/23.png"
+		],
+		"Content": [
+			"부유",
+			"가난",
+			"고독"
+		]
+	},
+	{
+		"EyebrowId": "24",
+		"Eyebrow": "선라미",
+		"picture": [
+			"./Coronation/male/eyebrow/24.png",
+			"./Coronation/female/eyebrow/24.png"
+		],
+		"Content": [
+			"장수",
+			"지혜",
+			"강직"
+		]
+	}
+]
