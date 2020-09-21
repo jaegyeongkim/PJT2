@@ -3,9 +3,6 @@ import pandas as pd
 import json
 import matplotlib
 
-kobis_api_key = '154cd46e45e67d2d6a50b9fb41f0ad15'  # 종현
-# kobis_api_key = '051bf14672daa986b8f9b40e3b9a3c74'  # 재경
-
 kobis_api_url = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json?key=%s&openStartDt=%d&itemPerPage=%d&repNationCd=%d&movieTypeCd=%d&curPage=%d'
 
 years = 1990
