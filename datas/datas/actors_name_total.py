@@ -29,8 +29,6 @@ for data in jsondata["movies_data"]:
         actors[actor["peopleNm"]] = ''
         cnt += 1
         actor_cnt += 1
-        if actor_cnt == 8:
-            break
 
 
 print(cnt)
