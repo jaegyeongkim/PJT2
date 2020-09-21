@@ -1,2 +1,0 @@
-arr = None
-print(arr)
