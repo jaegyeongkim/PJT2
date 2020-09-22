@@ -14,11 +14,15 @@ npm i
 material-kit-react
 .
 ├── src
-    ├── Front
-    │   ├── HelpFor206
-    │   ├── inedx.js
+    ├── Views
+	    ├── Front
+    	│   ├── HelpFor206
+	    │   ├── inedx.js
 ```
 
 현재는 이 두부분으로 여기를 수정하면 됩니다.
 
 ​	
+
+Main Page
+

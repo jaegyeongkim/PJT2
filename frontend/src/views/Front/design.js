@@ -38,7 +38,6 @@ export default function Components(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Help206 />
       <Header
         brand="Material Kit React"
         rightLinks={<HeaderLinks />}
@@ -50,7 +49,8 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      {/* <Parallax image={require("assets/img/bg4.jpg")}>
+      <Help206 />
+      <Parallax image={require("assets/img/bg4.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
@@ -63,7 +63,7 @@ export default function Components(props) {
             </GridItem>
           </GridContainer>
         </div>
-      </Parallax> */}
+      </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionBasics />
