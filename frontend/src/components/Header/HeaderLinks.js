@@ -26,13 +26,13 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           buttonText="Components"
           buttonProps={{
             className: classes.navLink,
-            color: "transparent"
+            color: "transparent",
           }}
           buttonIcon={Apps}
           dropdownList={[
@@ -45,11 +45,44 @@ export default function HeaderLinks(props) {
               className={classes.dropdownLink}
             >
               Documentation
-            </a>
+            </a>,
           ]}
         />
+      </ListItem> */}
+      <ListItem className={classes.listItem}>
+        <Link style={{ color: "inherit" }} color="transparent" to="/actor-list">
+          <Button
+            color="transparent"
+            target="_blank"
+            className={classes.navLink}
+          >
+            배우 목록
+          </Button>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
+        <Link style={{ color: "inherit" }} color="transparent" to="/login-page">
+          <Button
+            color="transparent"
+            target="_blank"
+            className={classes.navLink}
+          >
+            Login
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button color="transparent" target="_blank" className={classes.navLink}>
+          <Link
+            style={{ color: "inherit" }}
+            color="transparent"
+            to="/login-page"
+          >
+            Logout
+          </Link>
+        </Button>
+      </ListItem>
+      {/* <ListItem className={classes.listItem}>
         <Button
           href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
           color="transparent"
@@ -60,11 +93,11 @@ export default function HeaderLinks(props) {
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
+        <Tooltip title="Delete">
           <IconButton aria-label="Delete">
             <DeleteIcon />
           </IconButton>
-        </Tooltip>*/}
+        </Tooltip>
         <Tooltip
           id="instagram-twitter"
           title="Follow us on twitter"
@@ -114,7 +147,7 @@ export default function HeaderLinks(props) {
             <i className={classes.socialIcons + " fab fa-instagram"} />
           </Button>
         </Tooltip>
-      </ListItem>
+      </ListItem> */}
     </List>
   );
 }

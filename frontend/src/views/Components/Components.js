@@ -38,13 +38,13 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="Material Kit React"
+        brand="The Casting"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "white",
         }}
         {...rest}
       />
@@ -53,9 +53,9 @@ export default function Components(props) {
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>Material Kit React.</h1>
+                <h1 className={classes.title}>The Casting</h1>
                 <h3 className={classes.subtitle}>
-                  A Badass Material-UI Kit based on Material Design.
+                  원하는 카테고리를 선택하세요.
                 </h3>
               </div>
             </GridItem>
@@ -63,7 +63,7 @@ export default function Components(props) {
         </div>
       </Parallax>
 
-      <div className={classNames(classes.main, classes.mainRaised)}>
+      {/* <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionBasics />
         <SectionNavbars />
         <SectionTabs />
@@ -83,7 +83,7 @@ export default function Components(props) {
         </GridItem>
         <SectionExamples />
         <SectionDownload />
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
