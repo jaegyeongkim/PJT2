@@ -3,6 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
@@ -27,7 +28,7 @@ import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
-
+import ListItem from "@material-ui/core/ListItem";
 import styles from "assets/jss/material-kit-react/views/components.js";
 
 const useStyles = makeStyles(styles);
@@ -55,17 +56,34 @@ export default function Components(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}>The Casting</h1>
                 <h3 className={classes.subtitle}>
-                  원하는 카테고리를 선택하세요.
+                  이미지에 맞는 배우를 추천받아 보세요!
                 </h3>
+                <ListItem className={classes.listItem}>
+                  <Link
+                    style={{ color: "inherit" }}
+                    color="transparent"
+                    to="/category"
+                  >
+                    <Button
+                      color="transparent"
+                      target="_blank"
+                      className={classes.navLink}
+                      size="lg"
+                      simple
+                    >
+                      배우 추천 받아보기
+                    </Button>
+                  </Link>
+                </ListItem>
               </div>
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
 
-      {/* <div className={classNames(classes.main, classes.mainRaised)}>
+      <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionBasics />
-        <SectionNavbars />
+        {/* <SectionNavbars />
         <SectionTabs />
         <SectionPills />
         <SectionNotifications />
@@ -82,8 +100,8 @@ export default function Components(props) {
           </Link>
         </GridItem>
         <SectionExamples />
-        <SectionDownload />
-      </div> */}
+        <SectionDownload /> */}
+      </div>
       <Footer />
     </div>
   );

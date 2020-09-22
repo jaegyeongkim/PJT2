@@ -49,6 +49,7 @@ export default function Components(props) {
         }}
         {...rest}
       />
+
       <Help206 />
       <Parallax image={require("assets/img/bg4.jpg")}>
         <div className={classes.container}>

@@ -13,6 +13,7 @@ import LoginPage from "views/LoginPage/LoginPage.js";
 import Design from "views/Front/design.js";
 import ActorList from "views/Front/Actor/ActorList.js";
 import ActorDetail from "views/Front/Actor/ActorDetail.js";
+import Category from "views/Front/Category/Category.js";
 
 var hist = createBrowserHistory();
 
@@ -24,9 +25,11 @@ ReactDOM.render(
       <Route path="/login-page" component={LoginPage} />
       <Route path="/design" component={Design} />
       <Route path="/actor-list" component={ActorList} />
-      <Route path="/actor-detail" component={ActorDetail} />
+      <Route path="/actor-detail/:name" component={ActorDetail} />
+      <Route path="/category" component={Category} />
+
       {/* !!!! 맨 밑에 있어야 동작합니다. */}
-      <Route path="/" component={Components} />{" "}
+      <Route path="/" component={Components} />
     </Switch>
   </Router>,
   document.getElementById("root")

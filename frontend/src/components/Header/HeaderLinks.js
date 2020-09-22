@@ -50,6 +50,17 @@ export default function HeaderLinks(props) {
         />
       </ListItem> */}
       <ListItem className={classes.listItem}>
+        <Link style={{ color: "inherit" }} color="transparent" to="/">
+          <Button
+            color="transparent"
+            target="_blank"
+            className={classes.navLink}
+          >
+            Home
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
         <Link style={{ color: "inherit" }} color="transparent" to="/actor-list">
           <Button
             color="transparent"
@@ -67,21 +78,11 @@ export default function HeaderLinks(props) {
             target="_blank"
             className={classes.navLink}
           >
-            Login
+            Login / Logout
           </Button>
         </Link>
       </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button color="transparent" target="_blank" className={classes.navLink}>
-          <Link
-            style={{ color: "inherit" }}
-            color="transparent"
-            to="/login-page"
-          >
-            Logout
-          </Link>
-        </Button>
-      </ListItem>
+
       {/* <ListItem className={classes.listItem}>
         <Button
           href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
