@@ -6,9 +6,13 @@ const path = require("path");
 const cors = require("cors");
 const helmet = require("helmet");
 
-const { Sequelize } = require("sequelize");
+const {
+  Sequelize
+} = require("sequelize");
 const session = require("express-session");
-const { userInfo } = require("os");
+const {
+  userInfo
+} = require("os");
 
 // --------------------------------------------
 // env
@@ -32,7 +36,9 @@ app.use(cors(corsOptions));
 
 // bodyParser: parse request application/json x-www-form-urlencode
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 // models
 const models = require("./models/index");
