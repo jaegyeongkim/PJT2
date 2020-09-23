@@ -28,7 +28,6 @@ export default function ActorSearch({ match }) {
         style={{ marginTop: "100px" }}
         className={classNames(classes.main, classes.mainRaised)}
       >
-        <h3>{match.params.name} 에 대한 검색 결과입니다.</h3>
         <Grid
           container
           style={{
@@ -36,7 +35,9 @@ export default function ActorSearch({ match }) {
             justifyContent: "center",
             alignItems: "center",
           }}
-        ></Grid>
+        >
+          <h3>'{match.params.name}' 검색 결과입니다.</h3>
+        </Grid>
       </div>
       <Footer />
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 import classNames from "classnames";
-import { Button, Checkbox } from "@material-ui/core";
+import { Button, Checkbox, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -21,30 +21,58 @@ export default function Category(props) {
         {...rest}
       />
 
-      <div
+      <Grid
         style={{ marginTop: "100px" }}
         className={classNames(classes.main, classes.mainRaised)}
       >
-        <div>
-          <h3>원하는 카테고리를 선택해보세요</h3>
-        </div>
-
-        <div>
-          <h4 className={classes.subtitle}>성별</h4>
-          <div>
-            <span className={classes.subtitle}>남자</span>
-            <Checkbox
-              value="checkedA"
-              inputProps={{ "aria-label": "Checkbox A" }}
-            />
-            <span className={classes.subtitle}>여자</span>
-            <Checkbox
-              value="checkedA"
-              inputProps={{ "aria-label": "Checkbox A" }}
-            />
-          </div>
-        </div>
-      </div>
+        <Grid
+          container
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Grid
+            container
+            xs={8}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Grid item>
+              <h3>원하는 카테고리를 선택해보세요</h3>
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            xs={8}
+            style={{
+              display: "flex",
+              justifyContent: "",
+              alignItems: "center",
+            }}
+          >
+            <Grid item>
+              <h4 className={classes.subtitle}>성별</h4>
+              <div>
+                <span className={classes.subtitle}>남자</span>
+                <Checkbox
+                  value="checkedA"
+                  inputProps={{ "aria-label": "Checkbox A" }}
+                />
+                <span className={classes.subtitle}>여자</span>
+                <Checkbox
+                  value="checkedA"
+                  inputProps={{ "aria-label": "Checkbox A" }}
+                />
+              </div>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
       <Footer />
     </div>
   );
