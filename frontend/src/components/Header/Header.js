@@ -15,7 +15,7 @@ import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
 // core components
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
-
+import { useHistory } from "react-router-dom";
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
@@ -60,7 +60,16 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed,
   });
-  const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  let history = useHistory();
+  const MoveToHome = () => {
+    history.push("/");
+    return console.log(123);
+  };
+  const brandComponent = (
+    <Button onClick={MoveToHome} className={classes.title}>
+      {brand}
+    </Button>
+  );
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>

@@ -38,17 +38,19 @@ export default function Components(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        brand="The Casting"
-        rightLinks={<HeaderLinks />}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 400,
-          color: "white",
-        }}
-        {...rest}
-      />
+      <Link to="/">
+        <Header
+          brand="The Casting"
+          rightLinks={<HeaderLinks />}
+          fixed
+          color="transparent"
+          changeColorOnScroll={{
+            height: 400,
+            color: "white",
+          }}
+          {...rest}
+        />
+      </Link>
       <Parallax image={require("assets/img/bg4.jpg")}>
         <div className={classes.container}>
           <GridContainer>
@@ -81,9 +83,9 @@ export default function Components(props) {
         </div>
       </Parallax>
 
-      <div className={classNames(classes.main, classes.mainRaised)}>
+      {/* <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionBasics />
-        {/* <SectionNavbars />
+        <SectionNavbars />
         <SectionTabs />
         <SectionPills />
         <SectionNotifications />
@@ -100,8 +102,8 @@ export default function Components(props) {
           </Link>
         </GridItem>
         <SectionExamples />
-        <SectionDownload /> */}
-      </div>
+        <SectionDownload />
+      </div> */}
       <Footer />
     </div>
   );
