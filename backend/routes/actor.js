@@ -2,6 +2,8 @@ const express = require("express");
 const app = express.Router();
 const db = require("../models");
 const multer = require("multer");
+const fs = require("fs");
+const path = require("path");
 
 // 상품 전체 조회
 app.get("/", async function (req, res) {

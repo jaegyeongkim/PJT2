@@ -6,9 +6,13 @@ const path = require("path");
 const cors = require("cors");
 const helmet = require("helmet");
 
-const { Sequelize } = require("sequelize");
+const {
+  Sequelize
+} = require("sequelize");
 const session = require("express-session");
-const { userInfo } = require("os");
+const {
+  userInfo
+} = require("os");
 
 // --------------------------------------------
 // env
@@ -32,7 +36,9 @@ app.use(cors(corsOptions));
 
 // bodyParser: parse request application/json x-www-form-urlencode
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 // models
 const models = require("./models/index");
@@ -50,8 +56,14 @@ models.sequelize
 //----------------------------------
 // routes
 app.use(uploadFilePath, express.static(path.join(__dirname + uploadFilePath)));
-app.use("/api/", require(`${__dirname}/routes/base`));
-app.use("/api/actor", require(`${__dirname}/routes/auth`));
+app.use("/api/", require(`${__dirname}/routes/index`));
+app.use("/api/actor", require(`${__dirname}/routes/actor`));
+app.use("/api/eye", require(`${__dirname}/routes/eye`));
+app.use("/api/eyebrow", require(`${__dirname}/routes/evebrow`));
+app.use("/api/member", require(`${__dirname}/routes/member`));
+app.use("/api/mouth", require(`${__dirname}/routes/mouth`));
+app.use("/api/movie", require(`${__dirname}/routes/movie`));
+app.use("/api/nose", require(`${__dirname}/routes/nose`));
 
 //----------------------------------
 // port
