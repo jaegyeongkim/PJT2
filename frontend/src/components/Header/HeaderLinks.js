@@ -49,17 +49,7 @@ export default function HeaderLinks(props) {
           ]}
         />
       </ListItem> */}
-      <ListItem className={classes.listItem}>
-        <Link style={{ color: "inherit" }} color="transparent" to="/">
-          <Button
-            color="transparent"
-            target="_blank"
-            className={classes.navLink}
-          >
-            Home
-          </Button>
-        </Link>
-      </ListItem>
+
       <ListItem className={classes.listItem}>
         <Link style={{ color: "inherit" }} color="transparent" to="/actor-list">
           <Button

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import datas from "./ActorName";
+
 const Actorimg = () => {
   const abc = () => {
     // console.log(data);
@@ -11,12 +12,15 @@ const Actorimg = () => {
     <div>
       {datas.map((data, index) => {
         return (
-          <Link to={`actor-detail/${data}`}>
-            <img
-              src={require(`../../../assets/img/actors/${data}.jpg`)}
-              alt="배우 사진"
-            />
-          </Link>
+          <div>
+            <Link to={`actor-detail/${data}`}>
+              <img
+                src={require(`../../../assets/img/actors/${data}.jpg`)}
+                alt="배우 사진"
+              />
+            </Link>
+            <p>{data}</p>
+          </div>
         );
       })}
     </div>
