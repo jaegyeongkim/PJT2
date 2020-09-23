@@ -38,19 +38,17 @@ export default function Components(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Link to="/">
-        <Header
-          brand="The Casting"
-          rightLinks={<HeaderLinks />}
-          fixed
-          color="transparent"
-          changeColorOnScroll={{
-            height: 400,
-            color: "white",
-          }}
-          {...rest}
-        />
-      </Link>
+      <Header
+        brand="The Casting"
+        rightLinks={<HeaderLinks />}
+        fixed
+        color="transparent"
+        changeColorOnScroll={{
+          height: 400,
+          color: "white",
+        }}
+        {...rest}
+      />
       <Parallax image={require("assets/img/bg4.jpg")}>
         <div className={classes.container}>
           <GridContainer>
@@ -60,23 +58,38 @@ export default function Components(props) {
                 <h3 className={classes.subtitle}>
                   이미지에 맞는 배우를 추천받아 보세요!
                 </h3>
-                <ListItem className={classes.listItem}>
-                  <Link
-                    style={{ color: "inherit" }}
+                {/* <ListItem className={classes.listItem}> */}
+                <Link
+                  style={{ color: "inherit" }}
+                  color="transparent"
+                  to="/category"
+                >
+                  <Button
                     color="transparent"
-                    to="/category"
+                    target="_blank"
+                    className={classes.navLink}
+                    size="lg"
+                    simple
                   >
-                    <Button
-                      color="transparent"
-                      target="_blank"
-                      className={classes.navLink}
-                      size="lg"
-                      simple
-                    >
-                      배우 추천 받아보기
-                    </Button>
-                  </Link>
-                </ListItem>
+                    배우 추천 받아보기
+                  </Button>
+                </Link>
+                <Link
+                  style={{ color: "inherit" }}
+                  color="transparent"
+                  to="/introduce"
+                >
+                  <Button
+                    color="transparent"
+                    target="_blank"
+                    className={classes.navLink}
+                    size="lg"
+                    simple
+                  >
+                    The Casting 소개
+                  </Button>
+                </Link>
+                {/* </ListItem> */}
               </div>
             </GridItem>
           </GridContainer>

@@ -11,9 +11,11 @@ import LandingPage from "views/LandingPage/LandingPage.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import Design from "views/Front/design.js";
-import ActorList from "views/Front/Actor/ActorList.js";
+import ActorSearch from "views/Front/Actor/ActorSearch.js";
+import ActorSearchResult from "views/Front/Actor/ActorSearchResult.js";
 import ActorDetail from "views/Front/Actor/ActorDetail.js";
 import Category from "views/Front/Category/Category.js";
+import Introduce from "views/Front/Introduce/introduce.js";
 
 var hist = createBrowserHistory();
 
@@ -24,9 +26,11 @@ ReactDOM.render(
       <Route path="/profile-page" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />
       <Route path="/design" component={Design} />
-      <Route path="/actor-list" component={ActorList} />
+      <Route path="/actor-search" component={ActorSearch} />
+      <Route path="/actor-search-result/:name" component={ActorSearchResult} />
       <Route path="/actor-detail/:name" component={ActorDetail} />
       <Route path="/category" component={Category} />
+      <Route path="/introduce" component={Introduce} />
 
       {/* !!!! 맨 밑에 있어야 동작합니다. */}
       <Route path="/" component={Components} />
