@@ -51,13 +51,17 @@ export default function HeaderLinks(props) {
       </ListItem> */}
 
       <ListItem className={classes.listItem}>
-        <Link style={{ color: "inherit" }} color="transparent" to="/actor-list">
+        <Link
+          style={{ color: "inherit" }}
+          color="transparent"
+          to="/actor-search"
+        >
           <Button
             color="transparent"
             target="_blank"
             className={classes.navLink}
           >
-            배우 목록
+            배우 검색
           </Button>
         </Link>
       </ListItem>
