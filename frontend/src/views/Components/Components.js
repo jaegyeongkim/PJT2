@@ -49,12 +49,11 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg4.jpg")}>
+      <Parallax image={require("assets/img/6.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>The Casting</h1>
                 <h3 className={classes.subtitle}>
                   이미지에 맞는 배우를 추천받아 보세요!
                 </h3>

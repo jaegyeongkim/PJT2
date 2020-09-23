@@ -48,25 +48,36 @@ export default function ActorSearch(props) {
         style={{ marginTop: "100px" }}
         className={classNames(classes.main, classes.mainRaised)}
       >
-        <h3>배우 이름을 검색해보세요!</h3>
-        <Grid
-          container
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <TextField
-            placeholder="Search..."
-            autoFocus={true}
-            onKeyPress={onKeyPress(history.location)}
-            // className="input2"
+        <Grid>
+          <Grid
+            container
             style={{
-              height: "5vh",
-              width: "10vw",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          />
+          >
+            <h3>배우 이름을 검색해보세요!</h3>
+          </Grid>
+          <Grid
+            container
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <TextField
+              placeholder="Search..."
+              autoFocus={true}
+              onKeyPress={onKeyPress(history.location)}
+              // className="input2"
+              style={{
+                height: "5vh",
+                width: "10vw",
+              }}
+            />
+          </Grid>
         </Grid>
       </div>
       <Footer />
