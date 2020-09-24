@@ -16,25 +16,33 @@ npm i
 material-kit-react
 └── src
     ├── Components
-    |  ├── Header
-    |  |	├── Header.js
-    |  |	├── HeaderLink.js
-    |  ├── Footer
-	└── Views
-        ├── Components
-		|	├── components.js
-		├── Front
-    	|	├── Actor
-		|	|	├── Actorimg.js
-		|	|	├── ActorSearch.js
-        |   |	├── ActorSearchResult.js
-		|	├── HelpFor206
-		|	├── Category
-		|	|	├── Category.js
-        |   └──Introduce
-		|		└── Introduce.js
-		└──	LoginPage		
-			└──	LoginPage.js
+    |   ├── Header
+    |   |	├── Header.js
+    |   |	├── HeaderLink.js
+    |   ├── Footer 
+	├── Views
+    |   ├── Components
+	|	|	├── components.js
+	|	├── Front
+    | 	|	├── Actor
+	|	|	|	├── Actorimg.js
+	|	|	|	├── ActorSearch.js
+    |   |   |	├── ActorSearchResult.js
+	|	|	├── HelpFor206
+	|	|	├── Category
+	|	|	|	├── Category.js
+    |   |   └──Introduce
+	|	|		└── Introduce.js
+	|	├──	LoginPage		
+	|	|	└──	LoginPage.js
+	|	└── SignupPage
+	|		├── CommonContext.js
+	|		├── Form.js
+	|		├──	SignupPage.jsx
+	|		├── styles.jsx
+	|		└── ViewContext.js
+	├── App.js
+	└── index.js
 ```
 
 
