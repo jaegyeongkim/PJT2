@@ -6,11 +6,12 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 // material-ui core components
 import { List, ListItem } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
-
+import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-kit-react/components/footerStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -20,11 +21,11 @@ export default function Footer(props) {
   const { whiteFont } = props;
   const footerClasses = classNames({
     [classes.footer]: true,
-    [classes.footerWhiteFont]: whiteFont
+    [classes.footerWhiteFont]: whiteFont,
   });
   const aClasses = classNames({
     [classes.a]: true,
-    [classes.footerWhiteFont]: whiteFont
+    [classes.footerWhiteFont]: whiteFont,
   });
   return (
     <footer className={footerClasses}>
@@ -32,33 +33,30 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/?ref=mkr-footer"
+              <Link
+                style={{ color: "inherit" }}
+                color="transparent"
+                to="/about-us"
                 className={classes.block}
-                target="_blank"
               >
-                Creative Tim
-              </a>
+                <Button color="transparent" target="_blank">
+                  About us
+                </Button>
+              </Link>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/presentation?ref=mkr-footer"
+              <Link
+                style={{ color: "inherit" }}
+                color="transparent"
+                to="/license"
                 className={classes.block}
-                target="_blank"
               >
-                About us
-              </a>
+                <Button color="transparent" target="_blank">
+                  Licenses
+                </Button>
+              </Link>
             </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://blog.creative-tim.com/?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Blog
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
+            {/* <ListItem className={classes.inlineBlock}>
               <a
                 href="https://www.creative-tim.com/license?ref=mkr-footer"
                 className={classes.block}
@@ -66,7 +64,7 @@ export default function Footer(props) {
               >
                 Licenses
               </a>
-            </ListItem>
+            </ListItem> */}
           </List>
         </div>
         <div className={classes.right}>
@@ -87,5 +85,5 @@ export default function Footer(props) {
 }
 
 Footer.propTypes = {
-  whiteFont: PropTypes.bool
+  whiteFont: PropTypes.bool,
 };

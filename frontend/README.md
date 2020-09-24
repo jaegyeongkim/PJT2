@@ -55,4 +55,9 @@ material-kit-react
 
 페이지 소개				components.js
 
-회원가입					x
+회원가입					SigninPage.js
+
+라이센스					license.js
+
+개발자(팀) 소개		aboutus.js
+

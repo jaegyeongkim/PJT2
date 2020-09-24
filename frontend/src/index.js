@@ -16,6 +16,10 @@ import ActorSearchResult from "views/Front/Actor/ActorSearchResult.js";
 import ActorDetail from "views/Front/Actor/ActorDetail.js";
 import Category from "views/Front/Category/Category.js";
 import Introduce from "views/Front/Introduce/introduce.js";
+import Aboutus from "views/Front/AboutUs/aboutus.js";
+import License from "views/Front/License/license.js";
+import SigninPage from "views/LoginPage/SigninPage.js";
+// import Introduce from "views/Front/Introduce/introduce.js";
 
 var hist = createBrowserHistory();
 
@@ -31,6 +35,9 @@ ReactDOM.render(
       <Route path="/actor-detail/:name" component={ActorDetail} />
       <Route path="/category" component={Category} />
       <Route path="/introduce" component={Introduce} />
+      <Route path="/about-us" component={Aboutus} />
+      <Route path="/license" component={License} />
+      <Route path="/signin-page" component={SigninPage} />
 
       {/* !!!! 맨 밑에 있어야 동작합니다. */}
       <Route path="/" component={Components} />
