@@ -36,3 +36,5 @@ $ sequelize db:seed:all
 # 취소할 때
 $ sequelize db:seed:undo:all
 ```
+
+ 

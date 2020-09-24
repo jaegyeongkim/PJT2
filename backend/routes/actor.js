@@ -5,7 +5,7 @@ const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
 
-// 상품 전체 조회
+// 배우 전체 조회
 app.get("/", async function (req, res) {
   db.Actor.findAll()
     .then((data) => res.json(data))
