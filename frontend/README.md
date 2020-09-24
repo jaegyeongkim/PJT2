@@ -10,7 +10,7 @@ npm i
 
 ### 폴더 구조
 
-주로 사용하는 폴더만 표기하겠습니다.
+주로 사용하는 폴더만 표기했습니다.
 
 ```
 material-kit-react
@@ -54,3 +54,5 @@ material-kit-react
 배우 추천 카테고리	Category.js
 
 페이지 소개				components.js
+
+회원가입					x
