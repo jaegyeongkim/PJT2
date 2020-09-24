@@ -1,0 +1,335 @@
+[
+	{
+		"NoseId": "1",
+		"Nose": "절통비",
+		"picture": [
+			"./Coronation/male/nose/01.png",
+			"./Coronation/female/nose/01.png"
+		],
+		"Content": [
+			"온화",
+			"곧음"
+		]
+	},
+	{
+		"NoseId": "2",
+		"Nose": "성낭비",
+		"picture": [
+			"./Coronation/male/nose/02.png",
+			"./Coronation/female/nose/02.png"
+		],
+		"Content": [
+			"부유",
+			"호탕",
+			"추진력"
+		]
+	},
+	{
+		"NoseId": "3",
+		"Nose": "산비",
+		"picture": [
+			"./Coronation/male/nose/03.png",
+			"./Coronation/female/nose/03.png"
+		],
+		"Content": [
+			"존경",
+			"유순",
+			"정",
+			"우애"
+		]
+	},
+	{
+		"NoseId": "4",
+		"Nose": "용비",
+		"picture": [
+			"./Coronation/male/nose/04.png",
+			"./Coronation/female/nose/04.png"
+		],
+		"Content": [
+			"대귀",
+			"관직",
+			"명예",
+			"정열적"
+		]
+	},
+	{
+		"NoseId": "5",
+		"Nose": "응취비",
+		"picture": [
+			"./Coronation/male/nose/05.png",
+			"./Coronation/female/nose/05.png"
+		],
+		"Content": [
+			"간악음험",
+			"간사",
+			"편협",
+			"욕심",
+			"간교"
+		]
+	},
+	{
+		"NoseId": "6",
+		"Nose": "검봉비",
+		"picture": [
+			"./Coronation/male/nose/06.png",
+			"./Coronation/female/nose/06.png"
+		],
+		"Content": [
+			"흉",
+			"완고",
+			"거짓",
+			"괴팍",
+			"고독"
+		]
+	},
+	{
+		"NoseId": "7",
+		"Nose": "녹비",
+		"picture": [
+			"./Coronation/male/nose/07.png",
+			"./Coronation/female/nose/07.png"
+		],
+		"Content": [
+			"부유",
+			"의리",
+			"급함",
+			"불안",
+			"순박",
+			"인자"
+		]
+	},
+	{
+		"NoseId": "8",
+		"Nose": "즉어비",
+		"picture": [
+			"./Coronation/male/nose/08.png",
+			"./Coronation/female/nose/08.png"
+		],
+		"Content": [
+			"용렬",
+			"배신",
+			"우유부단",
+			"고단"
+		]
+	},
+	{
+		"NoseId": "9",
+		"Nose": "노척비",
+		"picture": [
+			"./Coronation/male/nose/09.png",
+			"./Coronation/female/nose/09.png"
+		],
+		"Content": [
+			"간악",
+			"우유부단",
+			"고독"
+		]
+	},
+	{
+		"NoseId": "10",
+		"Nose": "우비",
+		"picture": [
+			"./Coronation/male/nose/10.png",
+			"./Coronation/female/nose/10.png"
+		],
+		"Content": [
+			"관대",
+			"어짐",
+			"부지런"
+		]
+	},
+	{
+		"NoseId": "11",
+		"Nose": "호양비",
+		"picture": [
+			"./Coronation/male/nose/11.png",
+			"./Coronation/female/nose/11.png"
+		],
+		"Content": [
+			"부유",
+			"명예",
+			"귀함",
+			"섬세",
+			"고집"
+		]
+	},
+	{
+		"NoseId": "12",
+		"Nose": "편요비",
+		"picture": [
+			"./Coronation/male/nose/12.png",
+			"./Coronation/female/nose/12.png"
+		],
+		"Content": [
+			"고독",
+			"가난",
+			"곤란"
+		]
+	},
+	{
+		"NoseId": "13",
+		"Nose": "호비",
+		"picture": [
+			"./Coronation/male/nose/13.png",
+			"./Coronation/female/nose/13.png"
+		],
+		"Content": [
+			"부유",
+			"명예",
+			"온화",
+			"강직",
+			"대장부"
+		]
+	},
+	{
+		"NoseId": "14",
+		"Nose": "사자비",
+		"picture": [
+			"./Coronation/male/nose/14.png",
+			"./Coronation/female/nose/14.png"
+		],
+		"Content": [
+			"강건",
+			"용기",
+			"실천력"
+		]
+	},
+	{
+		"NoseId": "15",
+		"Nose": "후비",
+		"picture": [
+			"./Coronation/male/nose/15.png",
+			"./Coronation/female/nose/15.png"
+		],
+		"Content": [
+			"의심",
+			"인색",
+			"지혜",
+			"알뜰"
+		]
+	},
+	{
+		"NoseId": "16",
+		"Nose": "삼만삼곡비",
+		"picture": [
+			"./Coronation/male/nose/16.png",
+			"./Coronation/female/nose/16.png"
+		],
+		"Content": [
+			"고독"
+		]
+	},
+	{
+		"NoseId": "17",
+		"Nose": "고봉비",
+		"picture": [
+			"./Coronation/male/nose/17.png",
+			"./Coronation/female/nose/17.png"
+		],
+		"Content": [
+			"고독",
+			"가난",
+			"곤란"
+		]
+	},
+	{
+		"NoseId": "18",
+		"Nose": "현담비",
+		"picture": [
+			"./Coronation/male/nose/18.png",
+			"./Coronation/female/nose/18.png"
+		],
+		"Content": [
+			"부유",
+			"눈치",
+			"예의",
+			"건강"
+		]
+	},
+	{
+		"NoseId": "19",
+		"Nose": "구비",
+		"picture": [
+			"./Coronation/male/nose/19.png",
+			"./Coronation/female/nose/19.png"
+		],
+		"Content": [
+			"도둑",
+			"의리",
+			"곤궁",
+			"도벽"
+		]
+	},
+	{
+		"NoseId": "20",
+		"Nose": "성비",
+		"picture": [
+			"./Coronation/male/nose/20.png",
+			"./Coronation/female/nose/20.png"
+		],
+		"Content": [
+			"부유",
+			"너그러움",
+			"고귀",
+			"영특",
+			"호쾌"
+		]
+	},
+	{
+		"NoseId": "21",
+		"Nose": "장비",
+		"picture": [
+			"./Coronation/male/nose/21.png",
+			"./Coronation/female/nose/21.png"
+		],
+		"Content": [
+			"의리없음",
+			"시기심",
+			"고단",
+			"배신"
+		]
+	},
+	{
+		"NoseId": "22",
+		"Nose": "원비",
+		"picture": [
+			"./Coronation/male/nose/22.png",
+			"./Coronation/female/nose/22.png"
+		],
+		"Content": [
+			"시기",
+			"기만",
+			"경솔",
+			"조급",
+			"질투",
+			"근심",
+			"걱정"
+		]
+	},
+	{
+		"NoseId": "23",
+		"Nose": "복서비",
+		"picture": [
+			"./Coronation/male/nose/23.png",
+			"./Coronation/female/nose/23.png"
+		],
+		"Content": [
+			"총명기백",
+			"지혜",
+			"아량"
+		]
+	},
+	{
+		"NoseId": "24",
+		"Nose": "노조비",
+		"picture": [
+			"./Coronation/male/nose/24.png",
+			"./Coronation/female/nose/24.png"
+		],
+		"Content": [
+			"빈궁",
+			"가난",
+			"괴로움"
+		]
+	}
+]

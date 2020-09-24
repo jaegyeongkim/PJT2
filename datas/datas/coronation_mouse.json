@@ -1,0 +1,206 @@
+[
+	{
+		"MouseId": "1",
+		"Mouse": "앵도구",
+		"picture": [
+			"./Coronation/male/mouse/01.png",
+			"./Coronation/female/mouse/01.png"
+		],
+		"Content": [
+			"총명",
+			"온유",
+			"부유"
+		]
+	},
+	{
+		"MouseId": "2",
+		"Mouse": "방구",
+		"picture": [
+			"./Coronation/male/mouse/02.png",
+			"./Coronation/female/mouse/02.png"
+		],
+		"Content": [
+			"정직",
+			"예의",
+			"만사형통"
+		]
+	},
+	{
+		"MouseId": "3",
+		"Mouse": "양월구",
+		"picture": [
+			"./Coronation/male/mouse/03.png",
+			"./Coronation/female/mouse/03.png"
+		],
+		"Content": [
+			"성실",
+			"예술",
+			"명성"
+		]
+	},
+	{
+		"MouseId": "4",
+		"Mouse": "만궁구",
+		"picture": [
+			"./Coronation/male/mouse/04.png",
+			"./Coronation/female/mouse/04.png"
+		],
+		"Content": [
+			"명성",
+			"총명"
+		]
+	},
+	{
+		"MouseId": "5",
+		"Mouse": "후구",
+		"picture": [
+			"./Coronation/male/mouse/05.png",
+			"./Coronation/female/mouse/05.png"
+		],
+		"Content": [
+			"인색"
+		]
+	},
+	{
+		"MouseId": "6",
+		"Mouse": "양구",
+		"picture": [
+			"./Coronation/male/mouse/06.png",
+			"./Coronation/female/mouse/06.png"
+		],
+		"Content": [
+			"게으름",
+			"인색",
+			"가난"
+		]
+	},
+	{
+		"MouseId": "7",
+		"Mouse": "용구",
+		"picture": [
+			"./Coronation/male/mouse/07.png",
+			"./Coronation/female/mouse/07.png"
+		],
+		"Content": [
+			"통솔력",
+			"부유"
+		]
+	},
+	{
+		"MouseId": "8",
+		"Mouse": "즉어구",
+		"picture": [
+			"./Coronation/male/mouse/08.png",
+			"./Coronation/female/mouse/08.png"
+		],
+		"Content": [
+			"고난",
+			"고생"
+		]
+	},
+	{
+		"MouseId": "9",
+		"Mouse": "우구",
+		"picture": [
+			"./Coronation/male/mouse/09.png",
+			"./Coronation/female/mouse/09.png"
+		],
+		"Content": [
+			"부유",
+			"장수",
+			"총명"
+		]
+	},
+	{
+		"MouseId": "10",
+		"Mouse": "복선구",
+		"picture": [
+			"./Coronation/male/mouse/10.png",
+			"./Coronation/female/mouse/10.png"
+		],
+		"Content": [
+			"가난",
+			"고통"
+		]
+	},
+	{
+		"MouseId": "11",
+		"Mouse": "점어구",
+		"picture": [
+			"./Coronation/male/mouse/11.png",
+			"./Coronation/female/mouse/11.png"
+		],
+		"Content": [
+			"빈궁",
+			"고독"
+		]
+	},
+	{
+		"MouseId": "12",
+		"Mouse": "호구",
+		"picture": [
+			"./Coronation/male/mouse/12.png",
+			"./Coronation/female/mouse/12.png"
+		],
+		"Content": [
+			"덕망",
+			"위엄",
+			"강건",
+			"부유"
+		]
+	},
+	{
+		"MouseId": "13",
+		"Mouse": "사자구",
+		"picture": [
+			"./Coronation/male/mouse/13.png",
+			"./Coronation/female/mouse/13.png"
+		],
+		"Content": [
+			"총명",
+			"재주",
+			"지혜",
+			"부유"
+		]
+	},
+	{
+		"MouseId": "14",
+		"Mouse": "저구",
+		"picture": [
+			"./Coronation/male/mouse/14.png",
+			"./Coronation/female/mouse/14.png"
+		],
+		"Content": [
+			"간교",
+			"잔꾀",
+			"흉포",
+			"비방",
+			"빈궁"
+		]
+	},
+	{
+		"MouseId": "15",
+		"Mouse": "추문구",
+		"picture": [
+			"./Coronation/male/mouse/15.png",
+			"./Coronation/female/mouse/15.png"
+		],
+		"Content": [
+			"고난장수",
+			"고독"
+		]
+	},
+	{
+		"MouseId": "16",
+		"Mouse": "취화구",
+		"picture": [
+			"./Coronation/male/mouse/16.png",
+			"./Coronation/female/mouse/16.png"
+		],
+		"Content": [
+			"고생",
+			"장애",
+			"좌절"
+		]
+	}
+]
