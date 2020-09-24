@@ -30,7 +30,7 @@ export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function () {
     setCardAnimation("");
-  }, 700);
+  }, 100);
   const classes = useStyles();
   const { ...rest } = props;
   return (
@@ -94,7 +94,7 @@ export default function LoginPage(props) {
                     />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Link to="signin-page">
+                    <Link to="signup-page">
                       <Button simple color="primary" size="lg">
                         회원가입
                       </Button>
