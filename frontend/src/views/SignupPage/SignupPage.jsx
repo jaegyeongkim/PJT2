@@ -2,8 +2,8 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import Axios from "axios";
 import crypto from "crypto";
-import { ViewContext } from "./ViewContext";
-import { CommonContext } from "./CommonContext.js";
+import { ViewContext } from "../../context/ViewContext";
+import { CommonContext } from "../../context/CommonContext.js";
 import {
   Button,
   Dialog,

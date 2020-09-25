@@ -18,7 +18,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import styles from "assets/jss/material-kit-react/views/components.js";
 
-import { CommonContext } from "../SignupPage/CommonContext.js";
+import { CommonContext } from "../../context/CommonContext.js";
 
 const useStyles = makeStyles(styles);
 

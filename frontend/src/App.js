@@ -8,7 +8,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import "assets/scss/material-kit-react.scss?v=1.9.0";
 
 // hook
-import { CommonContext } from "./views/SignupPage/CommonContext";
+import { CommonContext } from "./context/CommonContext";
 // pages for this product
 import Components from "views/Components/Components.js";
 import LandingPage from "views/LandingPage/LandingPage.js";
@@ -22,7 +22,7 @@ import Category from "views/Front/Category/Category.js";
 import Introduce from "views/Front/Introduce/introduce.js";
 import Aboutus from "views/Front/AboutUs/aboutus.js";
 import License from "views/Front/License/license.js";
-import SignupPage from "views/SignupPage/SignupPage.jsx";
+import SignupPage from "views/SignupPage/SignupPage.js";
 // import Introduce from "views/Front/Introduce/introduce.js";
 
 var hist = createBrowserHistory();
@@ -39,12 +39,18 @@ console.log(window.React1 === window.React2);
 //   getProductDatas();
 // }, []);
 const App = () => {
+  // UseState 등록
+  const [eventListener, setEventListener] = useState(1);
+  // CommonContext로 사용하고 싶은 데이터 등록하면 됩니다.
   const [productDatas, setProductDatas] = useState(0); // 전체 데이터
   return (
+    // CommonCotext로 사용하고 싶은 데이터 등록하면 됩니다.
     <CommonContext.Provider
       value={{
         productDatas,
         setProductDatas,
+        eventListener,
+        setEventListener,
       }}
     >
       <Router history={hist}>
