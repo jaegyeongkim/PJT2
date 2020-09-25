@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
       },
       genre: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(200),
         allowNull: true,
       },
       birth: {
@@ -26,6 +26,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
       },
       total_cnt: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      movie_cd: {
         type: DataTypes.INTEGER,
         allowNull: true,
       },

@@ -8,7 +8,7 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/components.js";
 import SectionBasics from "../../Components/Sections/SectionBasics";
-import Actorimg from "./Actorimg";
+
 import datas from "./ActorName";
 const useStyles = makeStyles(styles);
 
