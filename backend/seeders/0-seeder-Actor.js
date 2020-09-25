@@ -2,17 +2,15 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    let datas = [
-      {
-        gender: "남자",
-        name: "sungho",
-        image: "test",
-        birth: "test",
-        face: "test",
-        movie: "test",
-        video: "test",
-      },
-    ];
+    let datas = [{
+      gender: "남자",
+      name: "sungho",
+      image: "asdfasdf",
+      birth: "asdfasdf",
+      face: "asdfasd",
+      movie: "test",
+      video: "test",
+    }, ];
 
     return queryInterface.bulkInsert("Actors", datas, {});
   },

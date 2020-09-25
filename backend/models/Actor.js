@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
       },
       movie: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(250),
         allowNull: true,
       },
       video: {
