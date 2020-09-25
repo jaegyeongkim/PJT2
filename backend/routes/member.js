@@ -28,7 +28,7 @@ app.post("/signup", async function (req, res) {
     await Member.findOne({
       where: { email: reqeustData.email },
     }).then((member) => {
-      // 중복이면 중 복 메세지 보내기
+      // 중복이면 중복 메세지 보내기
       if (member) {
         res.status(403).send({ message: "이미 존재하는 아이디입니다." });
       } else {
