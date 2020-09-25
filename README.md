@@ -10,6 +10,10 @@
 >
 > 팀 구성원: 구준모, 김경수, 김재경(팀장), 변찬석, 윤종현
 
+## 배포 주소
+
+> https://j3b206.p.ssafy.io/
+
 ## 개요
 
 > 감독이 찾는 이미지의 배우를 관상이라는 지표를 통해 찾을 수 있도록 도와주는 서비스
@@ -52,11 +56,25 @@
 
 ## 기술 스택
 
-> Python
->
-> Django
+> ### Front
 >
 > React
+>
+> ### Back
+>
+> Node.js
+>
+> mySQL
+>
+> ### Data
+>
+> Python
+>
+> KOBIS API
+>
+> Naver API
+>
+> 
 >
 > Postman
 >
@@ -66,7 +84,7 @@
 
 > Python: API를 활용한 데이터 받아오기
 >
-> Django: 데이터 모델링, 백엔드 작업
+> Node.js / mySQL: 데이터 모델링, 백엔드 작업
 >
 > React: 프런트
 
@@ -76,7 +94,11 @@
 
 ### 디렉토리 구조도
 
-> ### backend
+> ### Front-end
+>
+> Front README 에 작성했습니다.
+>
+> ### Back-end
 >
 > #### api
 >
@@ -97,10 +119,6 @@
 > * datas
 >
 >   API를 통해 받아온 데이터 정제 폴더
->
-> ### frontend
->
-> 아직 없음
 >
 > ### 산출물
 >
