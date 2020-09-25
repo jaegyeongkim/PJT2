@@ -25,7 +25,6 @@ const useStyles = makeStyles(styles);
 export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
-  const { productDatas } = useContext(CommonContext);
   return (
     <div>
       <Header
@@ -61,7 +60,6 @@ export default function Components(props) {
                     simple
                   >
                     배우 추천 받아보기
-                    {productDatas}
                   </Button>
                 </Link>
                 <Link
