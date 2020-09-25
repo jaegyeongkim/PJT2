@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const api = require("./routes/index");
 const cors = require("cors");
 const helmet = require("helmet");
 
@@ -22,6 +23,7 @@ var app = express();
 
 // 보안
 app.use(helmet());
+app.use("/api", api);
 
 // cors
 const corsOptions = {
