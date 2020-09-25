@@ -1,6 +1,6 @@
 // react
 import React, { useState, useEffect } from "react";
-
+import Axios from "axios";
 // hook
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
@@ -41,8 +41,20 @@ console.log(window.React1 === window.React2);
 const App = () => {
   // UseState 등록
   const [eventListener, setEventListener] = useState(1);
+  const [actorsData, setActorsData] = useState([]);
   // CommonContext로 사용하고 싶은 데이터 등록하면 됩니다.
   const [productDatas, setProductDatas] = useState(0); // 전체 데이터
+
+  // 배우 데이터
+
+  async function getActorDatas() {
+    Axios.get("https://j3b206.p.ssafy.io/api/actor/").then(function (res) {
+      setActorsData(res.data);
+    });
+  }
+  useEffect(() => {
+    getActorDatas();
+  }, []);
   return (
     // CommonCotext로 사용하고 싶은 데이터 등록하면 됩니다.
     <CommonContext.Provider
@@ -51,6 +63,8 @@ const App = () => {
         setProductDatas,
         eventListener,
         setEventListener,
+        actorsData,
+        setActorsData,
       }}
     >
       <Router history={hist}>
