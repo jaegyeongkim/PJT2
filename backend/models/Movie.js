@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
       },
       genre: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(200),
         allowNull: true,
       },
       birth: {
