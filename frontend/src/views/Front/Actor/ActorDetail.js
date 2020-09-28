@@ -1,5 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { GridList, Grid, TextField } from "@material-ui/core";
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -9,18 +10,22 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import { CommonContext } from "../../../context/CommonContext";
 import { supportsGoWithoutReloadUsingHash } from "history/DOMUtils";
 const useStyles = makeStyles(styles);
+
 const ActorDetail = ({ match }) => {
   const classes = useStyles();
   const { actorsData } = useContext(CommonContext);
-  // const [filmo, setFilmo] = useState("");
 
   for (var i = 0; i < actorsData.length; i++) {
     if (actorsData[i]["name"] == match.params.name) {
-      var filmo = actorsData[i]["movie"];
-      var filmo_list = filmo.split(",");
+      var filmo = actorsData[i]["movie"].split(",");
+      break;
     }
   }
-  console.log(filmo_list);
+
+  var filmo_list = [];
+  for (var i = 0; i < Object(filmo).length; i++) {
+    filmo_list.push(filmo[i]);
+  }
 
   return (
     <div>
@@ -38,9 +43,13 @@ const ActorDetail = ({ match }) => {
           src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.name}.jpg`}
           alt="배우 사진"
         />
-        <p>{match.params.name}</p>
+        <Grid>
+          {filmo_list.map((movie, index) => {
+            return <p>{movie}</p>;
+          })}
+        </Grid>
 
-        <p>{filmo_list}</p>
+        <p>{match.params.name}</p>
       </div>
       <Footer />
     </div>
