@@ -37,25 +37,11 @@ const Introduce = (props) => {
         className={classNames(classes.main, classes.mainRaised)}
       >
         <Grid>
-          <Grid
-            item
-            container
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Button onClick={executeScroll_director}>
-              <h3>감독이신가요?</h3>
-            </Button>
-            <Button onClick={executeScroll_actor}>
-              <h3>배우이신가요?</h3>
-            </Button>
-          </Grid>
           <Grid>
+            <h2>The Casting은</h2>
+
             <h5>
-              The Casting은 눈썹, 눈, 코, 입 관상을 이용해 찾으신는 이미지의
+              배우의 눈썹, 눈, 코, 입을 관상 데이터와 비교하여 카테고리별로
               배우를 추천해드립니다.
             </h5>
           </Grid>
