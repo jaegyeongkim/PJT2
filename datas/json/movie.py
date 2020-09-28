@@ -25,7 +25,7 @@ for data in json_data:
 
   dic1['birth'] = data['openDt']
 
-  dic1['total_cnt'] = 0
+  dic1['userRating'] = 0
 
   dic1['movie_cd'] = data['movieCd']
 
