@@ -24,6 +24,7 @@ import Aboutus from "views/Front/AboutUs/aboutus.js";
 import License from "views/Front/License/license.js";
 import SignupPage from "views/SignupPage/SignupPage.js";
 import Contactus from "views/Front/ContactUs/contactus";
+
 // import Introduce from "views/Front/Introduce/introduce.js";
 
 var hist = createBrowserHistory();
@@ -53,6 +54,7 @@ const App = () => {
       setActorsData(res.data);
     });
   }
+
   useEffect(() => {
     getActorDatas();
   }, []);

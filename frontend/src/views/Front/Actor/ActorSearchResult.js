@@ -9,21 +9,23 @@ import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/components.js";
 import SectionBasics from "../../Components/Sections/SectionBasics";
 import ActorCard from "./ActorCard";
-import datas from "./ActorName";
 
 import { CommonContext } from "../../../context/CommonContext";
-import actor_names from "./actors_name_list_8146.json";
-
+import ActorSearch from "./ActorSearch";
 const useStyles = makeStyles(styles);
 
-export default function ActorSearch({ match }, props) {
+export default function ActorSearchResult({ match }, props) {
   const classes = useStyles();
   let history = useHistory();
   const { actorsData } = useContext(CommonContext);
   // const click = () => {
   //   history.push(`actor-detail/${name}`);
   // };
-
+  const onKeyPress = (currentPathname) => (e) => {
+    if (e.key === "Enter") {
+      history.push(`/actor-search-result/${e.target.value}`);
+    }
+  };
   const searchResult = [];
   for (var i = 0; i < actorsData.length; i++) {
     if (actorsData[i]["name"].includes(match.params.name)) {
@@ -42,6 +44,37 @@ export default function ActorSearch({ match }, props) {
         style={{ marginTop: "100px" }}
         className={classNames(classes.main, classes.mainRaised)}
       >
+        <Grid>
+          <Grid
+            container
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <h3>배우 이름을 검색해보세요!</h3>
+          </Grid>
+          <Grid
+            container
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <TextField
+              placeholder="Search..."
+              autoFocus={true}
+              onKeyPress={onKeyPress(history.location)}
+              // className="input2"
+              style={{
+                height: "5vh",
+                width: "10vw",
+              }}
+            />
+          </Grid>
+        </Grid>
         <Grid
           container
           style={{
