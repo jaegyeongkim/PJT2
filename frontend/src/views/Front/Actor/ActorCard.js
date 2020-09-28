@@ -17,9 +17,7 @@ const ActorCard = (props) => {
   const { name, idnex } = props;
   let history = useHistory();
   const clickActorDetail = () => {
-    history.push("/");
-    // history.goBack(1);
-    history.push(`actor-detail/${name}`);
+    history.push(`/actor-detail/${name}`);
   };
   const useStyles = makeStyles({
     root: {
@@ -34,13 +32,13 @@ const ActorCard = (props) => {
     <Grid>
       <Card className={classes.root}>
         <CardActionArea>
-          <Link to={`actor-detail/${name}`}>
-            <CardMedia
-              className={classes.media}
-              image={`https://j3b206.p.ssafy.io/static/img/actor/${name}.jpg`}
-              title="Contemplative Reptile"
-            />
-          </Link>
+          <CardMedia
+            onClick={clickActorDetail}
+            className={classes.media}
+            image={`https://j3b206.p.ssafy.io/static/img/actor/${name}.jpg`}
+            title="Contemplative Reptile"
+          />
+
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {name}
