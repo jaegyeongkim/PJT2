@@ -23,7 +23,6 @@ app.post("/signup", async function (req, res) {
     res.status(403).json({ message: "이미 로그인 되어있습니다." });
   } else {
     const reqeustData = req.body;
-    console.log(reqeustData);
     // email 중복 확인
     await Member.findOne({
       where: { email: reqeustData.email },
