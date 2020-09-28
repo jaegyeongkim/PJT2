@@ -4,7 +4,7 @@ import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import { Icon } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
@@ -29,7 +29,7 @@ import image from "assets/img/bg7.jpg";
 
 const useStyles = makeStyles(styles);
 
-export default function LoginPage(props) {
+export default function SignupPage(props) {
   const [cardAnimaton, setCardAnimation] = useState("cardHidden");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,20 +37,38 @@ export default function LoginPage(props) {
   const [name, setName] = useState("");
   const [birth, setBirth] = useState("");
   const [uimage, setuImage] = useState("");
+  const [member, setMember] = useState([]);
 
-  const newmember = (email, password, gender, name, birth, uimage) => {
-    return axios
-      .post("/api/member/signup", {
-        email: email,
-        password: password,
-        gender: gender,
-        name: name,
-        birth: birth,
-        uimage: uimage,
-      })
-      .then(() => {
-        console.log("make member");
+  let history = useHistory();
+
+  useEffect(() => {
+    async function fetchData() {
+      await axios.get(`/api/member`).then((res) => {
+        setMember(res.data);
       });
+    }
+    fetchData();
+  }, []);
+  const newmember = (email, password, gender, name, birth, uimage) => {
+    const memberList = member.filter((mem) => mem.email === email);
+    if (memberList.length !== 0) {
+      alert("이미 있는 이메일입니다.");
+      return;
+    } else {
+      return axios
+        .post("/api/member/signup", {
+          email: email,
+          password: password,
+          gender: gender,
+          name: name,
+          birth: birth,
+          uimage: uimage,
+        })
+        .then(() => {
+          alert("회원가입이 완료되었습니다.");
+          history.push(`/`);
+        });
+    }
   };
 
   const handleEmailChange = (e) => {
@@ -78,9 +96,12 @@ export default function LoginPage(props) {
   //   }
   // };
   const handleCreate = () => {
-    newmember(email, password, gender, name, birth, uimage).then(() => {
-      console.log("hi");
-    });
+    if (!password || !email || !gender || !name || !birth) {
+      alert("회원정보를 모두 입력해주세요.");
+      return;
+    } else {
+      newmember(email, password, gender, name, birth, uimage);
+    }
   };
   setTimeout(function () {
     setCardAnimation("");

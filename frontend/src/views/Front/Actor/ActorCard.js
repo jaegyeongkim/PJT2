@@ -1,6 +1,17 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Button, Grid } from "@material-ui/core";
+import {
+  Button,
+  Grid,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+  Avatar,
+} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
 const ActorCard = (props) => {
   const { name, idnex } = props;
@@ -10,13 +21,33 @@ const ActorCard = (props) => {
     // history.goBack(1);
     history.push(`actor-detail/${name}`);
   };
+  const useStyles = makeStyles({
+    root: {
+      maxWidth: 180,
+    },
+    media: {
+      height: 250,
+    },
+  });
+  const classes = useStyles();
   return (
     <Grid>
-      {name}
-      <img
-        onClick={clickActorDetail}
-        src={`https://j3b206.p.ssafy.io/static/img/actor_img/${name}.jpg`}
-      />
+      <Card className={classes.root}>
+        <CardActionArea>
+          <Link to={`actor-detail/${name}`}>
+            <CardMedia
+              className={classes.media}
+              image={`https://j3b206.p.ssafy.io/static/img/actor/${name}.jpg`}
+              title="Contemplative Reptile"
+            />
+          </Link>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {name}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
     </Grid>
   );
 };
