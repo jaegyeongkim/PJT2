@@ -31,6 +31,7 @@ var hist = createBrowserHistory();
 require("react-dom");
 window.React2 = require("react");
 console.log(window.React1 === window.React2);
+
 // app
 
 // const getProductDatas = () => {
@@ -39,7 +40,12 @@ console.log(window.React1 === window.React2);
 // useEffect(() => {
 //   getProductDatas();
 // }, []);
+
 const App = () => {
+  const [user, setUser] = useState([]);
+  useEffect(() => {
+    setUser(JSON.parse(localStorage.getItem("user")) || []);
+  }, []);
   // UseState 등록
   const [eventListener, setEventListener] = useState(1);
   const [actorsData, setActorsData] = useState([]);
@@ -56,6 +62,7 @@ const App = () => {
   useEffect(() => {
     getActorDatas();
   }, []);
+
   return (
     // CommonCotext로 사용하고 싶은 데이터 등록하면 됩니다.
     <CommonContext.Provider

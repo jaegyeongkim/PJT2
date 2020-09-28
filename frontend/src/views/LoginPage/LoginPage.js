@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import { Icon } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useHistory, Redirect } from "react-router-dom";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
@@ -27,12 +28,64 @@ import image from "assets/img/bg7.jpg";
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
-  const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
+  let history = useHistory();
+
+  const [cardAnimaton, setCardAnimation] = useState("cardHidden");
   setTimeout(function () {
     setCardAnimation("");
   }, 100);
   const classes = useStyles();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [member, setMember] = useState([]);
   const { ...rest } = props;
+
+  useEffect(() => {
+    async function fetchData() {
+      await axios.get(`/api/member`).then((res) => {
+        setMember(res.data);
+      });
+    }
+    fetchData();
+  }, []);
+  const user = JSON.parse(localStorage.getItem("user"));
+  const Login = (email, password) => {
+    const memberList = member.filter((mem) => mem.email === email);
+    if (memberList.length !== 0) {
+      if (memberList[0].password !== password) {
+        alert("패스워드를 정확히 입력해주세요.");
+        return;
+      } else {
+        localStorage.setItem("user", JSON.stringify(memberList));
+        history.push(`/`);
+        return;
+      }
+    } else {
+      return;
+    }
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePassWordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLogin = () => {
+    if (!password || !email) {
+      alert("회원정보를 모두 입력해주세요.");
+      return;
+    } else {
+      Login(email, password);
+    }
+  };
+  if (user) {
+    localStorage.removeItem("user");
+    alert("로그아웃이 완료되었습니다.");
+    history.push("/");
+    return <></>;
+  }
   return (
     <div>
       <Header
@@ -62,6 +115,8 @@ export default function LoginPage(props) {
                     <CustomInput
                       labelText="Email..."
                       id="email"
+                      value={email}
+                      onChange={handleEmailChange}
                       formControlProps={{
                         fullWidth: true,
                       }}
@@ -77,6 +132,8 @@ export default function LoginPage(props) {
                     <CustomInput
                       labelText="Password"
                       id="pass"
+                      value={password}
+                      onChange={handlePassWordChange}
                       formControlProps={{
                         fullWidth: true,
                       }}
@@ -99,6 +156,14 @@ export default function LoginPage(props) {
                         회원가입
                       </Button>
                     </Link>
+                    <Button
+                      simple
+                      color="primary"
+                      size="lg"
+                      onLogin={handleLogin}
+                    >
+                      로그인
+                    </Button>
                   </CardFooter>
                 </form>
               </Card>
