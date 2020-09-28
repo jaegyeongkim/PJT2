@@ -23,6 +23,7 @@ const ActorDetail = ({ match }) => {
         style={{ marginTop: "100px" }}
         className={classNames(classes.main, classes.mainRaised)}
       >
+        <h1>ㅇㄹㅇㄹ</h1>
         <img
           src={`https://j3b206.p.ssafy.io/static/img/actor_img/${match.params.name}.jpg`}
           alt="배우 사진"
