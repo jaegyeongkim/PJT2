@@ -23,6 +23,7 @@ import Introduce from "views/Front/Introduce/introduce.js";
 import Aboutus from "views/Front/AboutUs/aboutus.js";
 import License from "views/Front/License/license.js";
 import SignupPage from "views/SignupPage/SignupPage.js";
+import Contactus from "views/Front/ContactUs/contactus";
 // import Introduce from "views/Front/Introduce/introduce.js";
 
 var hist = createBrowserHistory();
@@ -78,12 +79,17 @@ const App = () => {
             path="/actor-search-result/:name"
             component={ActorSearchResult}
           />
+          {/* <Route
+            path="/actor-search-result/:name/detail"
+            component={ActorDetail}
+          /> */}
           <Route path="/actor-detail/:name" component={ActorDetail} />
           <Route path="/category" component={Category} />
           <Route path="/introduce" component={Introduce} />
           <Route path="/about-us" component={Aboutus} />
           <Route path="/license" component={License} />
           <Route path="/signup-page" component={SignupPage} />
+          <Route path="/contact-us" component={Contactus} />
 
           {/* !!!! 맨 밑에 있어야 동작합니다. */}
           <Route path="/" component={Components} />

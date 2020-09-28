@@ -53,15 +53,19 @@ export default function ActorSearch({ match }, props) {
           <h3>'{match.params.name}' 검색 결과입니다.</h3>
         </Grid>
 
-        <Grid>
+        <GridList>
           {searchResult.map((name, index) => {
             return (
-              <Grid>
+              <Grid
+                xs={3}
+                md={2}
+                style={{ cursor: "pointer", width: "100%", height: "100%" }}
+              >
                 <ActorCard name={name} index={index} />
               </Grid>
             );
           })}
-        </Grid>
+        </GridList>
       </Grid>
       <Footer />
     </div>

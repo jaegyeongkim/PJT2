@@ -56,6 +56,18 @@ export default function Footer(props) {
                 </Button>
               </Link>
             </ListItem>
+            <ListItem className={classes.inlineBlock}>
+              <Link
+                style={{ color: "inherit" }}
+                color="transparent"
+                to="/contact-us"
+                className={classes.block}
+              >
+                <Button color="transparent" target="_blank">
+                  Contact us
+                </Button>
+              </Link>
+            </ListItem>
             {/* <ListItem className={classes.inlineBlock}>
               <a
                 href="https://www.creative-tim.com/license?ref=mkr-footer"
