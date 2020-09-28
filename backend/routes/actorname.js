@@ -7,7 +7,7 @@ const path = require("path");
 
 // 배우 전체 조회
 app.get("/", async function (req, res) {
-  db.Actorname.name()
+  db.Actorname.findAll()
     .then((data) => res.json(data))
     .catch((err) => res.status(404).send(err));
 });
