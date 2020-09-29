@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 // nodejs library that concatenates classes
-import classNames from "classnames";
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
 
@@ -17,8 +16,6 @@ import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import styles from "assets/jss/material-kit-react/views/components.js";
-
-import { CommonContext } from "../../context/CommonContext.js";
 
 const useStyles = makeStyles(styles);
 

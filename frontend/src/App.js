@@ -50,10 +50,10 @@ const App = () => {
   }, []);
 
   // UseState 등록
-  const [eventListener, setEventListener] = useState(1);
   const [actorsData, setActorsData] = useState([]);
+  const [movieData, setMovieData] = useState([]);
+  const [genreData, setGenreData] = useState([]);
   // CommonContext로 사용하고 싶은 데이터 등록하면 됩니다.
-  const [productDatas, setProductDatas] = useState(0); // 전체 데이터
 
   // 배우 데이터
 
@@ -62,21 +62,25 @@ const App = () => {
       setActorsData(res.data);
     });
   }
+  async function getMovieDatas() {
+    Axios.get("https://j3b206.p.ssafy.io/api/movie/").then(function (res) {
+      setMovieData(res.data);
+    });
+  }
 
   useEffect(() => {
     getActorDatas();
+    getMovieDatas();
   }, []);
 
   return (
     // CommonCotext로 사용하고 싶은 데이터 등록하면 됩니다.
     <CommonContext.Provider
       value={{
-        productDatas,
-        setProductDatas,
-        eventListener,
-        setEventListener,
         actorsData,
         setActorsData,
+        movieData,
+        setMovieData,
       }}
     >
       <Router history={hist}>
