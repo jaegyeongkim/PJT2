@@ -6,6 +6,7 @@ const path = require("path");
 const api = require("./routes/index");
 const cors = require("cors");
 const helmet = require("helmet");
+const multer = require("multer");
 
 const { Sequelize } = require("sequelize");
 const session = require("express-session");
@@ -53,6 +54,10 @@ models.sequelize
     console.log(err);
   });
 
+// 업로드
+const fileUpload = require("express-fileupload");
+app.use(fileUpload());
+
 //----------------------------------
 // routes
 app.use(uploadFilePath, express.static(path.join(__dirname + uploadFilePath)));
@@ -65,6 +70,7 @@ app.use("/api/mouth", require(`${__dirname}/routes/mouth`));
 app.use("/api/movie", require(`${__dirname}/routes/movie`));
 app.use("/api/nose", require(`${__dirname}/routes/nose`));
 app.use("/api/actorname", require(`${__dirname}/routes/actorname`));
+app.use("/api/upload", require(`${__dirname}/routes/upload`));
 
 //----------------------------------
 // port

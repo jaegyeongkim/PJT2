@@ -23,6 +23,7 @@ import Introduce from "views/Front/Introduce/introduce.js";
 import Aboutus from "views/Front/AboutUs/aboutus.js";
 import License from "views/Front/License/license.js";
 import SignupPage from "views/SignupPage/SignupPage.js";
+import ApplyPage from "views/ApplyPage/ApplyPage.jsx";
 import Contactus from "views/Front/ContactUs/contactus";
 
 // import Introduce from "views/Front/Introduce/introduce.js";
@@ -45,8 +46,9 @@ console.log(window.React1 === window.React2);
 const App = () => {
   const [user, setUser] = useState([]);
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("user")) || []);
+    setUser(JSON.parse(sessionStorage.getItem("user")) || []);
   }, []);
+
   // UseState 등록
   const [eventListener, setEventListener] = useState(1);
   const [actorsData, setActorsData] = useState([]);
@@ -82,6 +84,7 @@ const App = () => {
           <Route path="/landing-page" component={LandingPage} />
           <Route path="/profile-page" component={ProfilePage} />
           <Route path="/login-page" component={LoginPage} />
+          <Route path="/apply-page" component={ApplyPage} />
           <Route path="/design" component={Design} />
           <Route path="/actor-search" component={ActorSearch} />
           <Route
