@@ -1,20 +1,17 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import {
-  Button,
   Grid,
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
   CardMedia,
   Typography,
-  Avatar,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 
 const ActorCard = (props) => {
-  const { name, idnex } = props;
+  const { name } = props;
   let history = useHistory();
   const clickActorDetail = () => {
     history.push(`/actor-detail/${name}`);
@@ -30,7 +27,7 @@ const ActorCard = (props) => {
   const classes = useStyles();
   return (
     <Grid>
-      <Card className={classes.root}>
+      <Card className={classes.root} style={{ margin: "auto" }}>
         <CardActionArea>
           <CardMedia
             onClick={clickActorDetail}

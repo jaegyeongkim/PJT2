@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { GridList, Grid, TextField } from "@material-ui/core";
 import classNames from "classnames";
 import Header from "components/Header/Header.js";
@@ -7,31 +7,28 @@ import Footer from "components/Footer/Footer.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/components.js";
-import SectionBasics from "../../Components/Sections/SectionBasics";
 import ActorCard from "./ActorCard";
 
 import { CommonContext } from "../../../context/CommonContext";
-import ActorSearch from "./ActorSearch";
 const useStyles = makeStyles(styles);
 
 export default function ActorSearchResult({ match }, props) {
   const classes = useStyles();
   let history = useHistory();
   const { actorsData } = useContext(CommonContext);
-  // const click = () => {
-  //   history.push(`actor-detail/${name}`);
-  // };
   const onKeyPress = (currentPathname) => (e) => {
     if (e.key === "Enter") {
       history.push(`/actor-search-result/${e.target.value}`);
     }
   };
   const searchResult = [];
+  const total = [];
   for (var i = 0; i < actorsData.length; i++) {
     if (actorsData[i]["name"].includes(match.params.name)) {
       searchResult.push(actorsData[i]["name"]);
     }
   }
+
   return (
     <div>
       <Header
@@ -92,7 +89,12 @@ export default function ActorSearchResult({ match }, props) {
               <Grid
                 xs={3}
                 md={2}
-                style={{ cursor: "pointer", width: "100%", height: "100%" }}
+                style={{
+                  cursor: "pointer",
+                  width: "100%",
+                  height: "100%",
+                  padding: "6px",
+                }}
               >
                 <ActorCard name={name} index={index} />
               </Grid>
