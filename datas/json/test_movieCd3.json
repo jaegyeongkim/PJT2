@@ -5,7 +5,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1978/197844_P01_132432.jpg",
     "genre": "공포(호러)",
     "birth": "20200903",
-    "userRating": 0,
+    "userRating": "0.00",
     "movie_cd": "20207350"
   },
   {
@@ -14,7 +14,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1978/197845_P01_132641.jpg",
     "genre": "공포(호러)",
     "birth": "20200910",
-    "userRating": 0,
+    "userRating": "0.00",
     "movie_cd": "20207372"
   },
   {
@@ -23,7 +23,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1896/189623_P07_135856.jpg",
     "genre": "드라마",
     "birth": "20200820",
-    "userRating": 0,
+    "userRating": "9.02",
     "movie_cd": "20196773"
   },
   {
@@ -32,7 +32,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1894/189440_P01_174535.jpg",
     "genre": "가족,드라마",
     "birth": "20200923",
-    "userRating": 0,
+    "userRating": "9.93",
     "movie_cd": "20198863"
   },
   {
@@ -41,7 +41,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1968/196839_P16_143328.jpg",
     "genre": "애니메이션,액션",
     "birth": "20200930",
-    "userRating": 0,
+    "userRating": "0.00",
     "movie_cd": "20206588"
   },
   {
@@ -50,7 +50,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1933/193330_P14_182748.jpg",
     "genre": "드라마",
     "birth": "20200910",
-    "userRating": 0,
+    "userRating": "9.46",
     "movie_cd": "20198484"
   },
   {
@@ -59,7 +59,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1838/183866_P32_140535.jpg",
     "genre": "드라마",
     "birth": "20200929",
-    "userRating": 0,
+    "userRating": "8.78",
     "movie_cd": "20199816"
   },
   {
@@ -68,7 +68,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1883/188367_P10_105533.jpg",
     "genre": "공포(호러)",
     "birth": "20200213",
-    "userRating": 0,
+    "userRating": "4.34",
     "movie_cd": "20195491"
   },
   {
@@ -77,7 +77,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1822/182234_P49_102023.jpg",
     "genre": "코미디,액션",
     "birth": "20200812",
-    "userRating": 0,
+    "userRating": "6.37",
     "movie_cd": "20199883"
   },
   {
@@ -86,7 +86,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1913/191305_P01_143902.jpg",
     "genre": "드라마",
     "birth": "20200820",
-    "userRating": 0,
+    "userRating": "0.00",
     "movie_cd": "20198996"
   },
   {
@@ -95,7 +95,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1786/178687_P13_102523.jpg",
     "genre": "다큐멘터리",
     "birth": "20200903",
-    "userRating": 0,
+    "userRating": "9.64",
     "movie_cd": "20189973"
   },
   {
@@ -104,7 +104,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1921/192191_P01_142404.jpg",
     "genre": "드라마",
     "birth": "20200917",
-    "userRating": 0,
+    "userRating": "7.54",
     "movie_cd": "20205001"
   },
   {
@@ -113,7 +113,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1946/194688_P23_153424.jpg",
     "genre": "다큐멘터리",
     "birth": "20200716",
-    "userRating": 0,
+    "userRating": "4.15",
     "movie_cd": "20209954"
   },
   {
@@ -122,7 +122,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1788/178857_P00_153529.jpg",
     "genre": "드라마",
     "birth": "20181025",
-    "userRating": 0,
+    "userRating": "7.81",
     "movie_cd": "20188824"
   },
   {
@@ -131,7 +131,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1879/187981_P03_113847.jpg",
     "genre": "멜로/로맨스",
     "birth": "20200910",
-    "userRating": 0,
+    "userRating": "6.92",
     "movie_cd": "20192764"
   },
   {
@@ -140,7 +140,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1944/194485_P28_101253.jpg",
     "genre": "코미디,가족,액션",
     "birth": "20200820",
-    "userRating": 0,
+    "userRating": "5.33",
     "movie_cd": "20201785"
   },
   {
@@ -149,7 +149,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1652/165287_P22_101823.jpg",
     "genre": "액션",
     "birth": "20200923",
-    "userRating": 0,
+    "userRating": "8.30",
     "movie_cd": "20178401"
   },
   {
@@ -158,7 +158,7 @@
     "poster": "",
     "genre": "드라마",
     "birth": "19910301",
-    "userRating": 0,
+    "userRating": "0.00",
     "movie_cd": "19930026"
   },
   {
@@ -167,7 +167,7 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1943/194344_P16_113224.jpeg",
     "genre": "다큐멘터리",
     "birth": "20200801",
-    "userRating": 0,
+    "userRating": "9.00",
     "movie_cd": "20202485"
   },
   {
@@ -176,16 +176,16 @@
     "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1972/197280_P01_121516.jpg",
     "genre": "공포(호러)",
     "birth": "20200916",
-    "userRating": 0,
+    "userRating": "3.35",
     "movie_cd": "20206679"
   },
   {
     "id": 21,
     "name": "벌새",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1953/195362_P01_161121.jpg",
+    "poster": "ghttps://ssl.pstatic.net/imgmovie/mdi/mit110/1953/195362_P01_161121.jpg",
     "genre": "드라마",
     "birth": "20190829",
-    "userRating": 0,
+    "userRating": "0.00",
     "movie_cd": "20181103"
   },
   {
@@ -1028,7 +1028,7 @@
   {
     "id": 115,
     "name": "집",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1938/193837_P11_101655.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1938/193837_P11_101655.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/1938/193837_P11_101655.jpg",
     "genre": "판타지,애니메이션",
     "birth": "20110317",
     "userRating": 0,
@@ -1046,7 +1046,7 @@
   {
     "id": 117,
     "name": "짐승의 끝",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0735/73549_P24_114858.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0735/73549_P24_114858.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/0735/73549_P24_114858.jpg",
     "genre": "판타지,드라마",
     "birth": "20110317",
     "userRating": 0,
@@ -1055,7 +1055,7 @@
   {
     "id": 118,
     "name": "파수꾼",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1863/186333_P01_143626.png",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1863/186333_P01_143626.pnghttps://ssl.pstatic.net/imgmovie/mdi/mit110/1863/186333_P01_143626.png",
     "genre": "드라마",
     "birth": "20110303",
     "userRating": 0,
@@ -1064,7 +1064,7 @@
   {
     "id": 119,
     "name": "로망은 없다",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0714/71407_P12_135832.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0714/71407_P12_135832.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/0714/71407_P12_135832.jpg",
     "genre": "애니메이션,드라마,가족",
     "birth": "20091210",
     "userRating": 0,
@@ -1073,7 +1073,7 @@
   {
     "id": 120,
     "name": "여자 없는 세상",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0723/72338_P06_135859.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0723/72338_P06_135859.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/0723/72338_P06_135859.jpg",
     "genre": "드라마",
     "birth": "20091210",
     "userRating": 0,
@@ -1082,7 +1082,7 @@
   {
     "id": 121,
     "name": "너와 나의 21세기",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0712/71212_P10_135751.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0712/71212_P10_135751.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/0712/71212_P10_135751.jpg",
     "genre": "드라마",
     "birth": "20091210",
     "userRating": 0,
@@ -1091,7 +1091,7 @@
   {
     "id": 122,
     "name": "나는 곤경에 처했다!",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0712/71209_P11_135513.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0712/71209_P11_135513.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/0712/71209_P11_135513.jpg",
     "genre": "코미디,멜로/로맨스",
     "birth": "20091210",
     "userRating": 0,
@@ -1100,7 +1100,7 @@
   {
     "id": 123,
     "name": "제불찰씨 이야기",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0500/E0081-01.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0500/E0081-01.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/0500/E0081-01.jpg",
     "genre": "애니메이션,드라마,스릴러,미스터리",
     "birth": "20090312",
     "userRating": 0,
@@ -1109,7 +1109,7 @@
   {
     "id": 124,
     "name": "그녀들의 방",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1966/196675_P01_162741.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1966/196675_P01_162741.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/1966/196675_P01_162741.jpg",
     "genre": "드라마",
     "birth": "20090312",
     "userRating": 0,
@@ -1118,7 +1118,7 @@
   {
     "id": 125,
     "name": "어떤 개인 날",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0522/E2238-01.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0522/E2238-01.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/0522/E2238-01.jpg",
     "genre": "드라마",
     "birth": "20090312",
     "userRating": 0,
@@ -1127,7 +1127,7 @@
   {
     "id": 126,
     "name": "장례식의 멤버",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0508/E0833-00.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0508/E0833-00.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/0508/E0833-00.jpg",
     "genre": "드라마",
     "birth": "20090312",
     "userRating": 0,
@@ -1136,7 +1136,7 @@
   {
     "id": 127,
     "name": "세계일주",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1549/154964_P18_100952.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1549/154964_P18_100952.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/1549/154964_P18_100952.jpg",
     "genre": "가족,어드벤처",
     "birth": "20150326",
     "userRating": 0,
@@ -1145,7 +1145,7 @@
   {
     "id": 128,
     "name": "임을 위한 행진곡",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1564/156466_P37_143658.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1564/156466_P37_143658.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/1564/156466_P37_143658.jpg",
     "genre": "드라마",
     "birth": "20180516",
     "userRating": 0,
@@ -1154,7 +1154,7 @@
   {
     "id": 129,
     "name": "꿈은 이루어진다",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0709/70922_P25_170029.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0709/70922_P25_170029.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/0709/70922_P25_170029.jpg",
     "genre": "코미디,드라마",
     "birth": "20100527",
     "userRating": 0,
@@ -1163,7 +1163,7 @@
   {
     "id": 130,
     "name": "비스트",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1969/196935_P01_142055.JPG",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1969/196935_P01_142055.JPGhttps://ssl.pstatic.net/imgmovie/mdi/mit110/1969/196935_P01_142055.JPG",
     "genre": "범죄,스릴러",
     "birth": "20190626",
     "userRating": 0,
@@ -1172,7 +1172,7 @@
   {
     "id": 131,
     "name": "프랑스여자",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1853/185380_P11_141202.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1853/185380_P11_141202.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/1853/185380_P11_141202.jpg",
     "genre": "드라마",
     "birth": "20200604",
     "userRating": 0,
@@ -1181,7 +1181,7 @@
   {
     "id": 132,
     "name": "라디오 스타",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0917/91796_P01_164300.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/0917/91796_P01_164300.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/0917/91796_P01_164300.jpg",
     "genre": "드라마",
     "birth": "20060928",
     "userRating": 0,
@@ -1190,7 +1190,7 @@
   {
     "id": 133,
     "name": "나의 노래는 멀리멀리",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1879/187979_P14_112112.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1879/187979_P14_112112.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/1879/187979_P14_112112.jpg",
     "genre": "다큐멘터리",
     "birth": "20191003",
     "userRating": 0,
@@ -1199,7 +1199,7 @@
   {
     "id": 134,
     "name": "버닝",
-    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1892/189276_P07_165646.jpg",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1892/189276_P07_165646.jpghttps://ssl.pstatic.net/imgmovie/mdi/mit110/1892/189276_P07_165646.jpg",
     "genre": "미스터리",
     "birth": "20180517",
     "userRating": 0,
@@ -1208,7 +1208,7 @@
   {
     "id": 135,
     "name": "마더",
-    "poster": "",
+    "poster": "https://ssl.pstatic.net/imgmovie/mdi/mit110/1949/194953_P01_152837.png",
     "genre": "드라마",
     "birth": "20090528",
     "userRating": 0,
