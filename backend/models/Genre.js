@@ -1,7 +1,7 @@
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  const Member = sequelize.define(
-    "Member",
+  const Genre = sequelize.define(
+    "Genre",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -9,35 +9,14 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: true,
         primaryKey: true,
       },
-      email: {
-        unique: true,
-        type: DataTypes.STRING(50),
-        allowNull: false,
-      },
-      password: {
-        type: DataTypes.STRING(200),
-        allowNull: false,
-      },
-      gender: {
-        type: DataTypes.STRING(10),
-        allowNull: false,
-      },
-      name: {
+      genre_name: {
         type: DataTypes.STRING(20),
         allowNull: false,
-      },
-      birth: {
-        type: DataTypes.STRING(20),
-        allowNull: true,
-      },
-      image: {
-        type: DataTypes.STRING(200),
-        allowNull: true,
       },
     },
     {
       sequelize,
-      tableName: "Members",
+      tableName: "Genres",
       charset: "utf8",
       collate: "utf8_unicode_ci",
       timestamps: false,
@@ -50,5 +29,5 @@ module.exports = (sequelize, DataTypes) => {
   //   });
   // };
 
-  return Member;
+  return Genre;
 };

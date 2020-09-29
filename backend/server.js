@@ -65,6 +65,7 @@ app.use("/api/mouth", require(`${__dirname}/routes/mouth`));
 app.use("/api/movie", require(`${__dirname}/routes/movie`));
 app.use("/api/nose", require(`${__dirname}/routes/nose`));
 app.use("/api/actorname", require(`${__dirname}/routes/actorname`));
+app.use("/api/genre", require(`${__dirname}/routes/genre`));
 
 //----------------------------------
 // port
