@@ -27,6 +27,7 @@ export default function CustomInput(props) {
     white,
     inputRootCustomClasses,
     success,
+    onKeyPress,
   } = props;
 
   const labelClasses = classNames({
@@ -76,6 +77,7 @@ export default function CustomInput(props) {
         id={id}
         value={value}
         onChange={onChange}
+        onKeyPress={onKeyPress}
         {...inputProps}
       />
     </FormControl>

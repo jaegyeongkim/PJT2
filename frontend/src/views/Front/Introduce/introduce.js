@@ -37,13 +37,22 @@ const Introduce = (props) => {
         className={classNames(classes.main, classes.mainRaised)}
       >
         <Grid>
-          <Grid>
+          <Grid style={{ float: "left" }}>
             <h2>The Casting은</h2>
-
             <h5>
               배우의 눈썹, 눈, 코, 입을 관상 데이터와 비교하여 카테고리별로
               배우를 추천해드립니다.
             </h5>
+            <Grid item style={{ textAlign: "right", float: "right" }}>
+              <img
+                style={{
+                  width: "50%",
+                  Height: "50%",
+                }}
+                src={`https://j3b206.p.ssafy.io/static/img/main_img/intro1.png`}
+                alt=""
+              />
+            </Grid>
           </Grid>
 
           <Grid>

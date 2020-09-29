@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import crypto from "crypto";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -33,6 +34,7 @@ export default function SignupPage(props) {
   const [cardAnimaton, setCardAnimation] = useState("cardHidden");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
   const [gender, setGender] = useState("");
   const [name, setName] = useState("");
   const [birth, setBirth] = useState("");
@@ -54,7 +56,16 @@ export default function SignupPage(props) {
     if (memberList.length !== 0) {
       alert("이미 있는 이메일입니다.");
       return;
+    } else if (password != password2) {
+      alert("비밀번호가 다릅니다.");
+      return;
     } else {
+      const encrypted = crypto
+        .createHash("sha512")
+        .update(password)
+        .digest("base64");
+      password = encrypted;
+      console.log(password);
       return axios
         .post("/api/member/signup", {
           email: email,
@@ -77,6 +88,9 @@ export default function SignupPage(props) {
   const handlePassWordChange = (e) => {
     setPassword(e.target.value);
   };
+  const handlePassWord2Change = (e) => {
+    setPassword2(e.target.value);
+  };
   const handleGenderChange = (e) => {
     setGender(e.target.value);
   };
@@ -89,12 +103,6 @@ export default function SignupPage(props) {
   const handleuImageChange = (e) => {
     setuImage(e.target.value);
   };
-  // const handleKeyPress = (e) => {
-  //   // 눌려진 키가 Enter 면 handleCreate 호출
-  //   if (e.key === "Enter") {
-  //     handleCreate();
-  //   }
-  // };
   const handleCreate = () => {
     if (!password || !email || !gender || !name || !birth) {
       alert("회원정보를 모두 입력해주세요.");
@@ -103,11 +111,18 @@ export default function SignupPage(props) {
       newmember(email, password, gender, name, birth, uimage);
     }
   };
+  const handleKeyPress = (e) => {
+    // 눌려진 키가 Enter 면 handleCreate 호출
+    if (e.key === "Enter") {
+      handleCreate();
+    }
+  };
   setTimeout(function () {
     setCardAnimation("");
   }, 100);
   const classes = useStyles();
   const { ...rest } = props;
+
   return (
     <div>
       <Header
@@ -138,6 +153,7 @@ export default function SignupPage(props) {
                       labelText="이메일 *"
                       id="email"
                       value={email}
+                      onKeyPress={handleKeyPress}
                       onChange={handleEmailChange}
                       formControlProps={{
                         fullWidth: true,
@@ -155,6 +171,7 @@ export default function SignupPage(props) {
                       labelText="비밀번호 *"
                       id="pass"
                       value={password}
+                      onKeyPress={handleKeyPress}
                       onChange={handlePassWordChange}
                       formControlProps={{
                         fullWidth: true,
@@ -174,6 +191,9 @@ export default function SignupPage(props) {
                     <CustomInput
                       labelText="비밀번호 확인 *"
                       id="pass"
+                      value={password2}
+                      onKeyPress={handleKeyPress}
+                      onChange={handlePassWord2Change}
                       formControlProps={{
                         fullWidth: true,
                       }}
@@ -193,6 +213,7 @@ export default function SignupPage(props) {
                       labelText="이름 *"
                       id="name"
                       value={name}
+                      onKeyPress={handleKeyPress}
                       onChange={handleNameChange}
                       formControlProps={{
                         fullWidth: true,
@@ -211,6 +232,7 @@ export default function SignupPage(props) {
                       labelText="성별 *"
                       id="name"
                       value={gender}
+                      onKeyPress={handleKeyPress}
                       onChange={handleGenderChange}
                       formControlProps={{
                         fullWidth: true,
@@ -229,6 +251,7 @@ export default function SignupPage(props) {
                       labelText="출생년도 *"
                       id="name"
                       value={birth}
+                      onKeyPress={handleKeyPress}
                       onChange={handleBirthChange}
                       formControlProps={{
                         fullWidth: true,

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import crypto from "crypto";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -48,15 +49,20 @@ export default function LoginPage(props) {
     }
     fetchData();
   }, []);
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(sessionStorage.getItem("user"));
   const Login = (email, password) => {
+    const encrypted = crypto
+      .createHash("sha512")
+      .update(password)
+      .digest("base64");
+    password = encrypted;
     const memberList = member.filter((mem) => mem.email === email);
     if (memberList.length !== 0) {
       if (memberList[0].password !== password) {
         alert("패스워드를 정확히 입력해주세요.");
         return;
       } else {
-        localStorage.setItem("user", JSON.stringify(memberList));
+        sessionStorage.setItem("user", JSON.stringify(memberList));
         history.push(`/`);
         return;
       }
@@ -71,6 +77,12 @@ export default function LoginPage(props) {
   const handlePassWordChange = (e) => {
     setPassword(e.target.value);
   };
+  const handleKeyPress = (e) => {
+    // 눌려진 키가 Enter 면 handleCreate 호출
+    if (e.key === "Enter") {
+      handleLogin();
+    }
+  };
 
   const handleLogin = () => {
     if (!password || !email) {
@@ -81,7 +93,7 @@ export default function LoginPage(props) {
     }
   };
   if (user) {
-    localStorage.removeItem("user");
+    sessionStorage.removeItem("user");
     alert("로그아웃이 완료되었습니다.");
     history.push("/");
     return <></>;
@@ -116,6 +128,7 @@ export default function LoginPage(props) {
                       labelText="Email..."
                       id="email"
                       value={email}
+                      onKeyPress={handleKeyPress}
                       onChange={handleEmailChange}
                       formControlProps={{
                         fullWidth: true,
@@ -133,6 +146,7 @@ export default function LoginPage(props) {
                       labelText="Password"
                       id="pass"
                       value={password}
+                      onKeyPress={handleKeyPress}
                       onChange={handlePassWordChange}
                       formControlProps={{
                         fullWidth: true,

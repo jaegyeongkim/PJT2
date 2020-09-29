@@ -1,38 +1,22 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
-import { GridList, Grid, TextField } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
+import { Grid, TextField } from "@material-ui/core";
 import classNames from "classnames";
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/components.js";
-import SectionBasics from "../../Components/Sections/SectionBasics";
 
-import datas from "./ActorName";
 const useStyles = makeStyles(styles);
 
 export default function ActorSearch(props) {
   const classes = useStyles();
   let history = useHistory();
 
-  const { ...rest } = props;
-
   const onKeyPress = (currentPathname) => (e) => {
     if (e.key === "Enter") {
       history.push(`/actor-search-result/${e.target.value}`);
-      // // 만약에 서치에서 또 서치를 하면
-      // if (currentPathname.pathname.includes("searchresult")) {
-      //   history.push(`${e.target.value}`);
-      // }
-      // // 만약에 디테일에서 서치를 하면
-      // else if (currentPathname.pathname.includes("voteitemdetail")) {
-      //   history.push(`/searchresult/${e.target.value}`);
-      // }
-      // // 아니라면
-      // else {
-      //   history.push(`/searchresult/${e.target.value}`);
-      // }
     }
   };
 

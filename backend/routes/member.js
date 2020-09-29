@@ -5,7 +5,7 @@ const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
-const fileUpload = require("express-fileupload");
+// const fileUpload = require("express-fileupload");
 const cors = require("cors");
 app.use(cors());
 

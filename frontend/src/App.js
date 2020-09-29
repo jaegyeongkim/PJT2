@@ -23,7 +23,9 @@ import Introduce from "views/Front/Introduce/introduce.js";
 import Aboutus from "views/Front/AboutUs/aboutus.js";
 import License from "views/Front/License/license.js";
 import SignupPage from "views/SignupPage/SignupPage.js";
+import ApplyPage from "views/ApplyPage/ApplyPage.jsx";
 import Contactus from "views/Front/ContactUs/contactus";
+
 // import Introduce from "views/Front/Introduce/introduce.js";
 
 var hist = createBrowserHistory();
@@ -44,13 +46,14 @@ console.log(window.React1 === window.React2);
 const App = () => {
   const [user, setUser] = useState([]);
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("user")) || []);
+    setUser(JSON.parse(sessionStorage.getItem("user")) || []);
   }, []);
+
   // UseState 등록
-  const [eventListener, setEventListener] = useState(1);
   const [actorsData, setActorsData] = useState([]);
+  const [movieData, setMovieData] = useState([]);
+  const [genreData, setGenreData] = useState([]);
   // CommonContext로 사용하고 싶은 데이터 등록하면 됩니다.
-  const [productDatas, setProductDatas] = useState(0); // 전체 데이터
 
   // 배우 데이터
 
@@ -59,20 +62,25 @@ const App = () => {
       setActorsData(res.data);
     });
   }
+  async function getMovieDatas() {
+    Axios.get("https://j3b206.p.ssafy.io/api/movie/").then(function (res) {
+      setMovieData(res.data);
+    });
+  }
+
   useEffect(() => {
     getActorDatas();
+    getMovieDatas();
   }, []);
 
   return (
     // CommonCotext로 사용하고 싶은 데이터 등록하면 됩니다.
     <CommonContext.Provider
       value={{
-        productDatas,
-        setProductDatas,
-        eventListener,
-        setEventListener,
         actorsData,
         setActorsData,
+        movieData,
+        setMovieData,
       }}
     >
       <Router history={hist}>
@@ -80,6 +88,7 @@ const App = () => {
           <Route path="/landing-page" component={LandingPage} />
           <Route path="/profile-page" component={ProfilePage} />
           <Route path="/login-page" component={LoginPage} />
+          <Route path="/apply-page" component={ApplyPage} />
           <Route path="/design" component={Design} />
           <Route path="/actor-search" component={ActorSearch} />
           <Route
