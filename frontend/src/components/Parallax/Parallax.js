@@ -8,7 +8,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // core components
 import styles from "assets/jss/material-kit-react/components/parallaxStyle.js";
-import { Opacity } from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 

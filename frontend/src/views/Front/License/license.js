@@ -1,30 +1,3 @@
-// export default function Lisence(props) {
-//   const classes = useStyles();
-//   let history = useHistory();
-
-//   const { ...rest } = props;
-
-//   return (
-//     <div>
-//       <Header
-//         brand="The Casting"
-//         rightLinks={<HeaderLinks />}
-//         fixed
-//         color="white"
-//       />
-//       <div
-//         style={{ marginTop: "100px" }}
-//         className={classNames(classes.main, classes.mainRaised)}
-//       >
-//         <Grid>
-//           <h1>lisnece</h1>
-//         </Grid>
-//       </div>
-//       <Footer />
-//     </div>
-//   );
-// }
-
 import React from "react";
 import { Grid } from "@material-ui/core";
 import Footer from "components/Footer/Footer.js";
@@ -188,6 +161,7 @@ const Terms = () => {
           </Grid>
         </Grid>
       </Wrapper>
+      <Footer />
     </Grid>
   );
 };
