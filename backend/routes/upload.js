@@ -1,10 +1,10 @@
-const express = require("express");
-const multer = require("multer");
-const fs = require("fs");
-const path = require("path");
-const app = express.Router();
-const cors = require("cors");
-app.use(cors());
+// const express = require("express");
+// const multer = require("multer");
+// const fs = require("fs");
+// const path = require("path");
+// const app = express.Router();
+// const cors = require("cors");
+// app.use(cors());
 
 // fs.readdir("static/img/actor", (error) => {
 //   // uploads 폴더 없으면 생성
@@ -33,10 +33,10 @@ app.use(cors());
 //   res.json({ url: `/img/${req.file.filename}` });
 // });
 
-app.post("/", upload.single("img"), async function (req, res, next) {
-  res.send({
-    fileName: req.file.filename,
-  });
-});
+// app.post("/", upload.single("img"), async function (req, res, next) {
+//   res.send({
+//     fileName: req.file.filename,
+//   });
+// });
 
-module.exports = router;
+// module.exports = router;
