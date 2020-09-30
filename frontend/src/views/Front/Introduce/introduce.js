@@ -32,10 +32,7 @@ const Introduce = (props) => {
         fixed
         color="white"
       />
-      <Grid
-        style={{ marginTop: "100px" }}
-        className={classNames(classes.main, classes.mainRaised)}
-      >
+      <Grid className={classNames(classes.main, classes.mainRaised)}>
         <Grid>
           <Grid style={{ float: "left" }}>
             <h2>The Casting은</h2>

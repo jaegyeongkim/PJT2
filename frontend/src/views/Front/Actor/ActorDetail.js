@@ -39,7 +39,6 @@ const ActorDetail = ({ match }) => {
       }
     }
   }
-  console.log(movie_detail_data);
   return (
     <Grid>
       <Header
@@ -48,10 +47,7 @@ const ActorDetail = ({ match }) => {
         fixed
         color="white"
       />
-      <Grid
-        style={{ marginTop: "100px" }}
-        className={classNames(classes.main, classes.mainRaised)}
-      >
+      <Grid className={classNames(classes.main, classes.mainRaised)}>
         <Grid container>
           <Grid item xs={3}>
             <img

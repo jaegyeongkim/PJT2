@@ -63,7 +63,7 @@ export default function Header(props) {
   let history = useHistory();
   const MoveToHome = () => {
     history.push("/");
-    return console.log(123);
+    // return console.log(123);
   };
   const brandComponent = (
     <Button onClick={MoveToHome} className={classes.title}>
