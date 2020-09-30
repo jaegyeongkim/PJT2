@@ -65,7 +65,7 @@ export default function SignupPage(props) {
         .update(password)
         .digest("base64");
       password = encrypted;
-      console.log(password);
+      // console.log(password);
       return axios
         .post("/api/member/signup", {
           email: email,

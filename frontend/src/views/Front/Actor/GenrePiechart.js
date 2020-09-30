@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Grid } from "@material-ui/core";
 import Wrapper from "../../../assets/jss/material-kit-react/components/GenrePiechart";
-
+import { CommonContext } from "../../../context/CommonContext";
 import { PieChart } from "react-minimal-pie-chart";
 const GenrePiechart = () => {
+  const { genreData } = useContext(CommonContext);
+  console.log(genreData);
   return (
     <Wrapper>
       <Grid>

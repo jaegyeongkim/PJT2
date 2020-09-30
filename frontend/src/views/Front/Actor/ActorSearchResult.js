@@ -25,10 +25,13 @@ export default function ActorSearchResult({ match }, props) {
   const total = [];
   for (var i = 0; i < actorsData.length; i++) {
     if (actorsData[i]["name"].includes(match.params.name)) {
-      searchResult.push(actorsData[i]["name"]);
+      searchResult.push([actorsData[i]["name"], actorsData[i]["movie_total"]]);
     }
   }
-
+  searchResult.sort(function (a, b) {
+    return a[1] - b[1];
+  });
+  searchResult.reverse();
   return (
     <div>
       <Header
@@ -38,7 +41,7 @@ export default function ActorSearchResult({ match }, props) {
         color="white"
       />
       <Grid
-        style={{ marginTop: "100px" }}
+        // style={{ marginTop: "70px" }}
         className={classNames(classes.main, classes.mainRaised)}
       >
         <Grid>
@@ -96,7 +99,7 @@ export default function ActorSearchResult({ match }, props) {
                   padding: "6px",
                 }}
               >
-                <ActorCard name={name} index={index} />
+                <ActorCard name={name[0]} index={index} />
               </Grid>
             );
           })}

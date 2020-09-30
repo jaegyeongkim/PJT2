@@ -21,10 +21,7 @@ export default function Category(props) {
         {...rest}
       />
 
-      <Grid
-        style={{ marginTop: "100px" }}
-        className={classNames(classes.main, classes.mainRaised)}
-      >
+      <Grid className={classNames(classes.main, classes.mainRaised)}>
         <Grid
           container
           style={{

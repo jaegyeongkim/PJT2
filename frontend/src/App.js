@@ -32,7 +32,7 @@ var hist = createBrowserHistory();
 
 require("react-dom");
 window.React2 = require("react");
-console.log(window.React1 === window.React2);
+// console.log(window.React1 === window.React2);
 
 // app
 
@@ -67,10 +67,16 @@ const App = () => {
       setMovieData(res.data);
     });
   }
+  async function getGenreDatas() {
+    Axios.get("https://j3b206.p.ssafy.io/api/genre/").then(function (res) {
+      setGenreData(res.data);
+    });
+  }
 
   useEffect(() => {
     getActorDatas();
     getMovieDatas();
+    getGenreDatas();
   }, []);
 
   return (
@@ -81,6 +87,8 @@ const App = () => {
         setActorsData,
         movieData,
         setMovieData,
+        genreData,
+        setGenreData,
       }}
     >
       <Router history={hist}>

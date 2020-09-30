@@ -28,10 +28,7 @@ export default function ActorSearch(props) {
         fixed
         color="white"
       />
-      <div
-        style={{ marginTop: "100px" }}
-        className={classNames(classes.main, classes.mainRaised)}
-      >
+      <div className={classNames(classes.main, classes.mainRaised)}>
         <Grid>
           <Grid
             container
