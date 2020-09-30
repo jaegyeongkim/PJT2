@@ -4,19 +4,19 @@ import json
 import os
 import sys
 import urllib.request
-client_id = "네이버 api"
-client_secret = "네이버 api"
+client_id = "PX59dEp99gCNwxPwUjqg"
+client_secret = "HnUX3K1Xlm"
 
-with open('movie_com.json', 'r', encoding='utf-8') as f:
+with open('movie_com2.json', 'r', encoding='utf-8') as f:
   json_data = json.load(f)
 
 # curl "https://openapi.naver.com/v1/search/movie.xml?query=%EC%A3%BC%EC%8B%9D&display=10&start=1&genre=1" \
 #     -H "X-Naver-Client-Id:PX59dEp99gCNwxPwUjqg" \
 #     -H "X-Naver-Client-Secret:PX59dEp99gCNwxPwUjqg" -v
 # 여기부터 3535 부터 하면됨
-start = 3535
+start = 1113
 # for i in range(10):
-end = 9
+end = 1
 # cnt = 1
 for idx,j in enumerate(json_data[start:]):
     # print(idx)
