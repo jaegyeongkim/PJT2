@@ -4,8 +4,8 @@ import json
 import os
 import sys
 import urllib.request
-client_id = "PX59dEp99gCNwxPwUjqg"
-client_secret = "HnUX3K1Xlm"
+client_id = "네이버 api"
+client_secret = "네이버 api"
 
 with open('movie_com.json', 'r', encoding='utf-8') as f:
   json_data = json.load(f)
