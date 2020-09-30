@@ -7,17 +7,19 @@ import urllib.request
 client_id = "PX59dEp99gCNwxPwUjqg"
 client_secret = "HnUX3K1Xlm"
 
-with open('test_movieCd3.json', 'r', encoding='utf-8') as f:
+with open('movie_com2.json', 'r', encoding='utf-8') as f:
   json_data = json.load(f)
 
 # curl "https://openapi.naver.com/v1/search/movie.xml?query=%EC%A3%BC%EC%8B%9D&display=10&start=1&genre=1" \
 #     -H "X-Naver-Client-Id:PX59dEp99gCNwxPwUjqg" \
 #     -H "X-Naver-Client-Secret:PX59dEp99gCNwxPwUjqg" -v
-start = 114
-end = 20
-cnt = 1
+# 여기부터 3535 부터 하면됨
+start = 1113
+# for i in range(10):
+end = 1
+# cnt = 1
 for idx,j in enumerate(json_data[start:]):
-    print(idx)
+    # print(idx)
     if idx > end:
         break
     name = j["name"]
@@ -43,6 +45,7 @@ for idx,j in enumerate(json_data[start:]):
             # cnt += 1
             # print(movie_json["items"][0]["image"])
             j["poster"] += movie_json["items"][0]["image"]
+            j['userRating'] = movie_json["items"][0]["userRating"]
 
         except:
             pass
@@ -52,9 +55,10 @@ for idx,j in enumerate(json_data[start:]):
     else:
         # print("Error Code:" + rescode)
         pass
+    # start += end +
     
 
-with open('./test_movieCd3.json', 'w', encoding='utf-8') as make_file:
+with open('./movie_com.json', 'w', encoding='utf-8') as make_file:
     json.dump(json_data, make_file, ensure_ascii = False, indent='\t')
 
 
