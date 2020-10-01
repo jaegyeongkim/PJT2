@@ -119,24 +119,28 @@ const ActorDetail = ({ match }) => {
             </Grid>
           </Grid>
         </Grid>
-
-        <GridList>
-          {movie_detail_data.map((movie, index) => {
-            return (
-              <Grid
-                xs={3}
-                md={2}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  padding: "6px",
-                }}
-              >
-                <MovieCard movie={movie} index={index} />
-              </Grid>
-            );
-          })}
-        </GridList>
+        <Grid>
+          <Grid>
+            <h4>출연 영화</h4>
+          </Grid>
+          <GridList>
+            {movie_detail_data.map((movie, index) => {
+              return (
+                <Grid
+                  xs={3}
+                  md={2}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    padding: "6px",
+                  }}
+                >
+                  <MovieCard movie={movie} index={index} />
+                </Grid>
+              );
+            })}
+          </GridList>
+        </Grid>
       </Grid>
       <Footer />
     </Grid>
