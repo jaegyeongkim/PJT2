@@ -25,6 +25,7 @@ import License from "views/Front/License/license.js";
 import SignupPage from "views/SignupPage/SignupPage.js";
 import ApplyPage from "views/ApplyPage/ApplyPage.jsx";
 import Contactus from "views/Front/ContactUs/contactus";
+import CategoryResult from "views/Front/Category/CategoryResult";
 
 // import Introduce from "views/Front/Introduce/introduce.js";
 
@@ -114,6 +115,10 @@ const App = () => {
           <Route path="/license" component={License} />
           <Route path="/signup-page" component={SignupPage} />
           <Route path="/contact-us" component={Contactus} />
+          <Route
+            path="/category-result/:gender/:cat1/:cat2/:cat3"
+            component={CategoryResult}
+          />
 
           {/* !!!! 맨 밑에 있어야 동작합니다. */}
           <Route path="/" component={Components} />
