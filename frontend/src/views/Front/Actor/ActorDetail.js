@@ -71,24 +71,54 @@ const ActorDetail = ({ match }) => {
         color="white"
       />
       <Grid className={classNames(classes.main, classes.mainRaised)}>
-        <Grid container>
-          <Grid item xs={3}>
-            <img
-              style={{ width: "100%" }}
-              src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.name}.jpg`}
-              alt="배우 사진"
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <p>{match.params.name}</p>
-            <p>관상 데이터</p>
-          </Grid>
-          <Grid item xs={5}>
-            <GenrePiechart genre_cnt={genre_cnt} />
+        <Grid
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Grid container xs={11}>
+            <Grid
+              item
+              xs={3}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                style={{ width: "80%" }}
+                src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.name}.jpg`}
+                alt="배우 사진"
+              />
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <p>{match.params.name}</p>
+              <p>관상 데이터</p>
+            </Grid>
+            <Grid
+              item
+              xs={6}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <GenrePiechart xs={12} genre_cnt={genre_cnt} />
+            </Grid>
           </Grid>
         </Grid>
-
-        <Grid></Grid>
 
         <GridList>
           {movie_detail_data.map((movie, index) => {
