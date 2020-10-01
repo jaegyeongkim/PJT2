@@ -2,6 +2,7 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import Wrapper from "../../../assets/jss/material-kit-react/components/GenrePiechart";
 import { PieChart } from "react-minimal-pie-chart";
+import Chart from "react-google-charts";
 //   0: {id: 1, genre_name: "공포(호러)"}
 // 1: {id: 2, genre_name: "드라마"}
 // 2: {id: 3, genre_name: "가족"}
@@ -26,25 +27,32 @@ import { PieChart } from "react-minimal-pie-chart";
 // 21: {id: 22, genre_name: ""}
 const GenrePiechart = (props) => {
   var { genre_cnt } = props;
-  console.log(genre_cnt);
+  genre_cnt.unshift(["장르", "횟수"]);
+
   return (
     <Wrapper>
       <Grid>
-        <PieChart
-          data={[
-            { title: "One", value: 10, color: "#E38627" },
-            { title: "Two", value: 15, color: "#C13C37" },
-            { title: "Three", value: 20, color: "#6A2135" },
-          ]}
+        <Chart
+          width={"50vw"}
+          height={"40vh"}
+          chartType="PieChart"
+          loader={<div>Loading Chart</div>}
+          data={genre_cnt}
+          options={{
+            title: "출연 영화 장르",
+            // Just add this option
+            is3D: true,
+          }}
+          rootProps={{ "data-testid": "2" }}
         />
-        {genre_cnt.map((genre, index) => {
+
+        {/* {genre_cnt.map((genre, index) => {
           return (
             <p>
               {genre[0]}: {genre[1]}
             </p>
           );
-        })}
-        {/* https://www.npmjs.com/package/react-minimal-pie-chart */}
+        })} */}
       </Grid>
     </Wrapper>
   );
