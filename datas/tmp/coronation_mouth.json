@@ -6,11 +6,7 @@
 			"./Coronation_img/male/mouth/01.png",
 			"./Coronation_img/female/mouth/01.png"
 		],
-		"Content": [
-			"총명",
-			"온유",
-			"부유"
-		],
+		"Content": "총명 / 온유 / 부유",
 		"Point": [
 			[
 				0,
@@ -101,11 +97,7 @@
 			"./Coronation_img/male/mouth/02.png",
 			"./Coronation_img/female/mouth/02.png"
 		],
-		"Content": [
-			"정직",
-			"예의",
-			"만사형통"
-		],
+		"Content": "정직 / 예의 / 만사형통",
 		"Point": [
 			[
 				0,
@@ -196,11 +188,7 @@
 			"./Coronation_img/male/mouth/03.png",
 			"./Coronation_img/female/mouth/03.png"
 		],
-		"Content": [
-			"성실",
-			"예술",
-			"명성"
-		],
+		"Content": "성실 / 예술 / 명성",
 		"Point": [
 			[
 				0,
@@ -291,10 +279,7 @@
 			"./Coronation_img/male/mouth/04.png",
 			"./Coronation_img/female/mouth/04.png"
 		],
-		"Content": [
-			"명성",
-			"총명"
-		],
+		"Content": "명성 / 총명",
 		"Point": [
 			[
 				0,
@@ -385,9 +370,7 @@
 			"./Coronation_img/male/mouth/05.png",
 			"./Coronation_img/female/mouth/05.png"
 		],
-		"Content": [
-			"인색"
-		],
+		"Content": "인색",
 		"Point": [
 			[
 				0,
@@ -478,11 +461,7 @@
 			"./Coronation_img/male/mouth/06.png",
 			"./Coronation_img/female/mouth/06.png"
 		],
-		"Content": [
-			"게으름",
-			"인색",
-			"가난"
-		],
+		"Content": "게으름 / 인색 / 가난",
 		"Point": [
 			[
 				0,
@@ -573,10 +552,7 @@
 			"./Coronation_img/male/mouth/07.png",
 			"./Coronation_img/female/mouth/07.png"
 		],
-		"Content": [
-			"통솔력",
-			"부유"
-		],
+		"Content": "통솔력 / 부유",
 		"Point": [
 			[
 				0,
@@ -667,10 +643,7 @@
 			"./Coronation_img/male/mouth/08.png",
 			"./Coronation_img/female/mouth/08.png"
 		],
-		"Content": [
-			"고난",
-			"고생"
-		],
+		"Content": "고난 / 고생",
 		"Point": [
 			[
 				0,
@@ -761,11 +734,7 @@
 			"./Coronation_img/male/mouth/09.png",
 			"./Coronation_img/female/mouth/09.png"
 		],
-		"Content": [
-			"부유",
-			"장수",
-			"총명"
-		],
+		"Content": "부유 / 장수 / 총명",
 		"Point": [
 			[
 				0,
@@ -856,10 +825,7 @@
 			"./Coronation_img/male/mouth/10.png",
 			"./Coronation_img/female/mouth/10.png"
 		],
-		"Content": [
-			"가난",
-			"고통"
-		],
+		"Content": "가난 / 고통",
 		"Point": [
 			[
 				0,
@@ -950,10 +916,7 @@
 			"./Coronation_img/male/mouth/11.png",
 			"./Coronation_img/female/mouth/11.png"
 		],
-		"Content": [
-			"빈궁",
-			"고독"
-		],
+		"Content": "빈궁 / 고독",
 		"Point": [
 			[
 				0,
@@ -1044,12 +1007,7 @@
 			"./Coronation_img/male/mouth/12.png",
 			"./Coronation_img/female/mouth/12.png"
 		],
-		"Content": [
-			"덕망",
-			"위엄",
-			"강건",
-			"부유"
-		],
+		"Content": "덕망 / 위엄 / 강건 / 부유",
 		"Point": [
 			[
 				0,
@@ -1140,12 +1098,7 @@
 			"./Coronation_img/male/mouth/13.png",
 			"./Coronation_img/female/mouth/13.png"
 		],
-		"Content": [
-			"총명",
-			"재주",
-			"지혜",
-			"부유"
-		],
+		"Content": "총명 / 재주 / 지혜 / 부유",
 		"Point": [
 			[
 				0,
@@ -1236,13 +1189,7 @@
 			"./Coronation_img/male/mouth/14.png",
 			"./Coronation_img/female/mouth/14.png"
 		],
-		"Content": [
-			"간교",
-			"잔꾀",
-			"흉포",
-			"비방",
-			"빈궁"
-		],
+		"Content": "간교 / 잔꾀 / 흉포 / 비방 / 빈궁",
 		"Point": [
 			[
 				0,
@@ -1333,10 +1280,7 @@
 			"./Coronation_img/male/mouth/15.png",
 			"./Coronation_img/female/mouth/15.png"
 		],
-		"Content": [
-			"고난장수",
-			"고독"
-		],
+		"Content": "고난 / 장수 / 고독",
 		"Point": [
 			[
 				0,
@@ -1427,11 +1371,7 @@
 			"./Coronation_img/male/mouth/16.png",
 			"./Coronation_img/female/mouth/16.png"
 		],
-		"Content": [
-			"고생",
-			"장애",
-			"좌절"
-		],
+		"Content": "고생 / 장애 / 좌절",
 		"Point": [
 			[
 				0,
