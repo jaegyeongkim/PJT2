@@ -23,7 +23,7 @@ import Introduce from "views/Front/Introduce/introduce.js";
 import Aboutus from "views/Front/AboutUs/aboutus.js";
 import License from "views/Front/License/license.js";
 import SignupPage from "views/SignupPage/SignupPage.js";
-import ApplyPage from "views/ApplyPage/ApplyPage.jsx";
+import ApplyPage from "views/ApplyPage/ApplyPage.js";
 import Contactus from "views/Front/ContactUs/contactus";
 
 // import Introduce from "views/Front/Introduce/introduce.js";

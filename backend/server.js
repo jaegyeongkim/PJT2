@@ -55,6 +55,8 @@ models.sequelize
   });
 
 // 업로드
+app.use("/image", express.static("./upload"));
+const upload = multer({ dest: "./upload" });
 const fileUpload = require("express-fileupload");
 app.use(fileUpload());
 

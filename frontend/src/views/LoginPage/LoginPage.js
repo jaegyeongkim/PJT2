@@ -62,6 +62,8 @@ export default function LoginPage(props) {
         alert("패스워드를 정확히 입력해주세요.");
         return;
       } else {
+        delete memberList[0].password;
+        console.log(memberList[0]);
         sessionStorage.setItem("user", JSON.stringify(memberList));
         history.push(`/`);
         return;
