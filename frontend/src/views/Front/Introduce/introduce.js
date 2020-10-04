@@ -25,7 +25,7 @@ const Introduce = (props) => {
     actor.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <Grid>
+    <>
       <Header
         brand="The Casting"
         rightLinks={<HeaderLinks />}
@@ -33,59 +33,83 @@ const Introduce = (props) => {
         color="white"
       />
       <Grid
-        style={{ marginTop: "100px" }}
+        container
+        direction="column"
+        // style={{ marginTop: "100px" }}
         className={classNames(classes.main, classes.mainRaised)}
+        xs={12}
       >
-        <Grid>
-          <Grid style={{ float: "left" }}>
-            <h2>The Casting은</h2>
-            <h5>
-              배우의 눈썹, 눈, 코, 입을 관상 데이터와 비교하여 카테고리별로
-              배우를 추천해드립니다.
-            </h5>
-            <Grid item style={{ textAlign: "right", float: "right" }}>
+        <Grid item xs={12}>
+          <Grid container direction="row">
+            <Grid item xs={6} style={{ background: "F6F8F9" }}>
+              <h2>
+                The Casting은
+                <h5>
+                  배우의 눈썹, 눈, 코, 입을 관상 데이터와 비교하여 카테고리별로
+                  배우를 추천해드립니다.
+                </h5>
+              </h2>
+            </Grid>
+            <Grid item xs={6}>
               <img
                 style={{
-                  width: "50%",
-                  Height: "50%",
+                  width: "100%",
+                  Height: "100%",
                 }}
                 src={`https://j3b206.p.ssafy.io/static/img/main_img/intro1.png`}
                 alt=""
               />
             </Grid>
           </Grid>
-
-          <Grid>
-            <h4 ref={director}>감독</h4>
-            <p>어떤 이미지의 배우를 찾으시나요?</p>
-            <p>The Casting은 생각하는 이미지의 배우를 추천해드립니다.</p>
-            <p>찾는 이미지를 골라 검색해보세요!</p>
-            <Link
-              style={{ color: "inherit" }}
-              color="transparent"
-              to="/category"
-            >
-              <Button
-                color="transparent"
-                target="_blank"
-                className={classes.navLink}
-                size="lg"
-                simple
-              >
-                배우 추천 받아보기
-              </Button>
-            </Link>
+        </Grid>
+        <Grid container direction="row">
+          <Grid item xs={6}>
+            <img
+              style={{
+                width: "100%",
+                Height: "100%%",
+              }}
+              src={`https://j3b206.p.ssafy.io/static/img/main_img/intro2.jpg`}
+              alt=""
+            />
           </Grid>
-
-          <Grid>
-            <h4 ref={actor}>배우</h4>
-            <p>자신을 소개할 곳이 부족했나요?</p>
-            <p>자유롭게 사진을 고르고 감독이 찾을 수 있게 자신을 소개해봐요</p>
+          <Grid item xs={6}>
+            <h2>
+              The Casting은
+              <h5>
+                배우의 눈썹, 눈, 코, 입을 관상 데이터와 비교하여 카테고리별로
+                배우를 추천해드립니다.
+              </h5>
+            </h2>
           </Grid>
         </Grid>
+        <Grid>
+          <Grid container direction="row">
+            <Grid item xs={6}>
+              <h2>
+                The Casting은
+                <h5>
+                  배우의 눈썹, 눈, 코, 입을 관상 데이터와 비교하여 카테고리별로
+                  배우를 추천해드립니다.
+                </h5>
+              </h2>
+            </Grid>
+            <Grid item xs={6}>
+              <img
+                style={{
+                  width: "100%",
+                  Height: "100%",
+                }}
+                src={`https://j3b206.p.ssafy.io/static/img/main_img/intro1.png`}
+                alt=""
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Footer />
       </Grid>
-      <Footer />
-    </Grid>
+    </>
   );
 };
 export default Introduce;

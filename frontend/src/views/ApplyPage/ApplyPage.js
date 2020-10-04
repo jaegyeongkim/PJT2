@@ -100,10 +100,7 @@ const ApplyPage = () => {
         fixed
         color="white"
       />
-      <Wrapper
-        style={{ marginTop: "100px" }}
-        className={classNames(classes.main, classes.mainRaised)}
-      >
+      <Wrapper className={classNames(classes.main, classes.mainRaised)}>
         <form onSubmit={onSubmit}>
           {uploadedImg ? (
             <>

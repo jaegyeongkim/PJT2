@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -6,6 +7,15 @@ const { Actor } = require("../models");
 const cors = require("cors");
 const multer = require("multer");
 app.use(cors());
+=======
+// const express = require("express");
+// const multer = require("multer");
+// const fs = require("fs");
+// const path = require("path");
+// const app = express.Router();
+// const cors = require("cors");
+// app.use(cors());
+>>>>>>> de83a1b1be07942d762d2ac2a505beeffef36322
 
 // fs.readdir("static/img/actor", (error) => {
 //   // uploads 폴더 없으면 생성
@@ -34,6 +44,7 @@ app.use(cors());
 //   res.json({ url: `/img/${req.file.filename}` });
 // });
 
+<<<<<<< HEAD
 // const upload = multer({
 //   storage: multer.diskStorage({
 //     destination: function (req, file, cb) {
@@ -120,3 +131,12 @@ app.post("/", upload.single("img"), (req, res) => {
 });
 
 module.exports = app;
+=======
+// app.post("/", upload.single("img"), async function (req, res, next) {
+//   res.send({
+//     fileName: req.file.filename,
+//   });
+// });
+
+// module.exports = router;
+>>>>>>> de83a1b1be07942d762d2ac2a505beeffef36322

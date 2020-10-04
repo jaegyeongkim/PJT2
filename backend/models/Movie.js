@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
       },
       userRating: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.FLOAT(),
         allowNull: true,
       },
       movie_cd: {

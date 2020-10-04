@@ -18,10 +18,7 @@ const Terms = () => {
         fixed
         color="white"
       />
-      <Wrapper
-        style={{ marginTop: "100px" }}
-        className={classNames(classes.main, classes.mainRaised)}
-      >
+      <Wrapper className={classNames(classes.main, classes.mainRaised)}>
         <Grid container direction="column">
           <Grid item className="title">
             개인정보 처리방침
