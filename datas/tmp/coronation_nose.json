@@ -6,10 +6,7 @@
 			"./Coronation_img/male/nose/01.png",
 			"./Coronation_img/female/nose/01.png"
 		],
-		"Content": [
-			"온화",
-			"곧음"
-		],
+		"Content": "온화 / 곧음",
 		"Point": [
 			[
 				0,
@@ -56,11 +53,7 @@
 			"./Coronation_img/male/nose/02.png",
 			"./Coronation_img/female/nose/02.png"
 		],
-		"Content": [
-			"부유",
-			"호탕",
-			"추진력"
-		],
+		"Content": "부유 / 호탕 / 추진력",
 		"Point": [
 			[
 				0,
@@ -107,12 +100,7 @@
 			"./Coronation_img/male/nose/03.png",
 			"./Coronation_img/female/nose/03.png"
 		],
-		"Content": [
-			"존경",
-			"유순",
-			"정",
-			"우애"
-		],
+		"Content": "존경 / 유순 / 정 / 우애",
 		"Point": [
 			[
 				0,
@@ -159,12 +147,7 @@
 			"./Coronation_img/male/nose/04.png",
 			"./Coronation_img/female/nose/04.png"
 		],
-		"Content": [
-			"대귀",
-			"관직",
-			"명예",
-			"정열적"
-		],
+		"Content": "대귀 / 관직 / 명예 / 정열적",
 		"Point": [
 			[
 				0,
@@ -211,13 +194,7 @@
 			"./Coronation_img/male/nose/05.png",
 			"./Coronation_img/female/nose/05.png"
 		],
-		"Content": [
-			"간악음험",
-			"간사",
-			"편협",
-			"욕심",
-			"간교"
-		],
+		"Content": "간악음험 / 간사 / 편협 / 욕심 / 간교",
 		"Point": [
 			[
 				0,
@@ -264,13 +241,7 @@
 			"./Coronation_img/male/nose/06.png",
 			"./Coronation_img/female/nose/06.png"
 		],
-		"Content": [
-			"흉",
-			"완고",
-			"거짓",
-			"괴팍",
-			"고독"
-		],
+		"Content": "흉 / 완고 / 거짓 / 괴팍 / 고독",
 		"Point": [
 			[
 				0,
@@ -317,14 +288,7 @@
 			"./Coronation_img/male/nose/07.png",
 			"./Coronation_img/female/nose/07.png"
 		],
-		"Content": [
-			"부유",
-			"의리",
-			"급함",
-			"불안",
-			"순박",
-			"인자"
-		],
+		"Content": "부유 / 의리 / 급함 / 불안 / 순박 / 인자",
 		"Point": [
 			[
 				0,
@@ -371,12 +335,7 @@
 			"./Coronation_img/male/nose/08.png",
 			"./Coronation_img/female/nose/08.png"
 		],
-		"Content": [
-			"용렬",
-			"배신",
-			"우유부단",
-			"고단"
-		],
+		"Content": "용렬 / 배신 / 우유부단 / 고단",
 		"Point": [
 			[
 				0,
@@ -423,11 +382,7 @@
 			"./Coronation_img/male/nose/09.png",
 			"./Coronation_img/female/nose/09.png"
 		],
-		"Content": [
-			"간악",
-			"우유부단",
-			"고독"
-		],
+		"Content": "간악 / 우유부단 / 고독",
 		"Point": [
 			[
 				0,
@@ -474,11 +429,7 @@
 			"./Coronation_img/male/nose/10.png",
 			"./Coronation_img/female/nose/10.png"
 		],
-		"Content": [
-			"관대",
-			"어짐",
-			"부지런"
-		],
+		"Content": "관대 / 어짐 / 부지런",
 		"Point": [
 			[
 				0,
@@ -525,13 +476,7 @@
 			"./Coronation_img/male/nose/11.png",
 			"./Coronation_img/female/nose/11.png"
 		],
-		"Content": [
-			"부유",
-			"명예",
-			"귀함",
-			"섬세",
-			"고집"
-		],
+		"Content": "부유 / 명예 / 귀함 / 섬세 / 고집",
 		"Point": [
 			[
 				0,
@@ -578,11 +523,7 @@
 			"./Coronation_img/male/nose/12.png",
 			"./Coronation_img/female/nose/12.png"
 		],
-		"Content": [
-			"고독",
-			"가난",
-			"곤란"
-		],
+		"Content": "고독 / 가난 / 곤란",
 		"Point": [
 			[
 				0,
@@ -629,13 +570,7 @@
 			"./Coronation_img/male/nose/13.png",
 			"./Coronation_img/female/nose/13.png"
 		],
-		"Content": [
-			"부유",
-			"명예",
-			"온화",
-			"강직",
-			"대장부"
-		],
+		"Content": "부유 / 명예 / 온화 / 강직 / 대장부",
 		"Point": [
 			[
 				0,
@@ -682,11 +617,7 @@
 			"./Coronation_img/male/nose/14.png",
 			"./Coronation_img/female/nose/14.png"
 		],
-		"Content": [
-			"강건",
-			"용기",
-			"실천력"
-		],
+		"Content": "강건 / 용기 / 실천력",
 		"Point": [
 			[
 				0,
@@ -733,12 +664,7 @@
 			"./Coronation_img/male/nose/15.png",
 			"./Coronation_img/female/nose/15.png"
 		],
-		"Content": [
-			"의심",
-			"인색",
-			"지혜",
-			"알뜰"
-		],
+		"Content": "의심 / 인색 / 지혜 / 알뜰",
 		"Point": [
 			[
 				0,
@@ -785,9 +711,7 @@
 			"./Coronation_img/male/nose/16.png",
 			"./Coronation_img/female/nose/16.png"
 		],
-		"Content": [
-			"고독"
-		],
+		"Content": "고독",
 		"Point": [
 			[
 				0,
@@ -834,11 +758,7 @@
 			"./Coronation_img/male/nose/17.png",
 			"./Coronation_img/female/nose/17.png"
 		],
-		"Content": [
-			"고독",
-			"가난",
-			"곤란"
-		],
+		"Content": "고독 / 가난 / 곤란",
 		"Point": [
 			[
 				0,
@@ -885,12 +805,7 @@
 			"./Coronation_img/male/nose/18.png",
 			"./Coronation_img/female/nose/18.png"
 		],
-		"Content": [
-			"부유",
-			"눈치",
-			"예의",
-			"건강"
-		],
+		"Content": "부유 / 눈치 / 예의 / 건강",
 		"Point": [
 			[
 				0,
@@ -937,12 +852,7 @@
 			"./Coronation_img/male/nose/19.png",
 			"./Coronation_img/female/nose/19.png"
 		],
-		"Content": [
-			"도둑",
-			"의리",
-			"곤궁",
-			"도벽"
-		],
+		"Content": "도둑 / 의리 / 곤궁 / 도벽",
 		"Point": [
 			[
 				0,
@@ -989,13 +899,7 @@
 			"./Coronation_img/male/nose/20.png",
 			"./Coronation_img/female/nose/20.png"
 		],
-		"Content": [
-			"부유",
-			"너그러움",
-			"고귀",
-			"영특",
-			"호쾌"
-		],
+		"Content": "부유 / 너그러움 / 고귀 / 영특 / 호쾌",
 		"Point": [
 			[
 				0,
@@ -1042,12 +946,7 @@
 			"./Coronation_img/male/nose/21.png",
 			"./Coronation_img/female/nose/21.png"
 		],
-		"Content": [
-			"의리없음",
-			"시기심",
-			"고단",
-			"배신"
-		],
+		"Content": "의리없음 / 시기심 / 고단 / 배신",
 		"Point": [
 			[
 				0,
@@ -1094,15 +993,7 @@
 			"./Coronation_img/male/nose/22.png",
 			"./Coronation_img/female/nose/22.png"
 		],
-		"Content": [
-			"시기",
-			"기만",
-			"경솔",
-			"조급",
-			"질투",
-			"근심",
-			"걱정"
-		],
+		"Content": "시기 / 기만 / 경솔 / 조급 / 질투 / 근심 / 걱정",
 		"Point": [
 			[
 				0,
@@ -1149,11 +1040,7 @@
 			"./Coronation_img/male/nose/23.png",
 			"./Coronation_img/female/nose/23.png"
 		],
-		"Content": [
-			"총명기백",
-			"지혜",
-			"아량"
-		],
+		"Content": "총명기백 / 지혜 / 아량",
 		"Point": [
 			[
 				0,
@@ -1200,11 +1087,7 @@
 			"./Coronation_img/male/nose/24.png",
 			"./Coronation_img/female/nose/24.png"
 		],
-		"Content": [
-			"빈궁",
-			"가난",
-			"괴로움"
-		],
+		"Content": "빈궁 / 가난 / 괴로움",
 		"Point": [
 			[
 				0,

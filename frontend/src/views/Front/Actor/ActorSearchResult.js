@@ -22,7 +22,6 @@ export default function ActorSearchResult({ match }, props) {
     }
   };
   const searchResult = [];
-  const total = [];
   for (var i = 0; i < actorsData.length; i++) {
     if (actorsData[i]["name"].includes(match.params.name)) {
       searchResult.push([actorsData[i]["name"], actorsData[i]["movie_total"]]);

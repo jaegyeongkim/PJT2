@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, GridList } from "@material-ui/core";
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -8,11 +8,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/components.js";
 import { CommonContext } from "../../../context/CommonContext";
 import GenrePiechart from "./GenrePiechart";
+import MovieCard from "./MovieCard";
 const useStyles = makeStyles(styles);
 
 const ActorDetail = ({ match }) => {
   const classes = useStyles();
-  const { actorsData, movieData } = useContext(CommonContext);
+  const { actorsData, movieData, genreData } = useContext(CommonContext);
 
   // 출연 영화 split
   for (var i = 0; i < actorsData.length; i++) {
@@ -21,7 +22,7 @@ const ActorDetail = ({ match }) => {
       break;
     }
   }
-
+  /////////////////////////////////////////
   var filmo_list = [];
   for (var j = 0; j < Object(filmo).length; j++) {
     if (filmo_list.includes(filmo[j])) {
@@ -34,11 +35,33 @@ const ActorDetail = ({ match }) => {
   for (var m = 0; m < filmo_list.length; m++) {
     for (var n = 0; n < movieData.length; n++) {
       if (movieData[n]["name"] === filmo_list[m]) {
-        movie_detail_data.push(movieData[n]);
+        movie_detail_data.push([
+          movieData[n]["name"],
+          movieData[n]["poster"],
+          movieData[n]["genre"],
+        ]);
+
         break;
       }
     }
   }
+  //////////////////////////////////////////////////
+  var genre_cnt = [];
+  for (var k = 0; k < genreData.length; k++) {
+    genre_cnt.push([genreData[k]["genre_name"], 0]);
+  }
+  for (var g = 0; g < movie_detail_data.length; g++) {
+    var genres = movie_detail_data[g][2].split(",");
+    for (var c = 0; c < genres.length; c++) {
+      for (var p = 0; p < genre_cnt.length; p++) {
+        if (genre_cnt[p][0] === genres[c]) {
+          genre_cnt[p][1]++;
+          break;
+        }
+      }
+    }
+  }
+  console.log(genre_cnt);
   return (
     <Grid>
       <Header
@@ -48,31 +71,75 @@ const ActorDetail = ({ match }) => {
         color="white"
       />
       <Grid className={classNames(classes.main, classes.mainRaised)}>
-        <Grid container>
-          <Grid item xs={3}>
-            <img
-              style={{ width: "100%" }}
-              src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.name}.jpg`}
-              alt="배우 사진"
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <p>{match.params.name}</p>
-            <p>관상 데이터</p>
-          </Grid>
-          <Grid item xs={5}>
-            <GenrePiechart />
+        <Grid
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Grid container xs={11}>
+            <Grid
+              item
+              xs={3}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                style={{ width: "80%" }}
+                src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.name}.jpg`}
+                alt="배우 사진"
+              />
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <p>{match.params.name}</p>
+              <p>관상 데이터</p>
+            </Grid>
+            <Grid
+              item
+              xs={6}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <GenrePiechart xs={12} genre_cnt={genre_cnt} />
+            </Grid>
           </Grid>
         </Grid>
-
-        <Grid></Grid>
-
-        <Grid container>
+        <Grid>
           <Grid>
-            {filmo_list.map((movie, index) => {
-              return <p>{movie}</p>;
-            })}
+            <h4>출연 영화</h4>
           </Grid>
+          <GridList>
+            {movie_detail_data.map((movie, index) => {
+              return (
+                <Grid
+                  xs={3}
+                  md={2}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    padding: "6px",
+                  }}
+                >
+                  <MovieCard movie={movie} index={index} />
+                </Grid>
+              );
+            })}
+          </GridList>
         </Grid>
       </Grid>
       <Footer />
