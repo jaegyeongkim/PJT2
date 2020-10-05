@@ -8,18 +8,18 @@ const multer = require("multer");
 // const fileUpload = require("express-fileupload");
 app.use(cors());
 
-fs.readdir("uploads", (error) => {
-  // uploads 폴더 없으면 생성
-  if (error) {
-    fs.mkdirSync("uploads");
-  }
-});
+// fs.readdir("uploads", (error) => {
+//   // uploads 폴더 없으면 생성
+//   if (error) {
+//     fs.mkdirSync("uploads");
+//   }
+// });
 
 // 이미지 업로드
 const upload = multer({
   storage: multer.diskStorage({
     destination(req, file, cb) {
-      cb(null, "uploads/");
+      cb(null, "../frontend/build/static/img");
     },
     filename(req, file, cb) {
       const ext = path.extname(file.originalname);

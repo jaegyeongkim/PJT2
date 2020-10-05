@@ -19,8 +19,14 @@ const ActorDetail = ({ match }) => {
   for (var i = 0; i < actorsData.length; i++) {
     if (actorsData[i]["name"] === match.params.name) {
       var filmo = actorsData[i]["movie"].split("/");
+      var face = actorsData[i]["face"].split("/");
       break;
     }
+  }
+  /////////////////////////////////////////
+  var face_list = [];
+  for (var f = 0; f < Object(face).length; f++) {
+    face_list.push(face[f]);
   }
   /////////////////////////////////////////
   var filmo_list = [];
@@ -61,7 +67,6 @@ const ActorDetail = ({ match }) => {
       }
     }
   }
-  console.log(genre_cnt);
   return (
     <Grid>
       <Header
@@ -89,7 +94,7 @@ const ActorDetail = ({ match }) => {
               }}
             >
               <img
-                style={{ width: "80%" }}
+                style={{ width: "90%" }}
                 src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.name}.jpg`}
                 alt="배우 사진"
               />
@@ -97,14 +102,21 @@ const ActorDetail = ({ match }) => {
             <Grid
               item
               xs={3}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
+              // style={{
+              //   display: "flex",
+              //   justifyContent: "center",
+              //   alignItems: "center",
+              // }}
             >
-              <p>{match.params.name}</p>
-              <p>관상 데이터</p>
+              <Grid>
+                <h3>{match.params.name}의 관상</h3>
+              </Grid>
+
+              <Grid style={{ display: "inline-block" }}>
+                {face_list.map((data, index) => {
+                  return <span>{data}</span>;
+                })}
+              </Grid>
             </Grid>
             <Grid
               item
@@ -121,7 +133,7 @@ const ActorDetail = ({ match }) => {
         </Grid>
         <Grid>
           <Grid>
-            <h4>출연 영화</h4>
+            <h3 style={{ paddingLeft: "3vw" }}>출연 영화</h3>
           </Grid>
           <GridList>
             {movie_detail_data.map((movie, index) => {

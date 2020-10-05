@@ -33,7 +33,7 @@ const GenrePiechart = (props) => {
     <Wrapper>
       <Grid>
         <Chart
-          width={"50vw"}
+          width={"45vw"}
           height={"40vh"}
           chartType="PieChart"
           loader={<div>Loading Chart</div>}
