@@ -88,7 +88,7 @@ const ApplyPage = () => {
     formData.append("name", event.target.name.value);
     formData.append("profile_img", event.target.profile_img.files[0]);
     // formData.append("birth", event.target.birth.value);
-    formData.append("face", event.target.face.value);
+    // formData.append("face", event.target.face.value);
     // formData.append("movie", event.target.movie.value);
     formData.append("profile_video", event.target.profile_video.files[0]);
 
@@ -166,10 +166,10 @@ const ApplyPage = () => {
             ></input>
           </p> */}
 
-          <p>관상(이건 나중에)</p>
+          {/* <p>관상(이건 나중에)</p>
           <p>
             <input type="text" name="face" defaultValue={user[0].face}></input>
-          </p>
+          </p> */}
 
           {/* <p>출연영화</p>
           <p>
