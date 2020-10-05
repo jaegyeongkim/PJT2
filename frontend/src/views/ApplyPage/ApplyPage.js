@@ -52,6 +52,13 @@ const ApplyPage = () => {
   //   setMovie(e.target.value);
   // };
 
+  // const actorface = (info) => {
+  //   fetch("/api/upload/face", {
+  //     method: "post",
+  //     body: info,
+  //   });
+  // };
+
   const onChange = (e) => {
     e.preventDefault();
     let reader = new FileReader();
@@ -82,7 +89,7 @@ const ApplyPage = () => {
     formData.append("profile_img", event.target.profile_img.files[0]);
     // formData.append("birth", event.target.birth.value);
     formData.append("face", event.target.face.value);
-    formData.append("movie", event.target.movie.value);
+    // formData.append("movie", event.target.movie.value);
     formData.append("profile_video", event.target.profile_video.files[0]);
 
     register(formData);
@@ -164,14 +171,14 @@ const ApplyPage = () => {
             <input type="text" name="face" defaultValue={user[0].face}></input>
           </p>
 
-          <p>출연영화</p>
+          {/* <p>출연영화</p>
           <p>
             <input
               type="text"
               name="movie"
               defaultValue={user[0].movie}
             ></input>
-          </p>
+          </p> */}
           <p>자신을 어필할 영상</p>
           <p>
             <input
