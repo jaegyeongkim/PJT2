@@ -9,6 +9,7 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import { CommonContext } from "../../../context/CommonContext";
 import GenrePiechart from "./GenrePiechart";
 import MovieCard from "./MovieCard";
+import { object } from "prop-types";
 const useStyles = makeStyles(styles);
 
 const ActorDetail = ({ match }) => {
@@ -25,9 +26,21 @@ const ActorDetail = ({ match }) => {
   }
   /////////////////////////////////////////
   var face_list = [];
+  console.log(Object(face).length);
+  // const l = Object(face).length;
+  // var x = Math.floor(Math.random() * Object(face).length) + 1;
+  // console.log(x);
   for (var f = 0; f < Object(face).length; f++) {
+    // console.log(Math.random(f));
+    // var x = Math.floor(Math.random() * Object(face).length) + 1;
     face_list.push(face[f]);
+    // if (f == 4) {
+    //   break;
+    // } else {
+    //   continue;
+    // }
   }
+
   /////////////////////////////////////////
   var filmo_list = [];
   for (var j = 0; j < Object(filmo).length; j++) {
