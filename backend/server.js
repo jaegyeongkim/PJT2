@@ -77,6 +77,7 @@ app.use("/api/genre", require(`${__dirname}/routes/genre`));
 // app.use("/api/upload", express.static("uploads"));
 // app.use("/api/upload", require(`${__dirname}/routes/upload`));
 app.use("/api/upload", imgRouter);
+app.use("/api/character", require(`${__dirname}/routes/character`));
 
 //----------------------------------
 // port
