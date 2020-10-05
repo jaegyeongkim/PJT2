@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 import Footer from "components/Footer/Footer.js";
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -9,89 +10,104 @@ import Wrapper from "../../assets/jss/material-kit-react/components/contactus";
 import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
-const BASE_URL = "http://j3b206.p.ssafy.io";
 const ApplyPage = () => {
   const classes = useStyles();
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState([[]]);
   useEffect(() => {
     setUser(JSON.parse(sessionStorage.getItem("user")) || []);
   }, []);
+  let history = useHistory();
 
-  const [content, setContent] = useState("");
-  const [gender, setGender] = useState("");
-  const [name, setName] = useState("");
-  const [birth, setBirth] = useState("");
-  const [uimage, setuImage] = useState("");
-  const [video, setVideo] = useState("");
-  const [face, setFace] = useState("");
-  const [movie, setMovie] = useState("");
-  const [uploadedImg, setUploadedImg] = useState({
-    fileName: "",
-    fillPath: "",
-  });
-  // if (user[0]) {
-  //   setName(user[0].name);
-  // }
-  const handleGenderChange = (e) => {
-    setGender(e.target.value);
-  };
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-  const handleBirthChange = (e) => {
-    setBirth(e.target.value);
-  };
-  const handleuImageChange = (e) => {
-    setuImage(e.target.value);
-  };
-  const handleVideoChange = (e) => {
-    setVideo(e.target.value);
-  };
-  const handleFaceChange = (e) => {
-    setFace(e.target.value);
-  };
-  const handleMovieChange = (e) => {
-    setMovie(e.target.value);
-  };
+  const [file, setFile] = useState("");
+  const [file2, setFile2] = useState("");
+  const [url, setUrl] = useState("");
+  const [url2, setUrl2] = useState("");
+  // const [gender, setGender] = useState("");
+  // const [name, setName] = useState("");
+  // const [birth, setBirth] = useState("");
+  // const [uimage, setuImage] = useState("");
+  // const [video, setVideo] = useState("");
+  // const [face, setFace] = useState("");
+  // const [movie, setMovie] = useState("");
+
+  // const handleGenderChange = (e) => {
+  //   setGender(e.target.value);
+  // };
+  // const handleNameChange = (e) => {
+  //   setName(e.target.value);
+  // };
+  // const handleBirthChange = (e) => {
+  //   setBirth(e.target.value);
+  // };
+  // const handleuImageChange = (e) => {
+  //   setuImage(e.target.value);
+  // };
+  // const handleVideoChange = (e) => {
+  //   setVideo(e.target.value);
+  // };
+  // const handleFaceChange = (e) => {
+  //   setFace(e.target.value);
+  // };
+  // const handleMovieChange = (e) => {
+  //   setMovie(e.target.value);
+  // };
 
   const onChange = (e) => {
-    setContent(e.target.files[0]);
-  };
-  const onSubmit = (e) => {
     e.preventDefault();
-    // const formData = new FormData();
-    // formData.append("name", name);
-    // formData.append("gender", gender);
-    // formData.append("birth", birth);
-    // formData.append("img", content);
-    // formData.append("face", face);
-    // formData.append("movie", movie);
-    // formData.append("video", video);
-    // console.log(formData);
-    return axios
-      .post("/api/upload", {
-        gender: gender,
-        name: name,
-        birth: birth,
-        image: content,
-        face: face,
-        movie: movie,
-        video: video,
-      })
-      .then((res) => {
-        const { fileName } = res.data;
-        console.log(fileName);
-        setUploadedImg({
-          fileName,
-          filePath: `localhost:5000/upload/${fileName}`,
-          // filePath: `${BASE_URL}/static/img/actor/${fileName}`,
-        });
-        alert("The file is successfully uploaded");
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    let reader = new FileReader();
+    let file = e.target.files[0];
+    reader.onloadend = () => {
+      setFile(file);
+      setUrl(reader.result);
+    };
+    reader.readAsDataURL(file);
   };
+  const onChange2 = (e) => {
+    e.preventDefault();
+    let reader2 = new FileReader();
+    let file2 = e.target.files[0];
+    reader2.onloadend = () => {
+      setFile2(file2);
+      setUrl2(reader2.result);
+    };
+    reader2.readAsDataURL(file2);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("id", user[0].id);
+    formData.append("gender", event.target.gender.value);
+    formData.append("name", event.target.name.value);
+    formData.append("profile_img", event.target.profile_img.files[0]);
+    // formData.append("birth", event.target.birth.value);
+    formData.append("face", event.target.face.value);
+    formData.append("movie", event.target.movie.value);
+    formData.append("profile_video", event.target.profile_video.files[0]);
+
+    register(formData);
+  };
+
+  const register = (regiInfo) => {
+    fetch("/api/upload/account", {
+      method: "post",
+      body: regiInfo,
+    })
+      .then((res) => res.json())
+      .then((data) => alert(data.msg));
+    history.push(`/`);
+  };
+
+  let profile_preview = null;
+  if (file !== "") {
+    profile_preview = (
+      <img
+        style={{ width: "300px" }}
+        className="profile_preview"
+        src={url}
+      ></img>
+    );
+  }
   return (
     <>
       <Header
@@ -101,79 +117,75 @@ const ApplyPage = () => {
         color="white"
       />
       <Wrapper className={classNames(classes.main, classes.mainRaised)}>
-        <form onSubmit={onSubmit}>
-          {uploadedImg ? (
-            <>
-              <img src={uploadedImg.filePath} alt="" />
-              <h3>{uploadedImg.fileName}</h3>
-            </>
-          ) : (
-            ""
-          )}
-          <input type="file" onChange={onChange} />
-          <br />
-          <input type="name" value={name} onChange={handleNameChange} />
-          <br />
-          <input type="gender" value={gender} onChange={handleGenderChange} />
-          <br />
-          <input type="birth" value={birth} onChange={handleBirthChange} />
-          <br />
-          <input type="movie" value={movie} onChange={handleMovieChange} />
-          <br />
-          <input type="face" value={face} onChange={handleFaceChange} />
-          <br />
-          <input type="video" value={video} onChange={handleVideoChange} />
-          <br />
-          <button type="submit">Upload</button>
-        </form>
-        {/* <div style={{ maxWidth: "700px", margin: "2rem auto" }}>
-          <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-            <Title level={2}>신입 배우 등록 페이지</Title>
-          </div>
-          <Form onSubmit>
-            <div style={{ display: "flex", justifyContent: "space-between" }}> */}
-        {/* <Dropzone onDrop multiple maxSize>
-                maxSize
-                {({ getRootProps, getInputProps }) => (
-                  <div
-                    style={{
-                      width: "300px",
-                      height: "240px",
-                      border: "1px solid lightgray",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                    {...getRootProps()}
-                  >
-                    <input {...getInputProps()} />
-                    <Icon type="plus" style={{ fontSize: "3rem" }} />
-                  </div>
-                )}
-              </Dropzone> */}
-        {/* <div>
-                <img src alt />
-              </div>
-            </div>
-            <br />
-            <br />
-            <label>Title</label>
-            <Input onChange value />
-            <br />
-            <br />
-            <label>Description</label>
-            <TextArea onChange value />
-            <br />
-            <br />
-            <select onChange>
-              <option key value></option>
-            </select>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <form
+          name="accountFrm"
+          onSubmit={handleSubmit}
+          encType="multipart/form-data"
+        >
+          <div>{profile_preview}</div>
+          <p>
+            <input
+              type="file"
+              accept="image/jpg,impge/png,image/jpeg,image/gif"
+              name="profile_img"
+              onChange={onChange}
+            ></input>
+          </p>
+          <p>성별</p>
+          <p>
+            <input
+              type="text"
+              name="gender"
+              defaultValue={user[0].gender}
+            ></input>
+          </p>
 
-            <Button type="primary" size="large" onClick>
-              Submit
-            </Button> */}
-        {/* </Form>
-        </div> */}
+          <p>이름</p>
+          <p>
+            <input type="text" name="name" defaultValue={user[0].name}></input>
+          </p>
+
+          {/* <p>생일</p>
+          <p>
+            <input
+              type="text"
+              name="birth"
+              defaultValue={user[0].birth}
+            ></input>
+          </p> */}
+
+          <p>관상(이건 나중에)</p>
+          <p>
+            <input type="text" name="face" defaultValue={user[0].face}></input>
+          </p>
+
+          <p>출연영화</p>
+          <p>
+            <input
+              type="text"
+              name="movie"
+              defaultValue={user[0].movie}
+            ></input>
+          </p>
+          <p>자신을 어필할 영상</p>
+          <p>
+            <input
+              type="file"
+              name="profile_video"
+              onChange={onChange2}
+            ></input>
+          </p>
+
+          <br />
+          <p>
+            <input type="submit" value="등록하기"></input>
+          </p>
+        </form>
       </Wrapper>
       <Footer />
     </>

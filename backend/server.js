@@ -55,10 +55,11 @@ models.sequelize
   });
 
 // 업로드
-app.use("/image", express.static("./upload"));
-const upload = multer({ dest: "./upload" });
-const fileUpload = require("express-fileupload");
-app.use(fileUpload());
+// app.use("/image", express.static("./upload"));
+// const upload = multer({ dest: "./upload" });
+// const fileUpload = require("express-fileupload");
+// app.use(fileUpload());
+const imgRouter = require(`${__dirname}/routes/upload`);
 
 //----------------------------------
 // routes
@@ -73,7 +74,9 @@ app.use("/api/movie", require(`${__dirname}/routes/movie`));
 app.use("/api/nose", require(`${__dirname}/routes/nose`));
 app.use("/api/actorname", require(`${__dirname}/routes/actorname`));
 app.use("/api/genre", require(`${__dirname}/routes/genre`));
+// app.use("/api/upload", express.static("uploads"));
 // app.use("/api/upload", require(`${__dirname}/routes/upload`));
+app.use("/api/upload", imgRouter);
 
 //----------------------------------
 // port
