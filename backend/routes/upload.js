@@ -51,27 +51,29 @@ app.post(
       if (err) throw err;
 
       console.log("results: %j", results);
-    });
-    // 중복 확인
-    Actor.findOne({
-      where: { id: reqeustData.id },
-    }).then((actor) => {
-      // 중복이면 중복 메세지 보내기
-      if (actor) {
-        res.status(403).send({ msg: "이미 등록하셨습니다." });
-      } else {
-        Actor.create({
-          id: reqeustData.id,
-          gender: reqeustData.gender,
-          name: reqeustData.name,
-          image: req.files.profile_img[0].originalname,
-          face: reqeustData.face,
-          // movie: reqeustData.movie,
-          video: req.files.profile_video[0].originalname,
-        });
-      }
-      console.log("/account ", req.body);
-      res.send({ msg: "등록이 완료되었습니다." });
+      console.log(results);
+
+      // 중복 확인
+      Actor.findOne({
+        where: { id: reqeustData.id },
+      }).then((actor) => {
+        // 중복이면 중복 메세지 보내기
+        if (actor) {
+          res.status(403).send({ msg: "이미 등록하셨습니다." });
+        } else {
+          Actor.create({
+            id: reqeustData.id,
+            gender: reqeustData.gender,
+            name: reqeustData.name,
+            image: req.files.profile_img[0].originalname,
+            face: results,
+            // movie: reqeustData.movie,
+            video: req.files.profile_video[0].originalname,
+          });
+        }
+        console.log("/account ", req.body);
+        res.send({ msg: "등록이 완료되었습니다." });
+      });
     });
   }
 );
