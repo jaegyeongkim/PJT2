@@ -18,6 +18,7 @@ const Category = (props) => {
   const { ...rest } = props;
   const [selectedGender, setSelectedGender] = useState("");
   const [selectedCharacter, setSelectedCharacter] = useState([]);
+  const [liveInput, setLiveInput] = useState("");
 
   // 선택 완료 버튼 누르면 이곳으로 옵니다.
   // Router에 정보를 담아서 넘기는 거기 때문에
@@ -194,6 +195,13 @@ const Category = (props) => {
     );
   };
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // 실시간 변화
+  const handleNameChange = (event) => {
+    setLiveInput(event.target.value);
+    console.log(liveInput);
+  };
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // 최종 return 하는 곳
   return (
     <div>
@@ -242,6 +250,13 @@ const Category = (props) => {
               </Grid>
               <Grid>
                 <Character />
+              </Grid>
+              <Grid>
+                <input
+                  type="text"
+                  value={liveInput}
+                  onChange={handleNameChange}
+                />
               </Grid>
               <Grid onClick={submitCoronationData}>
                 <Button color="primary">선택 완료</Button>
