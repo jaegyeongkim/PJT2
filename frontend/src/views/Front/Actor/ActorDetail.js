@@ -112,7 +112,7 @@ const ActorDetail = ({ match }) => {
                 <h3>{match.params.name}의 관상</h3>
               </Grid>
 
-              <Grid>
+              <Grid style={{ display: "inline-block" }}>
                 {face_list.map((data, index) => {
                   return <span>{data}</span>;
                 })}
