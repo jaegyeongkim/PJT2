@@ -19,8 +19,14 @@ const ActorDetail = ({ match }) => {
   for (var i = 0; i < actorsData.length; i++) {
     if (actorsData[i]["name"] === match.params.name) {
       var filmo = actorsData[i]["movie"].split("/");
+      var face = actorsData[i]["face"].split("/");
       break;
     }
+  }
+  /////////////////////////////////////////
+  var face_list = [];
+  for (var f = 0; f < Object(face).length; f++) {
+    face_list.push(face[f]);
   }
   /////////////////////////////////////////
   var filmo_list = [];
@@ -61,7 +67,6 @@ const ActorDetail = ({ match }) => {
       }
     }
   }
-  console.log(genre_cnt);
   return (
     <Grid>
       <Header
@@ -103,8 +108,14 @@ const ActorDetail = ({ match }) => {
                 alignItems: "center",
               }}
             >
-              <p>{match.params.name}</p>
-              <p>관상 데이터</p>
+              <Grid>
+                <p>{match.params.name}</p>
+              </Grid>
+              <Grid>
+                {face_list.map((data, index) => {
+                  return <p>{data}</p>;
+                })}
+              </Grid>
             </Grid>
             <Grid
               item
