@@ -6,7 +6,7 @@
 			"./Coronation_img/male/eyebrow/01.png",
 			"./Coronation_img/female/eyebrow/01.png"
 		],
-		"Content": "강인 / 권위 / 지혜 / 관직",
+		"Content": "강인 / 권위 / 지혜 / 관직 / ",
 		"Point": [
 			[
 				0,
@@ -57,7 +57,7 @@
 			"./Coronation_img/male/eyebrow/02.png",
 			"./Coronation_img/female/eyebrow/02.png"
 		],
-		"Content": "부유 / 원만 / 사교 / 지혜 / 선함",
+		"Content": "부유 / 사교적 / 지혜 / 선함 / ",
 		"Point": [
 			[
 				0,
@@ -108,7 +108,7 @@
 			"./Coronation_img/male/eyebrow/03.png",
 			"./Coronation_img/female/eyebrow/03.png"
 		],
-		"Content": "부유 / 귀인 / 강직 / 충실",
+		"Content": "부유 / 귀인 / 강직 / 충실 / ",
 		"Point": [
 			[
 				0,
@@ -159,7 +159,7 @@
 			"./Coronation_img/male/eyebrow/04.png",
 			"./Coronation_img/female/eyebrow/04.png"
 		],
-		"Content": "총명 / 지혜 / 선함",
+		"Content": "총명 / 지혜 / 선함 / ",
 		"Point": [
 			[
 				0,
@@ -210,7 +210,7 @@
 			"./Coronation_img/male/eyebrow/05.png",
 			"./Coronation_img/female/eyebrow/05.png"
 		],
-		"Content": "장수 / 부유 / 고독",
+		"Content": "장수 / 부유 / 고독 / ",
 		"Point": [
 			[
 				0,
@@ -261,7 +261,7 @@
 			"./Coronation_img/male/eyebrow/06.png",
 			"./Coronation_img/female/eyebrow/06.png"
 		],
-		"Content": "어진 / 의로움 / 부귀 / 장수 / 고독",
+		"Content": "선함 / 정의 / 부유 / 장수 / 고독 / ",
 		"Point": [
 			[
 				0,
@@ -312,7 +312,7 @@
 			"./Coronation_img/male/eyebrow/07.png",
 			"./Coronation_img/female/eyebrow/07.png"
 		],
-		"Content": "효심 / 신의 / 영웅 / 충성 / 장수",
+		"Content": "효심 / 신의 / 영웅 / 충성 / 장수 / ",
 		"Point": [
 			[
 				0,
@@ -363,7 +363,7 @@
 			"./Coronation_img/male/eyebrow/08.png",
 			"./Coronation_img/female/eyebrow/08.png"
 		],
-		"Content": "간악 / 부유 / 사기",
+		"Content": "간악 / 부유 / 사기 / ",
 		"Point": [
 			[
 				0,
@@ -414,7 +414,7 @@
 			"./Coronation_img/male/eyebrow/09.png",
 			"./Coronation_img/female/eyebrow/09.png"
 		],
-		"Content": "신의 / 예의",
+		"Content": "신의 / 예의 / ",
 		"Point": [
 			[
 				0,
@@ -465,7 +465,7 @@
 			"./Coronation_img/male/eyebrow/10.png",
 			"./Coronation_img/female/eyebrow/10.png"
 		],
-		"Content": "총명 / 관직 / 처세술 / 기교 / 눈치",
+		"Content": "총명 / 관직 / 기교 / 눈치 / ",
 		"Point": [
 			[
 				0,
@@ -516,7 +516,7 @@
 			"./Coronation_img/male/eyebrow/11.png",
 			"./Coronation_img/female/eyebrow/11.png"
 		],
-		"Content": "부유 / 장수 / 냉정 / 담력 / 정직 / 명예",
+		"Content": "부유 / 장수 / 냉정 / 담력 / 정직 / 명망 / ",
 		"Point": [
 			[
 				0,
@@ -567,7 +567,7 @@
 			"./Coronation_img/male/eyebrow/12.png",
 			"./Coronation_img/female/eyebrow/12.png"
 		],
-		"Content": "독선적 / 관직",
+		"Content": "고집 / 관직 / ",
 		"Point": [
 			[
 				0,
@@ -618,7 +618,7 @@
 			"./Coronation_img/male/eyebrow/13.png",
 			"./Coronation_img/female/eyebrow/13.png"
 		],
-		"Content": "거침 / 날카로움 / 간교 / 욕심",
+		"Content": "포악 / 간악 / 욕심 / ",
 		"Point": [
 			[
 				0,
@@ -669,7 +669,7 @@
 			"./Coronation_img/male/eyebrow/14.png",
 			"./Coronation_img/female/eyebrow/14.png"
 		],
-		"Content": "출세 / 명성 / 대범 / 정의 / 신의",
+		"Content": "출세 / 명망 / 대범 / 정의 / 신의 / ",
 		"Point": [
 			[
 				0,
@@ -720,7 +720,7 @@
 			"./Coronation_img/male/eyebrow/15.png",
 			"./Coronation_img/female/eyebrow/15.png"
 		],
-		"Content": "부유 / 표리부동",
+		"Content": "부유 / 표리부동 / ",
 		"Point": [
 			[
 				0,
@@ -771,7 +771,7 @@
 			"./Coronation_img/male/eyebrow/16.png",
 			"./Coronation_img/female/eyebrow/16.png"
 		],
-		"Content": "성공",
+		"Content": "출세 / ",
 		"Point": [
 			[
 				0,
@@ -822,7 +822,7 @@
 			"./Coronation_img/male/eyebrow/17.png",
 			"./Coronation_img/female/eyebrow/17.png"
 		],
-		"Content": "옹졸 / 우유부단",
+		"Content": "옹졸 / 우유부단 / ",
 		"Point": [
 			[
 				0,
@@ -873,7 +873,7 @@
 			"./Coronation_img/male/eyebrow/18.png",
 			"./Coronation_img/female/eyebrow/18.png"
 		],
-		"Content": "관직 / 부유",
+		"Content": "관직 / 부유 / ",
 		"Point": [
 			[
 				0,
@@ -924,7 +924,7 @@
 			"./Coronation_img/male/eyebrow/19.png",
 			"./Coronation_img/female/eyebrow/19.png"
 		],
-		"Content": "부유 / 성급 / 줏대없음",
+		"Content": "부유 / 성급 / 우유부단 / ",
 		"Point": [
 			[
 				0,
@@ -975,7 +975,7 @@
 			"./Coronation_img/male/eyebrow/20.png",
 			"./Coronation_img/female/eyebrow/20.png"
 		],
-		"Content": "역마살 / 가난",
+		"Content": "역마살 / 가난 / ",
 		"Point": [
 			[
 				0,
@@ -1026,7 +1026,7 @@
 			"./Coronation_img/male/eyebrow/21.png",
 			"./Coronation_img/female/eyebrow/21.png"
 		],
-		"Content": "가정분란 / 가난",
+		"Content": "가정분란 / 가난 / ",
 		"Point": [
 			[
 				0,
@@ -1077,7 +1077,7 @@
 			"./Coronation_img/male/eyebrow/22.png",
 			"./Coronation_img/female/eyebrow/22.png"
 		],
-		"Content": "도적 / 간교 / 사기 / 악함 / 표리부동 / 실패 / 도벽",
+		"Content": "도적 / 간악 / 사기 / 악함 / 표리부동 / 실패 / ",
 		"Point": [
 			[
 				0,
@@ -1128,7 +1128,7 @@
 			"./Coronation_img/male/eyebrow/23.png",
 			"./Coronation_img/female/eyebrow/23.png"
 		],
-		"Content": "부유 / 가난 / 고독",
+		"Content": "부유 / 가난 / 고독 / ",
 		"Point": [
 			[
 				0,
@@ -1179,7 +1179,7 @@
 			"./Coronation_img/male/eyebrow/24.png",
 			"./Coronation_img/female/eyebrow/24.png"
 		],
-		"Content": "장수 / 지혜 / 강직",
+		"Content": "장수 / 지혜 / 강직 / ",
 		"Point": [
 			[
 				0,
