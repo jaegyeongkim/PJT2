@@ -186,7 +186,7 @@ const upload = multer({
 //     fileName: req.body.name + ".jpg",
 //   });
 // });
-
+// app.post("/face", function)
 app.post(
   "/account",
   upload.fields([{ name: "profile_img" }, { name: "profile_video" }]),
@@ -207,7 +207,7 @@ app.post(
           name: reqeustData.name,
           image: req.files.profile_img[0].originalname,
           face: reqeustData.face,
-          movie: reqeustData.movie,
+          // movie: reqeustData.movie,
           video: req.files.profile_video[0].originalname,
         });
       }
