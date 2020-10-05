@@ -52,6 +52,13 @@ const ApplyPage = () => {
   //   setMovie(e.target.value);
   // };
 
+  // const actorface = (info) => {
+  //   fetch("/api/upload/face", {
+  //     method: "post",
+  //     body: info,
+  //   });
+  // };
+
   const onChange = (e) => {
     e.preventDefault();
     let reader = new FileReader();
