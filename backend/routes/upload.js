@@ -8,6 +8,14 @@ const multer = require("multer");
 // const PythonShell = require("python-shell");
 let { PythonShell } = require("python-shell");
 
+const { StringDecoder } = require("string_decoder");
+const decoder = new StringDecoder("utf8");
+
+var Iconv = require("iconv").Iconv;
+
+var euckr2utf8 = new Iconv("EUC-KR", "UTF-8");
+var utf82euckr = new Iconv("UTF-8", "EUC-KR");
+
 app.use(cors());
 
 fs.readdir("uploads", (error) => {
@@ -34,7 +42,7 @@ const upload = multer({
 app.post(
   "/account",
   upload.fields([{ name: "profile_img" }, { name: "profile_video" }]),
-  function (req, res, next) {
+  async function (req, res, next) {
     const reqeustData = req.body;
     var options = {
       mode: "text",
@@ -45,36 +53,43 @@ app.post(
 
       scriptPath: "./routes",
 
-      args: [],
+      args: req.files.profile_img[0].originalname,
+
+      encoding: "utf8",
     };
-    PythonShell.run("test.py", options, function (err, results) {
-      if (err) throw err;
+    PythonShell.run(
+      "test.py",
+      options,
+      await function (err, results) {
+        if (err) throw err;
+        let data = results[0].replace(`b\'`, "").replace(`\'`, "");
+        let buff = Buffer.from(data, "base64");
+        let text = buff.toString("utf-8");
+        console.log(text);
 
-      console.log("results: %j", results);
-      console.log(results);
-
-      // 중복 확인
-      Actor.findOne({
-        where: { id: reqeustData.id },
-      }).then((actor) => {
-        // 중복이면 중복 메세지 보내기
-        if (actor) {
-          res.status(403).send({ msg: "이미 등록하셨습니다." });
-        } else {
-          Actor.create({
-            id: reqeustData.id,
-            gender: reqeustData.gender,
-            name: reqeustData.name,
-            image: req.files.profile_img[0].originalname,
-            face: results,
-            // movie: reqeustData.movie,
-            video: req.files.profile_video[0].originalname,
-          });
-        }
-        console.log("/account ", req.body);
-        res.send({ msg: "등록이 완료되었습니다." });
-      });
-    });
+        // 중복 확인
+        Actor.findOne({
+          where: { id: reqeustData.id },
+        }).then((actor) => {
+          // 중복이면 중복 메세지 보내기
+          if (actor) {
+            res.status(403).send({ msg: "이미 등록하셨습니다." });
+          } else {
+            Actor.create({
+              id: reqeustData.id,
+              gender: reqeustData.gender,
+              name: reqeustData.name,
+              image: req.files.profile_img[0].originalname,
+              face: text,
+              // movie: reqeustData.movie,
+              video: req.files.profile_video[0].originalname,
+            });
+          }
+          console.log("/account ", req.body);
+          res.send({ msg: "등록이 완료되었습니다." });
+        });
+      }
+    );
   }
 );
 
