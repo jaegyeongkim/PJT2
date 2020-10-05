@@ -94,7 +94,7 @@ const ActorDetail = ({ match }) => {
               }}
             >
               <img
-                style={{ width: "80%" }}
+                style={{ width: "90%" }}
                 src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.name}.jpg`}
                 alt="배우 사진"
               />
@@ -102,18 +102,19 @@ const ActorDetail = ({ match }) => {
             <Grid
               item
               xs={3}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
+              // style={{
+              //   display: "flex",
+              //   justifyContent: "center",
+              //   alignItems: "center",
+              // }}
             >
               <Grid>
-                <p>{match.params.name}</p>
+                <h3>{match.params.name}의 관상</h3>
               </Grid>
+
               <Grid>
                 {face_list.map((data, index) => {
-                  return <p>{data}</p>;
+                  return <span>{data}</span>;
                 })}
               </Grid>
             </Grid>
@@ -132,7 +133,7 @@ const ActorDetail = ({ match }) => {
         </Grid>
         <Grid>
           <Grid>
-            <h4>출연 영화</h4>
+            <h3 style={{ paddingLeft: "3vw" }}>출연 영화</h3>
           </Grid>
           <GridList>
             {movie_detail_data.map((movie, index) => {

@@ -34,7 +34,7 @@ const GenrePiechart = (props) => {
       <Grid>
         <Chart
           width={"50vw"}
-          height={"40vh"}
+          height={"45vh"}
           chartType="PieChart"
           loader={<div>Loading Chart</div>}
           data={genre_cnt}
