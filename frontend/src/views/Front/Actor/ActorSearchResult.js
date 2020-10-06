@@ -27,7 +27,7 @@ export default function ActorSearchResult({ match }, props) {
       searchResult.push([actorsData[i]["name"], actorsData[i]["movie_total"]]);
     }
   }
-  console.log(searchResult);
+  // console.log(searchResult);
   searchResult.sort(function (a, b) {
     return a[1] - b[1];
   });
