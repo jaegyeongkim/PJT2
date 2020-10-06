@@ -9,6 +9,10 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import { CommonContext } from "../../../context/CommonContext";
 import GenrePiechart from "./GenrePiechart";
 import MovieCard from "./MovieCard";
+
+import { Player } from "video-react";
+import "video-react/dist/video-react.css";
+
 const useStyles = makeStyles(styles);
 
 const ActorDetail = ({ match }) => {
@@ -25,9 +29,21 @@ const ActorDetail = ({ match }) => {
   }
   /////////////////////////////////////////
   var face_list = [];
+  console.log(Object(face).length);
+  // const l = Object(face).length;
+  // var x = Math.floor(Math.random() * Object(face).length) + 1;
+  // console.log(x);
   for (var f = 0; f < Object(face).length; f++) {
+    // console.log(Math.random(f));
+    // var x = Math.floor(Math.random() * Object(face).length) + 1;
     face_list.push(face[f]);
+    // if (f == 4) {
+    //   break;
+    // } else {
+    //   continue;
+    // }
   }
+
   /////////////////////////////////////////
   var filmo_list = [];
   for (var j = 0; j < Object(filmo).length; j++) {
@@ -75,6 +91,7 @@ const ActorDetail = ({ match }) => {
         fixed
         color="white"
       />
+      <link rel="stylesheet" href="/css/video-react.css" />
       <Grid className={classNames(classes.main, classes.mainRaised)}>
         <Grid
           style={{
@@ -95,7 +112,7 @@ const ActorDetail = ({ match }) => {
             >
               <img
                 style={{ width: "90%" }}
-                src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.name}.jpg`}
+                src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.image}`}
                 alt="배우 사진"
               />
             </Grid>
@@ -132,6 +149,10 @@ const ActorDetail = ({ match }) => {
           </Grid>
         </Grid>
         <Grid>
+          <Player
+            playsInline
+            src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.video}`}
+          />
           <Grid>
             <h3 style={{ paddingLeft: "3vw" }}>출연 영화</h3>
           </Grid>

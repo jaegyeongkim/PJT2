@@ -5,6 +5,7 @@ import glob
 from cv2 import cv2
 import numpy
 import json
+import random
 
 ESC_KEY = 27
 
@@ -37,8 +38,7 @@ predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
 cnt = 0
 # 두번째 매개변수로 지정한 폴더를 싹다 뒤져서 jpg파일을 찾는다.
 for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
-    cnt += 1
-    if 11500 <= cnt < 12000:
+    if 6000 <= cnt < 7000:
         print("Processing file: {}".format(f))
         eyepoint = []
         eyebrowpoint = []
@@ -50,6 +50,8 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
         try:
             img = dlib.load_rgb_image(f)
         except:
+            cnt += 1
+            print(cnt)
             continue
 
         # 불러온 이미지 데이터를 R과 B를 바꿔준다.
@@ -63,7 +65,7 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
         # will make everything bigger and allow us to detect more faces.
         dets = detector(img, 1)
         # print("Number of faces detected: {}".format(len(dets)))
-        print(cnt)
+        # print(cnt)
 
         # 이제부터 인식된 얼굴 개수만큼 반복하여 얼굴 윤곽을 표시할 것이다. 
         for k, d in enumerate(dets):
@@ -72,57 +74,35 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
             # print("Detection {}: Left: {} Top: {} Right: {} Bottom: {}".format(
             #     k, d.left(), d.top(), d.right(), d.bottom()))
 
-            # Get the landmarks/parts for the face in box d.
             shape = predictor(img, d)
             # print(shape.num_parts)
             for i in range(0, 68):
                 # 해당 X,Y 좌표를 두배로 키워 좌표를 얻고
                 x = shape.part(i).x*4
                 y = shape.part(i).y*4
-                # print(str(x) + ' ' + str(y))
-                # 좌표값 출력
-                # if 0 <= i < 17:
-                #     if i == 0:
-                #         print('얼굴 윤곽')
-                #     print(str(x) + ' ' + str(y))
                 if 17 <= i < 27:
-                    # if i == 17:
-                    #     print('눈썹')
                     if i == 17:
                         point_x = x
                         point_y = y
                     eyebrowpoint.append((x - point_x, y - point_y))
-                    # print(str(x) + ' ' + str(y))
                 elif 27 <= i < 36:
-                    # if i == 27:
-                    #     print('코')
                     if i == 27:
                         point_x = x
                         point_y = y
                     nosepoint.append((x - point_x, y - point_y))
-                    # print(str(x) + ' ' + str(y))
                 elif 36 <= i < 48:
-                    # if i == 36:
-                    #     print('눈')
                     if i == 36:
                         point_x = x
                         point_y = y
                     eyepoint.append((x - point_x, y - point_y))
-                    # print(str(x) + ' ' + str(y))
                 elif 48 <= i < 68:
-                    # if i == 48:
-                    #     print('입')
                     if i == 48:
                         point_x = x
                         point_y = y
                     mouthpoint.append((x - point_x, y - point_y))
-                    # print(str(x) + ' ' + str(y))
                 # 이미지 랜드마크 좌표 지점에 인덱스(랜드마크번호, 여기선 i)를 putText로 표시해준다.
                 cv2.putText(cvImg, str(i), (x, y), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 0.3, (0, 255, 0))                    
-            # print(eyebrowpoint)
-            # print(eyepoint)
-            # print(nosepoint)
-            # print(mouthpoint)
+
             with open('C:\\Users\\multicampus\\BIG-data_PJT\\s03p23b206\\datas\\tmp\\coronation_eye.json', 'r', encoding='utf-8') as json_file:
                 eyedata = json.load(json_file)
             with open('C:\\Users\\multicampus\\BIG-data_PJT\\s03p23b206\\datas\\tmp\\coronation_eyebrow.json', 'r', encoding='utf-8') as json_file:
@@ -178,25 +158,26 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
                     if mouthsum <= mouthmin:
                         mouthmin = mouthsum
                         mouth_idx = i
-            coro = eyedata[eye_idx]['Content'] + eyebrowdata[eyebrow_idx]['Content'] + nosedata[nose_idx]['Content'] + mouthdata[mouth_idx]['Content']
-
+            eye = eyedata[eye_idx]['Content'].split(' / ')[:-1]
+            random.shuffle(eye)
+            eyebrow = eyebrowdata[eyebrow_idx]['Content'].split(' / ')[:-1]
+            random.shuffle(eyebrow)
+            nose = nosedata[nose_idx]['Content'].split(' / ')[:-1]
+            random.shuffle(nose)
+            mouth = mouthdata[mouth_idx]['Content'].split(' / ')[:-1]
+            random.shuffle(mouth)
             with open('./test_actor.json', 'r', encoding='utf-8') as actor:
                 actor_data = json.load(actor)
             for i in range(len(actor_data)):
                 if actor_data[i]['name'] == name:
+                    n = int(actor_data[i]['id'])
+                    coro = [eye[n % len(eye)], eyebrow[n % len(eyebrow)], nose[n % len(nose)], mouth[n % len(mouth)]]
+                    random.shuffle(coro)
+                    coro = ' / '.join(coro)
                     if actor_data[i]['face'] == "":
                         actor_data[i]['face'] = coro
             with open('./test_actor.json', 'w', encoding='utf-8') as re_actor:
                 json.dump(actor_data, re_actor, ensure_ascii = False, indent='\t')
-    elif cnt < 11500:
-        cnt += 1
-    elif cnt >= 12000:
+    elif cnt >= 7000:
         break
-        # 랜드마크가 표시된 이미지를 openCV 윈도에 표시
-        # cv2.imshow('Face', cvImg)
-
-    # 무한 대기를 타고 있다가 ESC 키가 눌리면 빠져나와 다음 이미지를 검색한다.
-    # while True:
-    #     if cv2.waitKey(1) == 27:
-    #         break
-# cv2.destroyWindow('Face')  
+    cnt += 1
