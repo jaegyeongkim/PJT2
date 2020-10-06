@@ -11,11 +11,6 @@ let { PythonShell } = require("python-shell");
 const { StringDecoder } = require("string_decoder");
 const decoder = new StringDecoder("utf8");
 
-var Iconv = require("iconv").Iconv;
-
-var euckr2utf8 = new Iconv("EUC-KR", "UTF-8");
-var utf82euckr = new Iconv("UTF-8", "EUC-KR");
-
 app.use(cors());
 
 fs.readdir("uploads", (error) => {
