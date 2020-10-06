@@ -9,6 +9,8 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import { CommonContext } from "../../../context/CommonContext";
 import GenrePiechart from "./GenrePiechart";
 import MovieCard from "./MovieCard";
+import { object } from "prop-types";
+
 import { Player } from "video-react";
 import "video-react/dist/video-react.css";
 
