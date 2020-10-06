@@ -172,7 +172,6 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
                 if actor_data[i]['name'] == name:
                     n = int(actor_data[i]['id'])
                     coro = [eye[n % len(eye)], eyebrow[n % len(eyebrow)], nose[n % len(nose)], mouth[n % len(mouth)]]
-                    # coro = eye[n % len(eye)] + ' / ' + eyebrow[n % len(eyebrow)] + ' / ' + nose[n % len(nose)] + ' / ' + mouth[n % len(mouth)]
                     random.shuffle(coro)
                     coro = ' / '.join(coro)
                     if actor_data[i]['face'] == "":

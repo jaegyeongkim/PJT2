@@ -8,23 +8,20 @@ const multer = require("multer");
 // const PythonShell = require("python-shell");
 let { PythonShell } = require("python-shell");
 
-const { StringDecoder } = require("string_decoder");
-const decoder = new StringDecoder("utf8");
-
 app.use(cors());
 
-fs.readdir("uploads", (error) => {
-  // uploads 폴더 없으면 생성
-  if (error) {
-    fs.mkdirSync("uploads");
-  }
-});
+// fs.readdir("uploads", (error) => {
+//   // uploads 폴더 없으면 생성
+//   if (error) {
+//     fs.mkdirSync("uploads");
+//   }
+// });
 
 // 이미지 업로드
 const upload = multer({
   storage: multer.diskStorage({
     destination(req, file, cb) {
-      cb(null, "uploads/");
+      cb(null, "../frontend/build/static/img/actor/");
     },
     filename(req, file, cb) {
       const ext = path.extname(file.originalname);
@@ -74,9 +71,10 @@ app.post(
               id: reqeustData.id,
               gender: reqeustData.gender,
               name: reqeustData.name,
+              birth: reqeustData.birth,
               image: req.files.profile_img[0].originalname,
               face: text,
-              // movie: reqeustData.movie,
+              movie: "",
               video: req.files.profile_video[0].originalname,
             });
           }
