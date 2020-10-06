@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
+import { Grid, GridList } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import Footer from "components/Footer/Footer.js";
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/components.js";
-import Wrapper from "../../assets/jss/material-kit-react/components/contactus";
+// import Wrapper from "../../assets/jss/material-kit-react/components/contactus";
 import classNames from "classnames";
+import Button from "components/CustomButtons/Button.js";
+import CustomInput from "components/CustomInput/CustomInput.js";
 
 const useStyles = makeStyles(styles);
 const ApplyPage = () => {
@@ -87,7 +90,7 @@ const ApplyPage = () => {
     formData.append("gender", event.target.gender.value);
     formData.append("name", event.target.name.value);
     formData.append("profile_img", event.target.profile_img.files[0]);
-    formData.append("birth", event.target.birth.value);
+    // formData.append("birth", event.target.birth.value);
     // formData.append("face", event.target.face.value);
     // formData.append("movie", event.target.movie.value);
     formData.append("profile_video", event.target.profile_video.files[0]);
@@ -123,55 +126,104 @@ const ApplyPage = () => {
         fixed
         color="white"
       />
-      <Wrapper className={classNames(classes.main, classes.mainRaised)}>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <form
-          name="accountFrm"
-          onSubmit={handleSubmit}
-          encType="multipart/form-data"
+      <Grid className={classNames(classes.main, classes.mainRaised)}>
+        <Grid
+          container
+          direction="column"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          <div>{profile_preview}</div>
-          <p>
-            <input
-              type="file"
-              accept="image/jpg,impge/png,image/jpeg,image/gif"
-              name="profile_img"
-              onChange={onChange}
-            ></input>
-          </p>
-          <p>성별</p>
-          <p>
-            <input
-              type="text"
-              name="gender"
-              defaultValue={user[0].gender}
-            ></input>
-          </p>
+          <Grid
+            item
+            xs={11}
+            style={{ fontSize: "3vw", marginTop: "50px", marginBottom: "50px" }}
+          >
+            신인 배우 등록하기
+          </Grid>
 
-          <p>이름</p>
-          <p>
-            <input type="text" name="name" defaultValue={user[0].name}></input>
-          </p>
+          <Grid
+            item
+            xs={11}
+            style={{
+              marginLeft: "50px",
+            }}
+          >
+            <form
+              name="accountFrm"
+              onSubmit={handleSubmit}
+              encType="multipart/form-data"
+            >
+              <div>{profile_preview}</div>
+              <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
+                프로필 사진
+              </div>
+              <p style={{ fontSize: "1.2vw", marginBottom: "20px" }}>
+                <input
+                  style={{ marginLeft: "80px" }}
+                  type="file"
+                  accept="image/jpg,impge/png,image/jpeg,image/gif"
+                  name="profile_img"
+                  onChange={onChange}
+                ></input>
+              </p>
 
-          <p>생일</p>
+              <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
+                이름
+              </div>
+              <p
+                style={{
+                  fontSize: "1.3vw",
+                  marginBottom: "25px",
+                  textAlign: "right",
+                  marginRight: "75px",
+                }}
+              >
+                <input
+                  style={{
+                    width: "8vw",
+                    height: "4vh",
+                    borderRadius: 6,
+                  }}
+                  type="text"
+                  name="name"
+                  defaultValue={user[0].name}
+                ></input>
+              </p>
+              <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
+                성별
+              </div>
+              <p
+                style={{
+                  fontSize: "1.3vw",
+                  marginBottom: "25px",
+                  textAlign: "right",
+                  marginRight: "75px",
+                }}
+                type="text"
+                name="gender"
+                value={user[0].gender}
+              >
+                {user[0].gender}
+              </p>
+
+              {/* <p>생일</p>
           <p>
             <input
               type="text"
               name="birth"
               defaultValue={user[0].birth}
             ></input>
-          </p>
+          </p> */}
 
-          {/* <p>관상(이건 나중에)</p>
+              {/* <p>관상(이건 나중에)</p>
           <p>
             <input type="text" name="face" defaultValue={user[0].face}></input>
           </p> */}
 
-          {/* <p>출연영화</p>
+              {/* <p>출연영화</p>
           <p>
             <input
               type="text"
@@ -179,21 +231,37 @@ const ApplyPage = () => {
               defaultValue={user[0].movie}
             ></input>
           </p> */}
-          <p>자신을 어필할 영상</p>
-          <p>
-            <input
-              type="file"
-              name="profile_video"
-              onChange={onChange2}
-            ></input>
-          </p>
+              <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
+                자신을 어필할 영상
+              </div>
+              <p>
+                <input
+                  style={{ marginLeft: "80px" }}
+                  type="file"
+                  name="profile_video"
+                  onChange={onChange2}
+                ></input>
+              </p>
 
-          <br />
-          <p>
-            <input type="submit" value="등록하기"></input>
-          </p>
-        </form>
-      </Wrapper>
+              <br />
+
+              <Grid
+                item
+                xs={11}
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  alignItems: "flex-end",
+                }}
+              >
+                <Button color="primary" type="submit" size="sm">
+                  등록하기
+                </Button>
+              </Grid>
+            </form>
+          </Grid>
+        </Grid>
+      </Grid>
       <Footer />
     </>
   );

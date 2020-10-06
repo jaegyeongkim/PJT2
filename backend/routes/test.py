@@ -22,16 +22,16 @@ def swapRGB2BGR(rgb):
     return bgr
 
 # 랜드마크 파일 경로
-sys.argv.append('C:\\Users\\multicampus\\BIG-data_PJT\\s03p23b206\\datas\\json\\shape_predictor_68_face_landmarks.dat')
+sys.argv.append('./shape_predictor_68_face_landmarks.dat')
 predictor_path = sys.argv[2]
 # 이미지 경로
-face = 'C:\\Users\\multicampus\\BIG-data_PJT\\s03p23b206\\backend\\uploads\\' + sys.argv[1]
+face = '../frontend/build/static/img/actor/' + sys.argv[1]
 # print(sys.argv)
 # print(face)
 # 얼굴 인식용 클래스 생성 (기본 제공되는 얼굴 인식 모델 사용)
 detector = dlib.get_frontal_face_detector()
 # 인식된 얼굴에서 랜드마크 찾기위한 클래스 생성 
-predictor = dlib.shape_predictor('C:\\Users\\multicampus\\BIG-data_PJT\\s03p23b206\\datas\\json\\shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('./shape_predictor_68_face_landmarks.dat')
 
 # 두번째 매개변수로 지정한 폴더를 싹다 뒤져서 jpg파일을 찾는다.
 eyepoint = []
@@ -88,13 +88,13 @@ for k, d in enumerate(dets):
         # 이미지 랜드마크 좌표 지점에 인덱스(랜드마크번호, 여기선 i)를 putText로 표시해준다.
         cv2.putText(cvImg, str(i), (x, y), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 0.3, (0, 255, 0))                    
 
-    with open('C:\\Users\\multicampus\\BIG-data_PJT\\s03p23b206\\datas\\tmp\\coronation_eye.json', 'r', encoding='utf-8') as json_file:
+    with open('./coronation_eye.json', 'r', encoding='utf-8') as json_file:
         eyedata = json.load(json_file)
-    with open('C:\\Users\\multicampus\\BIG-data_PJT\\s03p23b206\\datas\\tmp\\coronation_eyebrow.json', 'r', encoding='utf-8') as json_file:
+    with open('./coronation_eyebrow.json', 'r', encoding='utf-8') as json_file:
         eyebrowdata = json.load(json_file)
-    with open('C:\\Users\\multicampus\\BIG-data_PJT\\s03p23b206\\datas\\tmp\\coronation_nose.json', 'r', encoding='utf-8') as json_file:
+    with open('./coronation_nose.json', 'r', encoding='utf-8') as json_file:
         nosedata = json.load(json_file)
-    with open('C:\\Users\\multicampus\\BIG-data_PJT\\s03p23b206\\datas\\tmp\\coronation_mouth.json', 'r', encoding='utf-8') as json_file:
+    with open('./coronation_mouth.json', 'r', encoding='utf-8') as json_file:
         mouthdata = json.load(json_file)
     eyemin = float('inf')
     eye_idx = 0
@@ -143,16 +143,11 @@ for k, d in enumerate(dets):
             if mouthsum <= mouthmin:
                 mouthmin = mouthsum
                 mouth_idx = i
-    eye = eyedata[eye_idx]['Content'].split(' / ')[:-1]
-    random.shuffle(eye)
-    eyebrow = eyebrowdata[eyebrow_idx]['Content'].split(' / ')[:-1]
-    random.shuffle(eyebrow)
-    nose = nosedata[nose_idx]['Content'].split(' / ')[:-1]
-    random.shuffle(nose)
-    mouth = mouthdata[mouth_idx]['Content'].split(' / ')[:-1]
-    random.shuffle(mouth)
-    coro = [eye[0], eyebrow[0], nose[0], mouth[0]]
-    random.shuffle(coro)
-    coro = ' / '.join(coro)
+    coro = eyedata[eye_idx]['Content'] + eyebrowdata[eye_idx]['Content'] + nosedata[eye_idx]['Content'] + mouthdata[eye_idx]['Content']
+    coro_data = coro.split(' / ')[:-1]
+    coro_data = list(set(coro_data))
+    random.shuffle(coro_data)
+    coro_data = coro_data[:6]
+    coro = ' / '.join(coro_data)
     result = str(coro)
     print(base64.b64encode(result.encode('utf-8')))
