@@ -71,7 +71,7 @@ app.post(
               id: reqeustData.id,
               gender: reqeustData.gender,
               name: reqeustData.name,
-              birth: reqeustData.birth,
+              birth: "",
               image: req.files.profile_img[0].originalname,
               face: text,
               movie: "",
