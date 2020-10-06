@@ -25,7 +25,7 @@ material-kit-react
 	|	|	├── components.js
 	|	├── Front
     | 	|	├── Actor
-	|	|	|	├── Actorimg.js
+	|	|	|	├── ActorCard.js
 	|	|	|	├── ActorSearch.js
     |   |   |	├── ActorSearchResult.js
 	|	|	├── HelpFor206
@@ -57,7 +57,7 @@ material-kit-react
 
 페이지 소개 components.js
 
-회원가입 SigninPage.js
+회원가입 SignupPage.js
 
 라이센스 license.js
 
