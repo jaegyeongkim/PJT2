@@ -12,9 +12,29 @@ import { CommonContext } from "../../../context/CommonContext";
 const useStyles = makeStyles(styles);
 
 const CategoryResult = ({ match }, props) => {
+  const faceData = [match.params.cat1, match.params.cat2, match.params.cat3];
+  const actorDic = { 1: [], 2: [], 3: [], 4: [], 5: [] };
   const classes = useStyles();
-  let history = useHistory();
+  const { actorsData } = useContext(CommonContext);
+  for (var a = 0; a < actorsData.length; a++) {
+    if (actorsData[a]["gender"] === match.params.gender) {
+      var face = actorsData[a]["face"].split("/");
 
+      var cnt = 0;
+      for (var f = 0; f < face.length; f++) {
+        for (var d = 0; d < faceData.length; d++) {
+          if (face[f].includes(faceData[d])) {
+            cnt++;
+            break;
+          }
+        }
+      }
+      if (cnt > 0) {
+        actorDic[cnt].push(actorsData[a]["name"]);
+      }
+    }
+  }
+  console.log(actorDic);
   return (
     <div>
       <Header
@@ -37,7 +57,8 @@ const CategoryResult = ({ match }, props) => {
         >
           <h3>
             "{match.params.gender}" + "{match.params.cat1}" + "
-            {match.params.cat2}" + "{match.params.cat3}" 선택 결과입니다.
+            {match.params.cat2}" + "{match.params.cat3} + {match.params.cat4} +{" "}
+            {match.params.cat5}" 선택 결과입니다.
           </h3>
         </Grid>
       </Grid>

@@ -54,6 +54,7 @@ const App = () => {
   const [actorsData, setActorsData] = useState([]);
   const [movieData, setMovieData] = useState([]);
   const [genreData, setGenreData] = useState([]);
+  const [characterData, setCharacterData] = useState([]);
   // CommonContext로 사용하고 싶은 데이터 등록하면 됩니다.
 
   // 배우 데이터
@@ -74,10 +75,17 @@ const App = () => {
     });
   }
 
+  async function getCharacterDatas() {
+    Axios.get("https://j3b206.p.ssafy.io/api/character/").then(function (res) {
+      setCharacterData(res.data);
+    });
+  }
+
   useEffect(() => {
     getActorDatas();
     getMovieDatas();
     getGenreDatas();
+    getCharacterDatas();
   }, []);
 
   return (
@@ -90,6 +98,8 @@ const App = () => {
         setMovieData,
         genreData,
         setGenreData,
+        characterData,
+        setCharacterData,
       }}
     >
       <Router history={hist}>
@@ -116,7 +126,7 @@ const App = () => {
           <Route path="/signup-page" component={SignupPage} />
           <Route path="/contact-us" component={Contactus} />
           <Route
-            path="/category-result/:gender/:cat1/:cat2/:cat3"
+            path="/category-result/:gender/:cat1/:cat2/:cat3/:cat4/:cat5"
             component={CategoryResult}
           />
 
