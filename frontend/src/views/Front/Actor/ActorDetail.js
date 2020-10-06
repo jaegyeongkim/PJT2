@@ -112,7 +112,7 @@ const ActorDetail = ({ match }) => {
             >
               <img
                 style={{ width: "90%" }}
-                src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.image}`}
+                src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.name}.jpg`}
                 alt="배우 사진"
               />
             </Grid>
