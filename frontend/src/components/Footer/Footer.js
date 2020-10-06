@@ -34,8 +34,8 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <Link
-                style={{ color: "inherit" }}
-                color="transparent"
+                // style={{ color: "inherit" }}
+                // color="transparent"
                 to="/about-us"
                 className={classes.block}
               >

@@ -5,6 +5,7 @@ import glob
 from cv2 import cv2
 import numpy
 import json
+import random
 
 ESC_KEY = 27
 
@@ -50,7 +51,7 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
             img = dlib.load_rgb_image(f)
         except:
             cnt += 1
-            # print(cnt)
+            print(cnt)
             continue
 
         # 불러온 이미지 데이터를 R과 B를 바꿔준다.
@@ -157,12 +158,22 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
                     if mouthsum <= mouthmin:
                         mouthmin = mouthsum
                         mouth_idx = i
-            coro = eyedata[eye_idx]['Content'] + eyebrowdata[eyebrow_idx]['Content'] + nosedata[nose_idx]['Content'] + mouthdata[mouth_idx]['Content']
-
+            eye = eyedata[eye_idx]['Content'].split(' / ')[:-1]
+            random.shuffle(eye)
+            eyebrow = eyebrowdata[eyebrow_idx]['Content'].split(' / ')[:-1]
+            random.shuffle(eyebrow)
+            nose = nosedata[nose_idx]['Content'].split(' / ')[:-1]
+            random.shuffle(nose)
+            mouth = mouthdata[mouth_idx]['Content'].split(' / ')[:-1]
+            random.shuffle(mouth)
             with open('./test_actor.json', 'r', encoding='utf-8') as actor:
                 actor_data = json.load(actor)
             for i in range(len(actor_data)):
                 if actor_data[i]['name'] == name:
+                    n = int(actor_data[i]['id'])
+                    coro = [eye[n % len(eye)], eyebrow[n % len(eyebrow)], nose[n % len(nose)], mouth[n % len(mouth)]]
+                    random.shuffle(coro)
+                    coro = ' / '.join(coro)
                     if actor_data[i]['face'] == "":
                         actor_data[i]['face'] = coro
             with open('./test_actor.json', 'w', encoding='utf-8') as re_actor:
