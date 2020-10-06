@@ -9,7 +9,10 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import { CommonContext } from "../../../context/CommonContext";
 import GenrePiechart from "./GenrePiechart";
 import MovieCard from "./MovieCard";
-import { object } from "prop-types";
+
+import { Player } from "video-react";
+import "video-react/dist/video-react.css";
+
 const useStyles = makeStyles(styles);
 
 const ActorDetail = ({ match }) => {
@@ -88,6 +91,7 @@ const ActorDetail = ({ match }) => {
         fixed
         color="white"
       />
+      <link rel="stylesheet" href="/css/video-react.css" />
       <Grid className={classNames(classes.main, classes.mainRaised)}>
         <Grid
           style={{
@@ -108,7 +112,7 @@ const ActorDetail = ({ match }) => {
             >
               <img
                 style={{ width: "90%" }}
-                src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.name}.jpg`}
+                src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.image}`}
                 alt="배우 사진"
               />
             </Grid>
@@ -145,6 +149,10 @@ const ActorDetail = ({ match }) => {
           </Grid>
         </Grid>
         <Grid>
+          <Player
+            playsInline
+            src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.video}`}
+          />
           <Grid>
             <h3 style={{ paddingLeft: "3vw" }}>출연 영화</h3>
           </Grid>
