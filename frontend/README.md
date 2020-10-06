@@ -6,8 +6,6 @@
 npm i
 ```
 
-
-
 ### 폴더 구조
 
 주로 사용하는 폴더만 표기했습니다.
@@ -19,8 +17,10 @@ material-kit-react
     |   ├── Header
     |   |	├── Header.js
     |   |	├── HeaderLink.js
-    |   ├── Footer 
+    |   ├── Footer
 	├── Views
+	|   ├── ApplyPage
+	|   |   └── ApplyPage.js
     |   ├── Components
 	|	|	├── components.js
 	|	├── Front
@@ -33,40 +33,34 @@ material-kit-react
 	|	|	|	├── Category.js
     |   |   └──Introduce
 	|	|		└── Introduce.js
-	|	├──	LoginPage		
+	|	├──	LoginPage
 	|	|	└──	LoginPage.js
 	|	└── SignupPage
-	|		├── CommonContext.js
-	|		├── Form.js
-	|		├──	SignupPage.jsx
-	|		├── styles.jsx
-	|		└── ViewContext.js
+	|		└── SignupPage.js
 	├── App.js
 	└── index.js
 ```
 
-
-
 ### 전체 페이지 구성
 
-메인							components.js
+메인 components.js
 
-배우 검색					ActorSearch.js
+배우 검색 ActorSearch.js
 
-배우 검색 결과			ActorSeachResult.js
+배우 검색 결과 ActorSeachResult.js
 
-배우 디테일				 ActorDetail.js
+배우 디테일 ActorDetail.js
 
-로그인						LoginPage.js
+로그인 LoginPage.js
 
-배우 추천 카테고리	Category.js
+배우 추천 카테고리 Category.js
 
-페이지 소개				components.js
+페이지 소개 components.js
 
-회원가입					SigninPage.js
+회원가입 SigninPage.js
 
-라이센스					license.js
+라이센스 license.js
 
-개발자(팀) 소개		aboutus.js
+개발자(팀) 소개 aboutus.js
 
-네비게이션바			Header.js
+네비게이션바 Header.js
