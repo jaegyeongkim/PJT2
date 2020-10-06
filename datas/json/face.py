@@ -1,6 +1,6 @@
 import json
 
-file = open("actor_com.json","r",encoding='utf-8')        # merge 하고자하는 1번 파일
+file = open("actor_com3.json","r",encoding='utf-8')        # merge 하고자하는 1번 파일
 jsondata = json.load(file)
 
 file = open("test_actor.json","r",encoding='utf-8')     # merge 하고자하는 2번 파일
@@ -20,5 +20,5 @@ for data in jsondata2:
     # jsondata["face"] += data["face"]
 
 # print(jsondata)
-with open('actor_com2', 'w', encoding='utf-8') as make_file:
+with open('actor_com4', 'w', encoding='utf-8') as make_file:
     json.dump(jsondata, make_file, ensure_ascii = False, indent='\t')
