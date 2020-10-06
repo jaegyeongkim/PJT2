@@ -24,6 +24,8 @@ const ActorDetail = ({ match }) => {
     if (actorsData[i]["name"] === match.params.name) {
       var filmo = actorsData[i]["movie"].split("/");
       var face = actorsData[i]["face"].split("/");
+      var userimg = actorsData[i]["image"];
+      var uservideo = actorsData[i]["video"];
       break;
     }
   }
@@ -112,7 +114,7 @@ const ActorDetail = ({ match }) => {
             >
               <img
                 style={{ width: "90%" }}
-                src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.image}`}
+                src={`https://j3b206.p.ssafy.io/static/img/actor/${userimg}`}
                 alt="배우 사진"
               />
             </Grid>
@@ -151,7 +153,7 @@ const ActorDetail = ({ match }) => {
         <Grid>
           <Player
             playsInline
-            src={`https://j3b206.p.ssafy.io/static/img/actor/${match.params.video}`}
+            src={`https://j3b206.p.ssafy.io/static/img/actor/${uservideo}`}
           />
           <Grid>
             <h3 style={{ paddingLeft: "3vw" }}>출연 영화</h3>
