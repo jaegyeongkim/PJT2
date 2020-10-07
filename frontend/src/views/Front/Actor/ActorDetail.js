@@ -26,7 +26,7 @@ const ActorDetail = ({ match }) => {
       var filmo = actorsData[i]["movie"].split("/");
       var face = actorsData[i]["face"].split("/");
       var userimg = actorsData[i]["image"];
-      // var uservideo = actorsData[i]["video"];
+      var uservideo = actorsData[i]["video"];
       break;
     }
   }
@@ -79,8 +79,8 @@ const ActorDetail = ({ match }) => {
     }
   }
   var movie_year = [];
-  for (var p = 0; p < movie_detail_data.length; p++) {
-    movie_year.push(movie_detail_data[p][5]);
+  for (var pp = 0; pp < movie_detail_data.length; pp++) {
+    movie_year.push(movie_detail_data[pp][5]);
   }
   var sameMovieActor = [];
   for (var sa = 0; sa < movie_detail_data.length; sa++) {
@@ -164,10 +164,10 @@ const ActorDetail = ({ match }) => {
           </Grid>
         </Grid>
         <Grid>
-          {/* <Player
+          <Player
             playsInline
             src={`https://j3b206.p.ssafy.io/static/img/actor/${uservideo}`}
-          /> */}
+          />
           <Grid>
             <h3 style={{ paddingLeft: "3vw" }}>출연 영화</h3>
           </Grid>

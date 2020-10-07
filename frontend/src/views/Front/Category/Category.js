@@ -15,7 +15,7 @@ import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import styles from "assets/jss/material-kit-react/views/components.js";
-import ButtonStyles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
+// import ButtonStyles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 import Button from "components/CustomButtons/Button.js";
 // import GridItem from "components/Grid/GridItem.js";
 // import { FiberManualRecord, Check } from "@material-ui/icons";
@@ -26,7 +26,7 @@ const useStyles = makeStyles(styles);
 const selectCharacters = [];
 const Category = (props) => {
   const classes = useStyles();
-  const buttonStyles = makeStyles(ButtonStyles);
+  // const buttonStyles = makeStyles(ButtonStyles);
   const { ...rest } = props;
   // const [selectedGender, setSelectedGender] = useState("");
   // const [selectedCharacter, setSelectedCharacter] = useState([]);
@@ -161,8 +161,6 @@ const Category = (props) => {
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // 성격 선택 체크 박스
   const Character = () => {
-    const classes = buttonStyles();
-
     const test = (event) => {
       const index = selectCharacters.indexOf(event.target.textContent);
 
@@ -175,7 +173,7 @@ const Category = (props) => {
 
     return (
       <Grid>
-        <h4 className={classes.subtitle}>이미지</h4>
+        {/* <h4 className={classes.subtitle}>이미지</h4> */}
         {/* <p>3개를 선택하세요</p> */}
         <div className={checkclasses.root}>
           <Autocomplete
@@ -238,61 +236,78 @@ const Category = (props) => {
         {...rest}
       />
 
-      <Grid className={classNames(classes.main, classes.mainRaised)}>
-        <Grid
-          container
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+      <Grid
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        className={classNames(classes.main, classes.mainRaised)}
+      >
+        <Grid>
+          <img
+            src="https://j3b206.p.ssafy.io/static/img/main_img/main1.jpg"
+            style={{ height: "70vh" }}
+            alt="관상"
+          />
+        </Grid>
+        <Grid>
           <Grid
             container
-            xs={8}
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <Grid item>
-              <h3>어떤 이미지의 배우를 찾으시나요?</h3>
-              <br />
+            <Grid
+              container
+              xs={8}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Grid item>
+                <h3 style={{ textAlign: "center" }}>어떤 이미지의</h3>
+                <h3 style={{ textAlign: "center" }}>인물을 찾으시나요?</h3>
+                <h5>최대 3개의 키워드를 선택해보세요.</h5>
+                <br />
+              </Grid>
             </Grid>
-          </Grid>
-          <Grid
-            container
-            xs={8}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Grid item>
-              {/* <Grid>
+            <Grid
+              container
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Grid item>
+                {/* <Grid>
                 <Gender />
               </Grid> */}
-              <Grid>
-                <Character
+                <Grid>
+                  <Character
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  />
+                </Grid>
+
+                <Grid
                   style={{
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                   }}
-                />
-              </Grid>
-
-              <Grid
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Grid onClick={submitCoronationData}>
-                  <Button color="primary">선택 완료</Button>
+                >
+                  <Grid onClick={submitCoronationData}>
+                    <Button color="primary">선택 완료</Button>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>

@@ -12,7 +12,7 @@ import { CommonContext } from "../../../context/CommonContext";
 const useStyles = makeStyles(styles);
 
 const CategoryResult2 = ({ match }, props) => {
-  const faceData = [match.params.cat1];
+  const faceData = [match.params.cat1, match.params.cat2];
   const actorDic = { 1: [], 2: [], 3: [], 4: [], 5: [] };
   const actor200 = [];
   const actorReal200over = [];
@@ -84,9 +84,9 @@ const CategoryResult2 = ({ match }, props) => {
     for (var ec = 0; ec < 200; ec++) {
       actorReal200.push(actor200[ec]);
     }
-    for (var fi = 0; fi < actorReal200.length; fi++) {
-      if (actorReal200[fi] !== undefined) {
-        final.push([actorReal200[fi]["name"]]);
+    for (var fif = 0; fif < actorReal200.length; fif++) {
+      if (actorReal200[fif] !== undefined) {
+        final.push([actorReal200[fif]["name"]]);
       }
     }
   }
