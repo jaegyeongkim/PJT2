@@ -13,7 +13,7 @@ const useStyles = makeStyles(styles);
 
 const CategoryResult2 = ({ match }, props) => {
   const faceData = [match.params.cat1, match.params.cat2];
-  const actorDic = { 1: [], 2: [], 3: [], 4: [], 5: [] };
+  const actorDic = { 1: [], 2: [] };
   const actor200 = [];
   const actorReal200over = [];
   const classes = useStyles();
@@ -34,8 +34,9 @@ const CategoryResult2 = ({ match }, props) => {
       actorDic[cnt].push(actorsData[a]);
     }
   }
+
   var actor200Cnt = 0;
-  for (var s = 5; s > 0; s--) {
+  for (var s = 2; s > 0; s--) {
     if (actorDic[s].length > 0) {
       if (actorDic[s].length <= 200) {
         actor200Cnt = actorDic[s].length;
@@ -48,7 +49,6 @@ const CategoryResult2 = ({ match }, props) => {
       break;
     }
   }
-
   const actorReal200 = [];
   const final = [];
   if (actor200Cnt > 0) {
@@ -81,6 +81,7 @@ const CategoryResult2 = ({ match }, props) => {
     actor200.sort(function (a, b) {
       return a["movie_total"] - b["movie_total"];
     });
+    actor200.reverse();
     for (var ec = 0; ec < 200; ec++) {
       actorReal200.push(actor200[ec]);
     }

@@ -81,6 +81,7 @@ const CategoryResult3 = ({ match }, props) => {
     actor200.sort(function (a, b) {
       return a["movie_total"] - b["movie_total"];
     });
+    actor200.reverse();
     for (var ec = 0; ec < 200; ec++) {
       actorReal200.push(actor200[ec]);
     }

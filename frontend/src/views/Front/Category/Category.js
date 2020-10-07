@@ -245,13 +245,11 @@ const Category = (props) => {
         className={classNames(classes.main, classes.mainRaised)}
       >
         <Grid>
-          <img
+          {/* <img
             src="https://j3b206.p.ssafy.io/static/img/main_img/main1.jpg"
-            style={{ height: "70vh" }}
+            style={{ height: "40vh" }}
             alt="관상"
-          />
-        </Grid>
-        <Grid>
+          /> */}
           <Grid
             container
             style={{
@@ -262,14 +260,25 @@ const Category = (props) => {
           >
             <Grid
               container
-              xs={8}
               style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                backgroundImage:
+                  "url(https://j3b206.p.ssafy.io/static/img/main_img/main1.jpg)",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
               }}
             >
               <Grid item>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
                 <h3 style={{ textAlign: "center" }}>어떤 이미지의</h3>
                 <h3 style={{ textAlign: "center" }}>인물을 찾으시나요?</h3>
                 <h5>최대 3개의 키워드를 선택해보세요.</h5>

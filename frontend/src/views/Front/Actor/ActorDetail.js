@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Grid, GridList } from "@material-ui/core";
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -19,7 +19,9 @@ const useStyles = makeStyles(styles);
 const ActorDetail = ({ match }) => {
   const classes = useStyles();
   const { actorsData, movieData, genreData } = useContext(CommonContext);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // 출연 영화 split
   for (var i = 0; i < actorsData.length; i++) {
     if (actorsData[i]["name"] === match.params.name) {
