@@ -20,5 +20,5 @@ for data in jsondata2:
     # jsondata["face"] += data["face"]
 
 # print(jsondata)
-with open('actor_com4', 'w', encoding='utf-8') as make_file:
+with open('actor_com4.json', 'w', encoding='utf-8') as make_file:
     json.dump(jsondata, make_file, ensure_ascii = False, indent='\t')
