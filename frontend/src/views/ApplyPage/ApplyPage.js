@@ -87,7 +87,7 @@ const ApplyPage = () => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("id", user[0].id);
-    formData.append("gender", event.target.gender.value);
+    formData.append("gender", user[0].gender);
     formData.append("name", event.target.name.value);
     formData.append("profile_img", event.target.profile_img.files[0]);
     // formData.append("birth", event.target.birth.value);
@@ -160,15 +160,15 @@ const ApplyPage = () => {
               <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
                 프로필 사진
               </div>
-              <p style={{ fontSize: "1.2vw", marginBottom: "20px" }}>
+              <div style={{ fontSize: "1.2vw", marginBottom: "20px" }}>
                 <input
-                  style={{ marginLeft: "80px" }}
+                  style={{ marginLeft: "80px", fontSize: "1.1vw" }}
                   type="file"
                   accept="image/jpg,impge/png,image/jpeg,image/gif"
                   name="profile_img"
                   onChange={onChange}
                 ></input>
-              </p>
+              </div>
 
               <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
                 이름
@@ -178,7 +178,7 @@ const ApplyPage = () => {
                   fontSize: "1.3vw",
                   marginBottom: "25px",
                   textAlign: "right",
-                  marginRight: "75px",
+                  marginRight: "100px",
                 }}
               >
                 <input
@@ -200,11 +200,10 @@ const ApplyPage = () => {
                   fontSize: "1.3vw",
                   marginBottom: "25px",
                   textAlign: "right",
-                  marginRight: "75px",
+                  marginRight: "100px",
                 }}
                 type="text"
                 name="gender"
-                value={user[0].gender}
               >
                 {user[0].gender}
               </p>
@@ -232,11 +231,11 @@ const ApplyPage = () => {
             ></input>
           </p> */}
               <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
-                자신을 어필할 영상
+                자신을 어필할 영상 (5MB 이하)
               </div>
               <p>
                 <input
-                  style={{ marginLeft: "80px" }}
+                  style={{ marginLeft: "80px", fontSize: "1.1vw" }}
                   type="file"
                   name="profile_video"
                   onChange={onChange2}
