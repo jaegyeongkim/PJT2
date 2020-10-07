@@ -12,83 +12,30 @@ import { CommonContext } from "../../../context/CommonContext";
 const useStyles = makeStyles(styles);
 
 const CategoryResult1 = ({ match }, props) => {
-  const faceData = [match.params.cat1];
-  const actorDic = { 1: [], 2: [], 3: [], 4: [], 5: [] };
-  const actor200 = [];
-  const actorReal200over = [];
+  const faceData = match.params.cat1;
+  var actorList = [];
   const classes = useStyles();
   const { actorsData } = useContext(CommonContext);
   for (var a = 0; a < actorsData.length; a++) {
     var face = actorsData[a]["face"].split("/");
 
-    var cnt = 0;
     for (var f = 0; f < face.length; f++) {
-      for (var d = 0; d < faceData.length; d++) {
-        if (face[f].includes(faceData[d])) {
-          cnt++;
-          break;
-        }
+      if (face[f].includes(faceData)) {
+        actorList.push(actorsData[a]);
+        break;
       }
-    }
-    if (cnt > 0) {
-      actorDic[cnt].push(actorsData[a]);
     }
   }
-  var actor200Cnt = 0;
-  for (var s = 5; s > 0; s--) {
-    if (actorDic[s].length > 0) {
-      if (actorDic[s].length <= 200) {
-        actor200Cnt = actorDic[s].length;
-      }
-      for (var b = 0; b < actorDic[s].length; b++) {
-        actor200.push(actorDic[s][b]);
-      }
-    }
-    if (actorDic[s].length > 200) {
-      break;
-    }
-  }
-  const actorReal200 = [];
+  actorList.sort(function (a, b) {
+    return a["movie_total"] - b["movie_total"];
+  });
+  actorList.reverse();
+  actorList = actorList.slice(0, 200);
   const final = [];
-  if (actor200Cnt > 0) {
-    for (var ac = 0; ac < actor200Cnt; ac++) {
-      actorReal200.push(actor200[ac]);
-    }
-    for (var oc = actor200Cnt; oc < actor200.length; oc++) {
-      actorReal200over.push(actor200[oc]);
-    }
-
-    actorReal200.sort(function (a, b) {
-      return a["movie_total"] - b["movie_total"];
-    });
-    actorReal200.reverse();
-    actorReal200over.sort(function (a, b) {
-      return a["movie_total"] - b["movie_total"];
-    });
-    actorReal200over.reverse();
-    const N = actorReal200.length;
-    for (var aoc = 0; aoc < 200 - N; aoc++) {
-      actorReal200.push(actorReal200over[aoc]);
-    }
-
-    for (var fi = 0; fi < actorReal200.length; fi++) {
-      if (actorReal200[fi] !== undefined) {
-        final.push([actorReal200[fi]["name"]]);
-      }
-    }
-  } else {
-    actor200.sort(function (a, b) {
-      return a["movie_total"] - b["movie_total"];
-    });
-    for (var ec = 0; ec < 200; ec++) {
-      actorReal200.push(actor200[ec]);
-    }
-    for (var fif = 0; fif < actorReal200.length; fif++) {
-      if (actorReal200[fif] !== undefined) {
-        final.push([actorReal200[fif]["name"]]);
-      }
-    }
+  for (var fi = 0; fi < actorList.length; fi++) {
+    final.push(actorList[fi]["name"]);
   }
+  console.log(final);
 
   return (
     <div>
