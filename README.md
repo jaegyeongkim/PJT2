@@ -93,9 +93,9 @@
 
 ## WireFrame
 
->![image-20201007234641295](../../AppData/Roaming/Typora/typora-user-images/image-20201007234641295.png)
+>![wireframe1](산출물/wireframe1.png)
 >
->![image-20201007234650439](../../AppData/Roaming/Typora/typora-user-images/image-20201007234650439.png)
+>![wireframe2](산출물/wireframe2.png)
 
 ### 디렉토리 구조도
 
