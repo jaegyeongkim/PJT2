@@ -1,7 +1,7 @@
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  const Movie = sequelize.define(
-    "Movie",
+  const Actor2 = sequelize.define(
+    "Actor2",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -9,15 +9,15 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: true,
         primaryKey: true,
       },
-      name: {
-        type: DataTypes.STRING(50),
+      gender: {
+        type: DataTypes.STRING(10),
         allowNull: false,
       },
-      poster: {
-        type: DataTypes.STRING(200),
-        allowNull: true,
+      name: {
+        type: DataTypes.STRING(20),
+        allowNull: false,
       },
-      genre: {
+      image: {
         type: DataTypes.STRING(200),
         allowNull: true,
       },
@@ -25,27 +25,31 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING(20),
         allowNull: true,
       },
-      userRating: {
-        type: DataTypes.FLOAT(),
-        allowNull: true,
-      },
-      movie_cd: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-      },
-      actors: {
+      face: {
         type: DataTypes.STRING(200),
+        allowNull: true,
+      },
+      movie: {
+        type: DataTypes.STRING(250),
+        allowNull: true,
+      },
+      video: {
+        type: DataTypes.STRING(200),
+        allowNull: true,
+      },
+      movie_total: {
+        type: DataTypes.INTEGER,
         allowNull: true,
       },
     },
     {
       sequelize,
-      tableName: "Movies",
+      tableName: "Actors2",
       charset: "utf8",
       collate: "utf8_unicode_ci",
       timestamps: false,
     }
   );
 
-  return Movie;
+  return Actor2;
 };
