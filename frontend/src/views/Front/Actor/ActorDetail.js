@@ -12,7 +12,6 @@ import ActorPieChart from "./ActorPieChart";
 import MovieYearBarChart from "./MovieYearBarChart";
 import MovieCard from "./MovieCard";
 
-import { Player } from "video-react";
 import "video-react/dist/video-react.css";
 
 const useStyles = makeStyles(styles);
@@ -27,25 +26,14 @@ const ActorDetail = ({ match }) => {
       var filmo = actorsData[i]["movie"].split("/");
       var face = actorsData[i]["face"].split("/");
       var userimg = actorsData[i]["image"];
-      var uservideo = actorsData[i]["video"];
+      // var uservideo = actorsData[i]["video"];
       break;
     }
   }
   /////////////////////////////////////////
   var face_list = [];
-  // console.log(Object(face).length);
-  // const l = Object(face).length;
-  // var x = Math.floor(Math.random() * Object(face).length) + 1;
-  // console.log(x);
   for (var f = 0; f < Object(face).length; f++) {
-    // console.log(Math.random(f));
-    // var x = Math.floor(Math.random() * Object(face).length) + 1;
     face_list.push(face[f]);
-    // if (f == 4) {
-    //   break;
-    // } else {
-    //   continue;
-    // }
   }
 
   /////////////////////////////////////////
@@ -149,7 +137,6 @@ const ActorDetail = ({ match }) => {
                   item
                   style={{
                     display: "flex",
-                    // justifyContent: "center",
                     alignItems: "center",
                   }}
                 >

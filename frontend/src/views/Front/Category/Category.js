@@ -3,11 +3,11 @@ import React, { useState, useContext } from "react";
 import classNames from "classnames";
 import {
   Grid,
-  FormControlLabel,
-  Radio,
-  Checkbox,
+  // FormControlLabel,
+  // Radio,
+  // Checkbox,
   TextField,
-  Chip,
+  // Chip,
 } from "@material-ui/core";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import { makeStyles } from "@material-ui/core/styles";
@@ -17,22 +17,21 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import styles from "assets/jss/material-kit-react/views/components.js";
 import ButtonStyles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 import Button from "components/CustomButtons/Button.js";
-import GridItem from "components/Grid/GridItem.js";
-import { FiberManualRecord, Check } from "@material-ui/icons";
+// import GridItem from "components/Grid/GridItem.js";
+// import { FiberManualRecord, Check } from "@material-ui/icons";
 import { CommonContext } from "../../../context/CommonContext";
 import Badge from "components/Badge/Badge.js";
 const useStyles = makeStyles(styles);
 
-const _list = [];
 const selectCharacters = [];
 const Category = (props) => {
   const classes = useStyles();
   const buttonStyles = makeStyles(ButtonStyles);
   const { ...rest } = props;
-  const [selectedGender, setSelectedGender] = useState("");
-  const [selectedCharacter, setSelectedCharacter] = useState([]);
+  // const [selectedGender, setSelectedGender] = useState("");
+  // const [selectedCharacter, setSelectedCharacter] = useState([]);
   const [liveInput, setLiveInput] = useState([]);
-  const [liveCharacter, setLiveCharacter] = useState([]);
+  // const [liveCharacter, setLiveCharacter] = useState([]);
   const { characterData } = useContext(CommonContext);
   // 선택 완료 버튼 누르면 이곳으로 옵니다.
   // Router에 정보를 담아서 넘기는 거기 때문에
@@ -40,113 +39,117 @@ const Category = (props) => {
   // 이부분은 추후 상의해서 카테고리를 만들고 추천 방식을 만들어야 합니다.
 
   const submitCoronationData = () => {
-    if (selectedGender && selectCharacters.length === 5) {
-      window.location.href = `/category-result/${selectedGender}/${selectCharacters[0]}/${selectCharacters[1]}/${selectCharacters[2]}/${selectCharacters[3]}/${selectCharacters[4]}`;
-    } else if (selectedGender.length === 0) {
-      alert("성별 선택을 해주세요!");
-    } else if (selectCharacters.length != 5) {
-      alert("카테고리를 5개 선택해주세요!");
+    if (selectCharacters.length === 1) {
+      window.location.href = `/category-result1/${selectCharacters[0]}`;
+    } else if (selectCharacters.length === 2) {
+      window.location.href = `/category-result2/${selectCharacters[0]}/${selectCharacters[1]}/`;
+    } else if (selectCharacters.length === 3) {
+      window.location.href = `/category-result3/${selectCharacters[0]}/${selectCharacters[1]}/${selectCharacters[2]}/`;
+    } else if (selectCharacters.length < 1) {
+      alert("카테고리를 1개 이상 선택해주세요!");
+    } else if (selectCharacters.length > 3) {
+      alert("카테고리를 3개 이하로 선택해주세요!");
     }
   };
   // category_list에 제시해줄 데이터를 추가해주면 됩니다.
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   // 성별 선택 Radio 버튼
-  const Gender = () => {
-    const classes = buttonStyles();
-    return (
-      <Grid>
-        <Grid>
-          <h4 className={classes.subtitle}>성별</h4>
-          <GridItem>
-            <div
-              className={
-                classes.checkboxAndRadio +
-                " " +
-                classes.checkboxAndRadioHorizontal
-              }
-            >
-              <FormControlLabel
-                control={
-                  <Radio
-                    checked={selectedGender === "남자"}
-                    onChange={() => setSelectedGender("남자")}
-                    value="남자"
-                    name="radio button enabled"
-                    aria-label="A"
-                    icon={
-                      <FiberManualRecord className={classes.radioUnchecked} />
-                    }
-                    checkedIcon={
-                      <FiberManualRecord className={classes.radioChecked} />
-                    }
-                    classes={{
-                      checked: classes.radio,
-                      root: classes.radioRoot,
-                    }}
-                  />
-                }
-                classes={{
-                  label: classes.label,
-                  root: classes.labelRoot,
-                }}
-                label="남자"
-              />
-            </div>
-            <div
-              className={
-                classes.checkboxAndRadio +
-                " " +
-                classes.checkboxAndRadioHorizontal
-              }
-            >
-              <FormControlLabel
-                control={
-                  <Radio
-                    checked={selectedGender === "여자"}
-                    onChange={() => setSelectedGender("여자")}
-                    value="여자"
-                    name="radio button enabled"
-                    aria-label="B"
-                    icon={
-                      <FiberManualRecord className={classes.radioUnchecked} />
-                    }
-                    checkedIcon={
-                      <FiberManualRecord className={classes.radioChecked} />
-                    }
-                    classes={{
-                      checked: classes.radio,
-                      root: classes.radioRoot,
-                    }}
-                  />
-                }
-                classes={{
-                  label: classes.label,
-                  root: classes.labelRoot,
-                }}
-                label="여자"
-              />
-            </div>
-            <div
-              className={
-                classes.checkboxAndRadio +
-                " " +
-                classes.checkboxAndRadioHorizontal
-              }
-            ></div>
-            <div
-              className={
-                classes.checkboxAndRadio +
-                " " +
-                classes.checkboxAndRadioHorizontal
-              }
-            ></div>
-          </GridItem>
-          <br />
-        </Grid>
-      </Grid>
-    );
-  };
+  // const Gender = () => {
+  //   const classes = buttonStyles();
+  //   return (
+  //     <Grid>
+  //       <Grid>
+  //         <h4 className={classes.subtitle}>성별</h4>
+  //         <GridItem>
+  //           <div
+  //             className={
+  //               classes.checkboxAndRadio +
+  //               " " +
+  //               classes.checkboxAndRadioHorizontal
+  //             }
+  //           >
+  //             <FormControlLabel
+  //               control={
+  //                 <Radio
+  //                   checked={selectedGender === "남자"}
+  //                   onChange={() => setSelectedGender("남자")}
+  //                   value="남자"
+  //                   name="radio button enabled"
+  //                   aria-label="A"
+  //                   icon={
+  //                     <FiberManualRecord className={classes.radioUnchecked} />
+  //                   }
+  //                   checkedIcon={
+  //                     <FiberManualRecord className={classes.radioChecked} />
+  //                   }
+  //                   classes={{
+  //                     checked: classes.radio,
+  //                     root: classes.radioRoot,
+  //                   }}
+  //                 />
+  //               }
+  //               classes={{
+  //                 label: classes.label,
+  //                 root: classes.labelRoot,
+  //               }}
+  //               label="남자"
+  //             />
+  //           </div>
+  //           <div
+  //             className={
+  //               classes.checkboxAndRadio +
+  //               " " +
+  //               classes.checkboxAndRadioHorizontal
+  //             }
+  //           >
+  //             <FormControlLabel
+  //               control={
+  //                 <Radio
+  //                   checked={selectedGender === "여자"}
+  //                   onChange={() => setSelectedGender("여자")}
+  //                   value="여자"
+  //                   name="radio button enabled"
+  //                   aria-label="B"
+  //                   icon={
+  //                     <FiberManualRecord className={classes.radioUnchecked} />
+  //                   }
+  //                   checkedIcon={
+  //                     <FiberManualRecord className={classes.radioChecked} />
+  //                   }
+  //                   classes={{
+  //                     checked: classes.radio,
+  //                     root: classes.radioRoot,
+  //                   }}
+  //                 />
+  //               }
+  //               classes={{
+  //                 label: classes.label,
+  //                 root: classes.labelRoot,
+  //               }}
+  //               label="여자"
+  //             />
+  //           </div>
+  //           <div
+  //             className={
+  //               classes.checkboxAndRadio +
+  //               " " +
+  //               classes.checkboxAndRadioHorizontal
+  //             }
+  //           ></div>
+  //           <div
+  //             className={
+  //               classes.checkboxAndRadio +
+  //               " " +
+  //               classes.checkboxAndRadioHorizontal
+  //             }
+  //           ></div>
+  //         </GridItem>
+  //         <br />
+  //       </Grid>
+  //     </Grid>
+  //   );
+  // };
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // Badge
   const click = (e, data) => {
@@ -167,23 +170,9 @@ const Category = (props) => {
         ? selectCharacters.push(event.target.textContent)
         : selectCharacters.splice(index, 1);
 
-      // const idx = liveInput.indexOf(event.target.textContent);
-      // liveInput.indexOf(event.target.textContent) === -1
-      //   ? liveInput.push(event.target.textContent)
-      //   : liveInput.splice(idx, 1);
       setLiveInput((liveInput) => [...liveInput, event.target.textContent]);
     };
-    // const handleToggle = (value) => {
-    //   const currentIndex = selectedCharacter.indexOf(value);
-    //   const newChecked = [...selectedCharacter];
 
-    //   if (currentIndex === -1) {
-    //     newChecked.push(value);
-    //   } else {
-    //     newChecked.splice(currentIndex, 1);
-    //   }
-    //   setSelectedCharacter(newChecked);
-    // };
     return (
       <Grid>
         <h4 className={classes.subtitle}>이미지</h4>
@@ -221,39 +210,11 @@ const Category = (props) => {
               </span>
             );
           })}
-          {/* <br />
-          {liveInput.map((character, index) => {
-            return (
-              <span
-                onClick={(e) => click(e, character)}
-                style={{ cursor: "pointer" }}
-              >
-                <Badge color="primary">{character}</Badge>
-              </span>
-            );
-          })} */}
         </Grid>
         <br />
       </Grid>
     );
   };
-
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // 실시간 변화
-
-  // var selectedCharacterData = [];
-  // const handleNameChange = (event) => {
-  //   setLiveCharacter([]);
-  //   setLiveInput(event.target.value);
-  //   for (var i = 0; i < characterData.length; i++) {
-  //     if (characterData[i]["character"].includes(liveInput)) {
-  //       const data = characterData[i]["character"];
-  //       setLiveCharacter((liveCharacter) => [...liveCharacter, data]);
-  //       // selectedCharacterData.push(characterData[i]["character"]);
-  //     }
-  //   }
-  //   console.log(liveCharacter);
-  // };
 
   const checkstyles = makeStyles((theme) => ({
     root: {
@@ -296,7 +257,7 @@ const Category = (props) => {
             }}
           >
             <Grid item>
-              <h3>원하는 배우의 이미지를 검색 & 선택해보세요</h3>
+              <h3>어떤 이미지의 배우를 찾으시나요?</h3>
               <br />
             </Grid>
           </Grid>
@@ -310,9 +271,9 @@ const Category = (props) => {
             }}
           >
             <Grid item>
-              <Grid>
+              {/* <Grid>
                 <Gender />
-              </Grid>
+              </Grid> */}
               <Grid>
                 <Character
                   style={{

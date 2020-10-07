@@ -25,24 +25,14 @@ import License from "views/Front/License/license.js";
 import SignupPage from "views/SignupPage/SignupPage.js";
 import ApplyPage from "views/ApplyPage/ApplyPage.js";
 import Contactus from "views/Front/ContactUs/contactus";
-import CategoryResult from "views/Front/Category/CategoryResult";
-
-// import Introduce from "views/Front/Introduce/introduce.js";
+import CategoryResult1 from "views/Front/Category/CategoryResult1";
+import CategoryResult2 from "views/Front/Category/CategoryResult2";
+import CategoryResult3 from "views/Front/Category/CategoryResult3";
 
 var hist = createBrowserHistory();
 
 require("react-dom");
 window.React2 = require("react");
-// console.log(window.React1 === window.React2);
-
-// app
-
-// const getProductDatas = () => {
-//   setProductDatas(1);
-// };
-// useEffect(() => {
-//   getProductDatas();
-// }, []);
 
 const App = () => {
   const [user, setUser] = useState([]);
@@ -60,8 +50,8 @@ const App = () => {
   // 배우 데이터
 
   async function getActorDatas() {
-    Axios.get("https://j3b206.p.ssafy.io/api/actor2/").then(function (res) {
-      // Axios.get("https://j3b206.p.ssafy.io/api/actor3/").then(function (res) {
+    // Axios.get("https://j3b206.p.ssafy.io/api/actor2/").then(function (res) {
+    Axios.get("https://j3b206.p.ssafy.io/api/actor/").then(function (res) {
       setActorsData(res.data);
     });
   }
@@ -115,10 +105,7 @@ const App = () => {
             path="/actor-search-result/:name"
             component={ActorSearchResult}
           />
-          {/* <Route
-            path="/actor-search-result/:name/detail"
-            component={ActorDetail}
-          /> */}
+
           <Route path="/actor-detail/:name" component={ActorDetail} />
           <Route path="/category" component={Category} />
           <Route path="/introduce" component={Introduce} />
@@ -126,13 +113,14 @@ const App = () => {
           <Route path="/license" component={License} />
           <Route path="/signup-page" component={SignupPage} />
           <Route path="/contact-us" component={Contactus} />
-          {/* <Route
-            path="/category-result/:gender/:cat1/:cat2/:cat3/:cat4/:cat5"
-            component={CategoryResult}
-          /> */}
+          <Route path="/category-result1/:cat1/" component={CategoryResult1} />
           <Route
-            path="/category-result/:gender/:cat1/:cat2/:cat3/:cat4/:cat5/:cat6/:cat7/:cat8/:cat9/:cat10/:cat11/:cat12"
-            component={CategoryResult}
+            path="/category-result2/:cat1/:cat2/"
+            component={CategoryResult2}
+          />
+          <Route
+            path="/category-result3/:cat1/:cat2/:cat3/"
+            component={CategoryResult3}
           />
 
           {/* !!!! 맨 밑에 있어야 동작합니다. */}

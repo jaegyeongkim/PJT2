@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import Wrapper from "../../../assets/jss/material-kit-react/components/GenrePiechart";
-import { PieChart } from "react-minimal-pie-chart";
 import Chart from "react-google-charts";
 
 const GenrePiechart = (props) => {
@@ -24,14 +23,6 @@ const GenrePiechart = (props) => {
           }}
           rootProps={{ "data-testid": "2" }}
         />
-
-        {/* {genre_cnt.map((genre, index) => {
-          return (
-            <p>
-              {genre[0]}: {genre[1]}
-            </p>
-          );
-        })} */}
       </Grid>
     </Wrapper>
   );

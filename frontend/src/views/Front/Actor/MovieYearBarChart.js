@@ -1,14 +1,13 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import Wrapper from "../../../assets/jss/material-kit-react/components/GenrePiechart";
-import { PieChart } from "react-minimal-pie-chart";
 import Chart from "react-google-charts";
 
 const MovieYearBarChart = (props) => {
   var { movie_year } = props;
   var years = [];
-  for (var y = 0; y < movie_year.length; y++) {
-    years.push(Number(movie_year[y].slice(0, 4)));
+  for (var yy = 0; yy < movie_year.length; yy++) {
+    years.push(Number(movie_year[yy].slice(0, 4)));
   }
 
   const last = Math.max.apply(null, years);
