@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Grid, GridList } from "@material-ui/core";
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -19,6 +19,9 @@ const useStyles = makeStyles(styles);
 const ActorDetail = ({ match }) => {
   const classes = useStyles();
   const { actorsData, movieData, genreData } = useContext(CommonContext);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // 출연 영화 split
   for (var i = 0; i < actorsData.length; i++) {
@@ -151,7 +154,27 @@ const ActorDetail = ({ match }) => {
             </Grid>
           </Grid>
         </Grid>
-
+        {uservideo ? (
+          <>
+            <h3 style={{ paddingLeft: "3vw" }}>신인 오디션 영상</h3>
+            <Grid
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Grid style={{ width: "800px" }}>
+                <Player
+                  playsInline
+                  src={`https://j3b206.p.ssafy.io/static/img/actor/${uservideo}`}
+                />
+              </Grid>
+            </Grid>
+          </>
+        ) : (
+          ""
+        )}
         <Grid
           style={{
             display: "flex",
@@ -164,10 +187,6 @@ const ActorDetail = ({ match }) => {
           </Grid>
         </Grid>
         <Grid>
-          <Player
-            playsInline
-            src={`https://j3b206.p.ssafy.io/static/img/actor/${uservideo}`}
-          />
           <Grid>
             <h3 style={{ paddingLeft: "3vw" }}>출연 영화</h3>
           </Grid>
