@@ -5,7 +5,7 @@ import crypto from "crypto";
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import { Icon } from "@material-ui/core";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
@@ -56,7 +56,7 @@ export default function SignupPage(props) {
     if (memberList.length !== 0) {
       alert("이미 있는 이메일입니다.");
       return;
-    } else if (password != password2) {
+    } else if (password !== password2) {
       alert("비밀번호가 다릅니다.");
       return;
     } else {

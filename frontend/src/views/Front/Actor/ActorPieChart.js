@@ -33,6 +33,12 @@ const ActorPieChart = (props) => {
     return a[1] - b[1];
   });
   actorsCnt.reverse();
+  if (actorsCnt.length >= 10) {
+    actorsCnt = actorsCnt.slice(1, 11);
+  } else if (actorsCnt.length < 10) {
+    actorsCnt = actorsCnt.slice(1);
+  }
+
   actorsCnt.unshift(["장르", "횟수"]);
   return (
     <Wrapper>
