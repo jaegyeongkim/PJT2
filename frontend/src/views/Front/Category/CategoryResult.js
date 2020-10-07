@@ -15,8 +15,8 @@ const useStyles = makeStyles(styles);
 const CategoryResult = ({ match }, props) => {
   const faceData = [match.params.cat1, match.params.cat2, match.params.cat3];
   const actorDic = { 1: [], 2: [], 3: [], 4: [], 5: [] };
-  const actor10 = [];
-  const actorReal10over = [];
+  const actor12 = [];
+  const actorReal12over = [];
   const classes = useStyles();
   const { actorsData } = useContext(CommonContext);
   for (var a = 0; a < actorsData.length; a++) {
@@ -37,54 +37,65 @@ const CategoryResult = ({ match }, props) => {
       }
     }
   }
-  console.log(actorDic);
-  var actor10Cnt = 0;
+  // console.log(actorDic);
+  var actor12Cnt = 0;
   for (var d = 5; d > 0; d--) {
     if (actorDic[d].length > 0) {
-      if (actorDic[d].length <= 10) {
-        actor10Cnt = actorDic[d].length;
+      if (actorDic[d].length <= 12) {
+        actor12Cnt = actorDic[d].length;
       }
       for (var b = 0; b < actorDic[d].length; b++) {
-        actor10.push(actorDic[d][b]);
+        actor12.push(actorDic[d][b]);
       }
     }
-    if (actorDic[d].length > 10) {
+    if (actorDic[d].length > 12) {
       break;
     }
   }
 
-  // console.log(actor10);
-  const actorReal10 = [];
-  if (actor10Cnt) {
-    for (var ac = 0; ac < actor10Cnt; ac++) {
-      actorReal10.push(actor10[ac]);
+  // console.log(actor12);
+  const actorReal12 = [];
+  const final = [];
+  if (actor12Cnt > 0) {
+    for (var ac = 0; ac < actor12Cnt; ac++) {
+      actorReal12.push(actor12[ac]);
     }
-    for (var oc = actor10Cnt; oc < actor10.length; oc++) {
-      actorReal10over.push(actor10[oc]);
+    for (var oc = actor12Cnt; oc < actor12.length; oc++) {
+      actorReal12over.push(actor12[oc]);
     }
 
-    actorReal10.sort(function (a, b) {
+    actorReal12.sort(function (a, b) {
       return a["movie_total"] - b["movie_total"];
     });
-    actorReal10.reverse();
-    actorReal10over.sort(function (a, b) {
+    actorReal12.reverse();
+    actorReal12over.sort(function (a, b) {
       return a["movie_total"] - b["movie_total"];
     });
-    actorReal10over.reverse();
-    const N = actorReal10.length;
-    for (var aoc = 0; aoc < 10 - N; aoc++) {
-      actorReal10.push(actorReal10over[aoc]);
+    actorReal12over.reverse();
+    const N = actorReal12.length;
+    for (var aoc = 0; aoc < 12 - N; aoc++) {
+      actorReal12.push(actorReal12over[aoc]);
+    }
+
+    for (var fi = 0; fi < actorReal12.length; fi++) {
+      if (actorReal12[fi] !== undefined) {
+        final.push([actorReal12[fi]["name"]]);
+      }
     }
   } else {
-    actor10.sort(function (a, b) {
+    actor12.sort(function (a, b) {
       return a["movie_total"] - b["movie_total"];
     });
-    for (var ec = 0; ec < 10; ec++) {
-      actorReal10.push(actor10[ec]);
+    for (var ec = 0; ec < 12; ec++) {
+      actorReal12.push(actor12[ec]);
+    }
+    for (var fi = 0; fi < actorReal12.length; fi++) {
+      if (actorReal12[fi] !== undefined) {
+        final.push([actorReal12[fi]["name"]]);
+      }
     }
   }
-  console.log(actorReal10[0]);
-
+  console.log(final);
   // const finalactorReal10 = [];
   // for (var ee = 0; ee < actorReal10.length; ee++) {
   //   console.log(actorReal10[ee]["face"]);
@@ -111,14 +122,14 @@ const CategoryResult = ({ match }, props) => {
             alignItems: "center",
           }}
         >
-          <h3>
+          <h3 style={{ padding: "5vh 0" }}>
             "{match.params.gender}" + "{match.params.cat1}" + "
             {match.params.cat2}" + "{match.params.cat3} + {match.params.cat4} +{" "}
             {match.params.cat5}" 선택 결과입니다.
           </h3>
         </Grid>
-        {/* <GridList>
-          {Object(actorReal10).map((name, index) => {
+        <GridList>
+          {final.map((name, index) => {
             return (
               <Grid
                 xs={3}
@@ -130,11 +141,11 @@ const CategoryResult = ({ match }, props) => {
                   padding: "6px",
                 }}
               >
-                <ActorCard name={name[0]} index={index} />
+                <ActorCard name={name} index={index} />
               </Grid>
             );
           })}
-        </GridList> */}
+        </GridList>
       </Grid>
       <Footer />
     </div>
