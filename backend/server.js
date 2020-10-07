@@ -66,6 +66,8 @@ const imgRouter = require(`${__dirname}/routes/upload`);
 app.use(uploadFilePath, express.static(path.join(__dirname + uploadFilePath)));
 app.use("/api/", require(`${__dirname}/routes/index`));
 app.use("/api/actor", require(`${__dirname}/routes/actor`));
+app.use("/api/actor2", require(`${__dirname}/routes/actor2`));
+app.use("/api/actor3", require(`${__dirname}/routes/actor3`));
 app.use("/api/eye", require(`${__dirname}/routes/eye`));
 app.use("/api/eyebrow", require(`${__dirname}/routes/eyebrow`));
 app.use("/api/member", require(`${__dirname}/routes/member`));
