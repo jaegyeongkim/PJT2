@@ -33,7 +33,7 @@ const CategoryResult1 = ({ match }, props) => {
   actorList = actorList.slice(0, 200);
   const final = [];
   for (var fi = 0; fi < actorList.length; fi++) {
-    final.push(actorList[fi]["name"]);
+    final.push([actorList[fi]["name"], actorList[fi]["image"]]);
   }
   console.log(final);
 
@@ -71,7 +71,7 @@ const CategoryResult1 = ({ match }, props) => {
                   padding: "6px",
                 }}
               >
-                <ActorCard name={name} index={index} />
+                <ActorCard name={name[0]} image={name[1]} index={index} />
               </Grid>
             );
           })}

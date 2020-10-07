@@ -153,7 +153,27 @@ const ActorDetail = ({ match }) => {
             </Grid>
           </Grid>
         </Grid>
-
+        {uservideo ? (
+          <>
+            <h3 style={{ paddingLeft: "3vw" }}>신인 오디션 영상</h3>
+            <Grid
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Grid style={{ width: "800px" }}>
+                <Player
+                  playsInline
+                  src={`https://j3b206.p.ssafy.io/static/img/actor/${uservideo}`}
+                />
+              </Grid>
+            </Grid>
+          </>
+        ) : (
+          ""
+        )}
         <Grid
           style={{
             display: "flex",
@@ -166,10 +186,6 @@ const ActorDetail = ({ match }) => {
           </Grid>
         </Grid>
         <Grid>
-          <Player
-            playsInline
-            src={`https://j3b206.p.ssafy.io/static/img/actor/${uservideo}`}
-          />
           <Grid>
             <h3 style={{ paddingLeft: "3vw" }}>출연 영화</h3>
           </Grid>
