@@ -11,6 +11,7 @@ import GenrePiechart from "./GenrePiechart";
 import ActorPieChart from "./ActorPieChart";
 import MovieYearBarChart from "./MovieYearBarChart";
 import MovieCard from "./MovieCard";
+import { Player } from "video-react";
 
 import "video-react/dist/video-react.css";
 
