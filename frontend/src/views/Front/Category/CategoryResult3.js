@@ -74,7 +74,7 @@ const CategoryResult3 = ({ match }, props) => {
 
     for (var fi = 0; fi < actorReal200.length; fi++) {
       if (actorReal200[fi] !== undefined) {
-        final.push([actorReal200[fi]["name"]]);
+        final.push([actorReal200[fi]["name"], actorReal200[fi]["image"]]);
       }
     }
   } else {
@@ -87,7 +87,7 @@ const CategoryResult3 = ({ match }, props) => {
     }
     for (var fif = 0; fif < actorReal200.length; fif++) {
       if (actorReal200[fif] !== undefined) {
-        final.push([actorReal200[fif]["name"]]);
+        final.push([actorReal200[fif]["name"], actorReal200[fif]["image"]]);
       }
     }
   }
@@ -127,7 +127,7 @@ const CategoryResult3 = ({ match }, props) => {
                   padding: "6px",
                 }}
               >
-                <ActorCard name={name} index={index} />
+                <ActorCard name={name[0]} image={name[1]} index={index} />
               </Grid>
             );
           })}
