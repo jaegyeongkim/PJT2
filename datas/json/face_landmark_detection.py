@@ -58,7 +58,7 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
         cvImg = swapRGB2BGR(img) 
 
         #이미지를 두배로 키운다.
-        cvImg = cv2.resize(cvImg, None, fx=4, fy=4, interpolation=cv2.INTER_AREA)
+        cvImg = cv2.resize(cvImg, None, fx=1, fy=1, interpolation=cv2.INTER_AREA)
 
         # Ask the detector to find the bounding boxes of each face. The 1 in the
         # second argument indicates that we should upsample the image 1 time. This
@@ -78,8 +78,8 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
             # print(shape.num_parts)
             for i in range(0, 68):
                 # 해당 X,Y 좌표를 두배로 키워 좌표를 얻고
-                x = shape.part(i).x*4
-                y = shape.part(i).y*4
+                x = shape.part(i).x*1
+                y = shape.part(i).y*1
                 if 17 <= i < 27:
                     if i == 17:
                         point_x = x
@@ -158,22 +158,32 @@ for f in glob.glob(os.path.join(faces_folder_path, "*.jpg")):
                     if mouthsum <= mouthmin:
                         mouthmin = mouthsum
                         mouth_idx = i
-            eye = eyedata[eye_idx]['Content'].split(' / ')[:-1]
-            random.shuffle(eye)
-            eyebrow = eyebrowdata[eyebrow_idx]['Content'].split(' / ')[:-1]
-            random.shuffle(eyebrow)
-            nose = nosedata[nose_idx]['Content'].split(' / ')[:-1]
-            random.shuffle(nose)
-            mouth = mouthdata[mouth_idx]['Content'].split(' / ')[:-1]
-            random.shuffle(mouth)
+            # eye = eyedata[eye_idx]['Content'].split(' / ')[:-1]
+            # random.shuffle(eye)
+            # eyebrow = eyebrowdata[eyebrow_idx]['Content'].split(' / ')[:-1]
+            # random.shuffle(eyebrow)
+            # nose = nosedata[nose_idx]['Content'].split(' / ')[:-1]
+            # random.shuffle(nose)
+            # mouth = mouthdata[mouth_idx]['Content'].split(' / ')[:-1]
+            # random.shuffle(mouth)
+            coro = eyedata[eye_idx]['Content'] + eyebrowdata[eye_idx]['Content'] + nosedata[eye_idx]['Content'] + mouthdata[eye_idx]['Content']
+            # coro_data = coro.split(' / ')[:-1]
+            # coro_data = list(set(coro_data))
+            # random.shuffle(coro_data)
+            # coro_data = coro_data[:6]
+            # coro = ' / '.join(coro_data)
+            # print(coro)
             with open('./test_actor.json', 'r', encoding='utf-8') as actor:
                 actor_data = json.load(actor)
             for i in range(len(actor_data)):
                 if actor_data[i]['name'] == name:
                     n = int(actor_data[i]['id'])
-                    coro = [eye[n % len(eye)], eyebrow[n % len(eyebrow)], nose[n % len(nose)], mouth[n % len(mouth)]]
-                    random.shuffle(coro)
-                    coro = ' / '.join(coro)
+                    coro = eyedata[eye_idx]['Content'] + eyebrowdata[eye_idx]['Content'] + nosedata[eye_idx]['Content'] + mouthdata[eye_idx]['Content']
+                    coro_data = coro.split(' / ')[:-1]
+                    coro_data = list(set(coro_data))
+                    random.shuffle(coro_data)
+                    coro_data = coro_data[:6]
+                    coro = ' / '.join(coro_data)
                     if actor_data[i]['face'] == "":
                         actor_data[i]['face'] = coro
             with open('./test_actor.json', 'w', encoding='utf-8') as re_actor:

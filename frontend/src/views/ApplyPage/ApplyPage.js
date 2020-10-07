@@ -87,7 +87,7 @@ const ApplyPage = () => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("id", user[0].id);
-    formData.append("gender", event.target.gender.value);
+    formData.append("gender", user[0].gender);
     formData.append("name", event.target.name.value);
     formData.append("profile_img", event.target.profile_img.files[0]);
     // formData.append("birth", event.target.birth.value);

@@ -69,6 +69,7 @@ export default function LoginPage(props) {
         return;
       }
     } else {
+      alert("존재하지 않는 이메일 입니다.");
       return;
     }
   };

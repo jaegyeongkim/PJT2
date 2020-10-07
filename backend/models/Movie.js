@@ -33,6 +33,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: true,
       },
+      actors: {
+        type: DataTypes.STRING(200),
+        allowNull: true,
+      },
     },
     {
       sequelize,

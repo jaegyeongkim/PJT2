@@ -5,8 +5,8 @@ import { HistoGram } from "react-minimal-pie-chart";
 import Chart from "react-google-charts";
 
 const HistoGram = (props) => {
-  var { birth } = props;
-  birth.unshift(["출연 영화", "횟수"]);
+  var { movie_birth } = props;
+  movie_birth.unshift(["출연 영화", "횟수"]);
   return (
     <Wrapper>
       <Chart
@@ -14,7 +14,10 @@ const HistoGram = (props) => {
         height={"40vh"}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
-        data={genre_cnt}
+        data={movie_birth}
+        options={{
+          title: "출연 영화 횟수",
+        }}
       ></Chart>
     </Wrapper>
   );
