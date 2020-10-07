@@ -55,8 +55,15 @@ const Introduce = (props) => {
                 width: "50%",
               }}
             >
-              <h1 style={{ paddingRight: "30px" }}>
+              <h1 style={{ paddingRight: "30px", textAlign: "center" }}>
                 <strong>The Casting은</strong>
+                <hr
+                  style={{
+                    width: "10%",
+                    height: "5px",
+                    backgroundColor: "black",
+                  }}
+                />
                 <h3>
                   배우의 얼굴을 관상 데이터와 비교하여 <br /> 이미지
                   카테고리별로 배우를 추천해드립니다.
@@ -116,13 +123,19 @@ const Introduce = (props) => {
                 width: "50%",
               }}
             >
-              <h2 style={{ paddingLeft: "30px" }}>
-                The Casting은
-                <h5>
-                  배우의 눈썹, 눈, 코, 입을 관상 데이터와 비교하여 카테고리별로
-                  배우를 추천해드립니다.
-                </h5>
-              </h2>
+              <h1 style={{ paddingRight: "30px", textAlign: "center" }}>
+                <strong>
+                  조건에 맞게 검색 <br /> 빠르게 캐스팅
+                </strong>
+                <hr
+                  style={{
+                    width: "10%",
+                    height: "5px",
+                    backgroundColor: "black",
+                  }}
+                />
+                <h3>작품에 딱 맞는 배우들이 감독님을 기다리고 있습니다.</h3>
+              </h1>
             </Grid>
           </Grid>
         </Grid>
@@ -143,13 +156,23 @@ const Introduce = (props) => {
                 width: "50%",
               }}
             >
-              <h2 style={{ paddingRight: "30px" }}>
-                The Casting은
-                <h5>
-                  배우의 눈썹, 눈, 코, 입을 관상 데이터와 비교하여 카테고리별로
-                  배우를 추천해드립니다.
-                </h5>
-              </h2>
+              <h1 style={{ paddingRight: "30px", textAlign: "center" }}>
+                <strong>
+                  영상 첨부도 안되는 <br /> PPT는 그만
+                </strong>
+                <hr
+                  style={{
+                    width: "10%",
+                    height: "5px",
+                    backgroundColor: "black",
+                  }}
+                />
+                <h3>
+                  The Casting에서 나만의 프로필을 제작하여
+                  <br />
+                  빠르고 간편하게 지원해보세요!
+                </h3>
+              </h1>
             </Grid>
             <Grid
               style={{
@@ -161,10 +184,10 @@ const Introduce = (props) => {
             >
               <img
                 style={{
-                  width: "100%",
-                  Height: "100%",
+                  width: "80%",
+                  Height: "80%",
                 }}
-                src={`https://j3b206.p.ssafy.io/static/img/main_img/intro1.png`}
+                src={`https://j3b206.p.ssafy.io/static/img/main_img/intro3.png`}
                 alt=""
               />
             </Grid>
