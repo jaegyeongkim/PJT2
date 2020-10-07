@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import Wrapper from "../../../assets/jss/material-kit-react/components/GenrePiechart";
-import { PieChart } from "react-minimal-pie-chart";
 import Chart from "react-google-charts";
 
 const ActorPieChart = (props) => {
