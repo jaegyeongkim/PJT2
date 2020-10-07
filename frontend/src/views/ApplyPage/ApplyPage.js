@@ -139,9 +139,13 @@ const ApplyPage = () => {
           <Grid
             item
             xs={11}
-            style={{ fontSize: "3vw", marginTop: "50px", marginBottom: "50px" }}
+            style={{
+              fontSize: "3.5vw",
+              marginTop: "50px",
+              marginBottom: "50px",
+            }}
           >
-            신인 배우 등록하기
+            등록하기
           </Grid>
 
           <Grid
@@ -155,16 +159,16 @@ const ApplyPage = () => {
               name="accountFrm"
               onSubmit={handleSubmit}
               encType="multipart/form-data"
+              style={{ width: "80%" }}
             >
-              <div>{profile_preview}</div>
               <br />
               <Grid container justify="space-between" alignItems="center">
                 <Grid
                   item
                   xs={12}
-                  style={{ fontSize: "1.5vw", marginBottom: "15px" }}
+                  style={{ fontSize: "1.5vw", marginBottom: "20px" }}
                 >
-                  프로필 사진
+                  프로필 사진 (영문 파일)
                 </Grid>
                 <Grid
                   item
@@ -183,11 +187,17 @@ const ApplyPage = () => {
                   ></input>
                 </Grid>
               </Grid>
-
               <hr />
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {profile_preview}
+              </div>
+
               <br />
               <br />
-              <Grid container justify="space-between" alignItems="center">
+              <br />
+              <br />
+              <br />
+              {/* <Grid container justify="space-between" alignItems="center">
                 <Grid item style={{ fontSize: "1.5vw" }}>
                   이름
                 </Grid>
@@ -232,15 +242,15 @@ const ApplyPage = () => {
 
               <hr />
               <br />
-              <br />
+              <br /> */}
 
               <Grid container direction="column">
                 <Grid
                   item
                   xs={12}
-                  style={{ fontSize: "1.5vw", marginBottom: "15px" }}
+                  style={{ fontSize: "1.5vw", marginBottom: "20px" }}
                 >
-                  자신을 어필할 영상
+                  자신을 어필할 영상 (5MB 이하)
                 </Grid>
                 <Grid
                   item
@@ -271,7 +281,7 @@ const ApplyPage = () => {
                   alignItems: "flex-end",
                 }}
               >
-                <Button color="primary" type="submit" size="sm">
+                <Button color="primary" type="submit">
                   등록하기
                 </Button>
               </Grid>
