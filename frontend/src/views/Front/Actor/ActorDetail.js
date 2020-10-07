@@ -22,7 +22,6 @@ const ActorDetail = ({ match }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   // 출연 영화 split
   for (var i = 0; i < actorsData.length; i++) {
     if (actorsData[i]["name"] === match.params.name) {
