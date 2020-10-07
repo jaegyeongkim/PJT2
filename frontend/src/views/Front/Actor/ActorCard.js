@@ -12,6 +12,7 @@ import { makeStyles } from "@material-ui/core";
 
 const ActorCard = (props) => {
   const { name } = props;
+  const { image } = props;
   let history = useHistory();
   const clickActorDetail = () => {
     history.push(`/actor-detail/${name}`);
@@ -32,7 +33,7 @@ const ActorCard = (props) => {
           <CardMedia
             onClick={clickActorDetail}
             className={classes.media}
-            image={`https://j3b206.p.ssafy.io/static/img/actor/${name}.jpg`}
+            image={`https://j3b206.p.ssafy.io/static/img/actor/${image}`}
             title="Contemplative Reptile"
           />
 

@@ -22,7 +22,7 @@ def swapRGB2BGR(rgb):
     return bgr
 
 # 랜드마크 파일 경로
-sys.argv.append('./shape_predictor_68_face_landmarks.dat')
+sys.argv.append('/home/ubuntu/project/new_backend/routes/shape_predictor_68_face_landmarks.dat')
 predictor_path = sys.argv[2]
 # 이미지 경로
 face = '../frontend/build/static/img/actor/' + sys.argv[1]
@@ -31,7 +31,7 @@ face = '../frontend/build/static/img/actor/' + sys.argv[1]
 # 얼굴 인식용 클래스 생성 (기본 제공되는 얼굴 인식 모델 사용)
 detector = dlib.get_frontal_face_detector()
 # 인식된 얼굴에서 랜드마크 찾기위한 클래스 생성 
-predictor = dlib.shape_predictor('./shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('/home/ubuntu/project/new_backend/routes/shape_predictor_68_face_landmarks.dat')
 
 # 두번째 매개변수로 지정한 폴더를 싹다 뒤져서 jpg파일을 찾는다.
 eyepoint = []
@@ -88,13 +88,13 @@ for k, d in enumerate(dets):
         # 이미지 랜드마크 좌표 지점에 인덱스(랜드마크번호, 여기선 i)를 putText로 표시해준다.
         cv2.putText(cvImg, str(i), (x, y), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 0.3, (0, 255, 0))                    
 
-    with open('./coronation_eye.json', 'r', encoding='utf-8') as json_file:
+    with open('/home/ubuntu/project/new_backend/routes/coronation_eye.json', 'r', encoding='utf-8') as json_file:
         eyedata = json.load(json_file)
-    with open('./coronation_eyebrow.json', 'r', encoding='utf-8') as json_file:
+    with open('/home/ubuntu/project/new_backend/routes/coronation_eyebrow.json', 'r', encoding='utf-8') as json_file:
         eyebrowdata = json.load(json_file)
-    with open('./coronation_nose.json', 'r', encoding='utf-8') as json_file:
+    with open('/home/ubuntu/project/new_backend/routes/coronation_nose.json', 'r', encoding='utf-8') as json_file:
         nosedata = json.load(json_file)
-    with open('./coronation_mouth.json', 'r', encoding='utf-8') as json_file:
+    with open('/home/ubuntu/project/new_backend/routes/coronation_mouth.json', 'r', encoding='utf-8') as json_file:
         mouthdata = json.load(json_file)
     eyemin = float('inf')
     eye_idx = 0
@@ -143,7 +143,7 @@ for k, d in enumerate(dets):
             if mouthsum <= mouthmin:
                 mouthmin = mouthsum
                 mouth_idx = i
-    coro = eyedata[eye_idx]['Content'] + eyebrowdata[eye_idx]['Content'] + nosedata[eye_idx]['Content'] + mouthdata[eye_idx]['Content']
+    coro = eyedata[eye_idx]['Content'] + eyebrowdata[eyebrow_idx]['Content'] + nosedata[nose_idx]['Content'] + mouthdata[mouth_idx]['Content']
     coro_data = coro.split(' / ')[:-1]
     coro_data = list(set(coro_data))
     random.shuffle(coro_data)

@@ -87,7 +87,7 @@ const ApplyPage = () => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("id", user[0].id);
-    formData.append("gender", event.target.gender.value);
+    formData.append("gender", user[0].gender);
     formData.append("name", event.target.name.value);
     formData.append("profile_img", event.target.profile_img.files[0]);
     // formData.append("birth", event.target.birth.value);
@@ -139,9 +139,13 @@ const ApplyPage = () => {
           <Grid
             item
             xs={11}
-            style={{ fontSize: "3vw", marginTop: "50px", marginBottom: "50px" }}
+            style={{
+              fontSize: "3.5vw",
+              marginTop: "50px",
+              marginBottom: "50px",
+            }}
           >
-            신인 배우 등록하기
+            등록하기
           </Grid>
 
           <Grid
@@ -155,94 +159,117 @@ const ApplyPage = () => {
               name="accountFrm"
               onSubmit={handleSubmit}
               encType="multipart/form-data"
+              style={{ width: "80%" }}
             >
-              <div>{profile_preview}</div>
-              <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
-                프로필 사진
-              </div>
-              <p style={{ fontSize: "1.2vw", marginBottom: "20px" }}>
-                <input
-                  style={{ marginLeft: "80px" }}
-                  type="file"
-                  accept="image/jpg,impge/png,image/jpeg,image/gif"
-                  name="profile_img"
-                  onChange={onChange}
-                ></input>
-              </p>
-
-              <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
-                이름
-              </div>
-              <p
-                style={{
-                  fontSize: "1.3vw",
-                  marginBottom: "25px",
-                  textAlign: "right",
-                  marginRight: "75px",
-                }}
-              >
-                <input
+              <br />
+              <Grid container justify="space-between" alignItems="center">
+                <Grid
+                  item
+                  xs={12}
+                  style={{ fontSize: "1.5vw", marginBottom: "20px" }}
+                >
+                  프로필 사진 (영문 파일)
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
                   style={{
-                    width: "8vw",
-                    height: "4vh",
-                    borderRadius: 6,
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    alignItems: "flex-end",
                   }}
-                  type="text"
-                  name="name"
-                  defaultValue={user[0].name}
-                ></input>
-              </p>
-              <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
-                성별
+                >
+                  <input
+                    type="file"
+                    accept="image/jpg,impge/png,image/jpeg,image/gif"
+                    name="profile_img"
+                    onChange={onChange}
+                  ></input>
+                </Grid>
+              </Grid>
+              <hr />
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {profile_preview}
               </div>
-              <p
-                style={{
-                  fontSize: "1.3vw",
-                  marginBottom: "25px",
-                  textAlign: "right",
-                  marginRight: "75px",
-                }}
-                type="text"
-                name="gender"
-                value={user[0].gender}
-              >
-                {user[0].gender}
-              </p>
 
-              {/* <p>생일</p>
-          <p>
-            <input
-              type="text"
-              name="birth"
-              defaultValue={user[0].birth}
-            ></input>
-          </p> */}
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              {/* <Grid container justify="space-between" alignItems="center">
+                <Grid item style={{ fontSize: "1.5vw" }}>
+                  이름
+                </Grid>
+                <Grid item>
+                  <input
+                    style={{
+                      width: "6vw",
+                      height: "4vh",
+                      borderRadius: 6,
+                      fontSize: "1.2vw",
+                      textAlign: "center",
+                    }}
+                    type="text"
+                    name="name"
+                    defaultValue={user[0].name}
+                  ></input>
+                </Grid>
+              </Grid>
 
-              {/* <p>관상(이건 나중에)</p>
-          <p>
-            <input type="text" name="face" defaultValue={user[0].face}></input>
-          </p> */}
+              <hr />
+              <br />
+              <br />
+              <Grid container justify="space-between" alignItems="center">
+                <Grid item style={{ fontSize: "1.5vw" }}>
+                  성별
+                </Grid>
+                <Grid item>
+                  <div
+                    style={{
+                      fontSize: "1.3vw",
 
-              {/* <p>출연영화</p>
-          <p>
-            <input
-              type="text"
-              name="movie"
-              defaultValue={user[0].movie}
-            ></input>
-          </p> */}
-              <div style={{ fontSize: "1.5vw", marginBottom: "10px" }}>
-                자신을 어필할 영상
-              </div>
-              <p>
-                <input
-                  style={{ marginLeft: "80px" }}
-                  type="file"
-                  name="profile_video"
-                  onChange={onChange2}
-                ></input>
-              </p>
+                      textAlign: "right",
+                    }}
+                    type="text"
+                    name="gender"
+                    value={user[0].gender}
+                  >
+                    {user[0].gender}
+                  </div>
+                </Grid>
+              </Grid>
 
+              <hr />
+              <br />
+              <br /> */}
+
+              <Grid container direction="column">
+                <Grid
+                  item
+                  xs={12}
+                  style={{ fontSize: "1.5vw", marginBottom: "20px" }}
+                >
+                  자신을 어필할 영상 (5MB 이하)
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    alignItems: "flex-end",
+                  }}
+                >
+                  <input
+                    type="file"
+                    name="profile_video"
+                    onChange={onChange2}
+                  ></input>
+                </Grid>
+              </Grid>
+              <hr />
+              <br />
               <br />
 
               <Grid
@@ -254,7 +281,7 @@ const ApplyPage = () => {
                   alignItems: "flex-end",
                 }}
               >
-                <Button color="primary" type="submit" size="sm">
+                <Button color="primary" type="submit">
                   등록하기
                 </Button>
               </Grid>

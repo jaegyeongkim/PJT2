@@ -24,14 +24,18 @@ export default function ActorSearchResult({ match }, props) {
   const searchResult = [];
   for (var i = 0; i < actorsData.length; i++) {
     if (actorsData[i]["name"].includes(match.params.name)) {
-      searchResult.push([actorsData[i]["name"], actorsData[i]["movie_total"]]);
+      searchResult.push([
+        actorsData[i]["name"],
+        actorsData[i]["movie_total"],
+        actorsData[i]["image"],
+      ]);
     }
   }
   // console.log(searchResult);
   searchResult.sort(function (a, b) {
     return a[1] - b[1];
   });
-  console.log(searchResult);
+  // console.log(searchResult);
   searchResult.reverse();
   return (
     <div>
@@ -100,7 +104,7 @@ export default function ActorSearchResult({ match }, props) {
                   padding: "6px",
                 }}
               >
-                <ActorCard name={name[0]} index={index} />
+                <ActorCard name={name[0]} image={name[2]} index={index} />
               </Grid>
             );
           })}
