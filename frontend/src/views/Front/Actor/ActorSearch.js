@@ -16,7 +16,9 @@ export default function ActorSearch(props) {
 
   const onKeyPress = (currentPathname) => (e) => {
     if (e.key === "Enter") {
-      history.push(`/actor-search-result/${e.target.value}`);
+      if (e.target.value === "") {
+        alert("검색어를 입력해주세요!");
+      } else history.push(`/actor-search-result/${e.target.value}`);
     }
   };
 
