@@ -77,7 +77,7 @@
 
 ## 기술 스택
 
-> ![skill_stack](C:\Users\multicampus\BIG-data_PJT\s03p23b206\산출물\skill_stack.png)
+> ![skill_stack](산출물/skill_stack.png)
 
 ## 기술 설명
 
@@ -93,9 +93,9 @@
 
 ## WireFrame
 
->![image-20201007233541742](C:\Users\multicampus\AppData\Roaming\Typora\typora-user-images\image-20201007233541742.png)
+>![image-20201007234641295](../../AppData/Roaming/Typora/typora-user-images/image-20201007234641295.png)
 >
->![image-20201007233548164](C:\Users\multicampus\AppData\Roaming\Typora\typora-user-images\image-20201007233548164.png)
+>![image-20201007234650439](../../AppData/Roaming/Typora/typora-user-images/image-20201007234650439.png)
 
 ### 디렉토리 구조도
 
