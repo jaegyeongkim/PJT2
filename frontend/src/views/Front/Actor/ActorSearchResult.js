@@ -31,7 +31,7 @@ export default function ActorSearchResult({ match }, props) {
   searchResult.sort(function (a, b) {
     return a[1] - b[1];
   });
-  console.log(searchResult);
+  // console.log(searchResult);
   searchResult.reverse();
   return (
     <div>
