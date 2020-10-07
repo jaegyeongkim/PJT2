@@ -8,6 +8,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/components.js";
 import { CommonContext } from "../../../context/CommonContext";
 import GenrePiechart from "./GenrePiechart";
+import ActorPieChart from "./ActorPieChart";
+import MovieYearBarChart from "./MovieYearBarChart";
 import MovieCard from "./MovieCard";
 
 import { Player } from "video-react";
@@ -31,7 +33,7 @@ const ActorDetail = ({ match }) => {
   }
   /////////////////////////////////////////
   var face_list = [];
-  console.log(Object(face).length);
+  // console.log(Object(face).length);
   // const l = Object(face).length;
   // var x = Math.floor(Math.random() * Object(face).length) + 1;
   // console.log(x);
@@ -63,12 +65,15 @@ const ActorDetail = ({ match }) => {
           movieData[n]["name"],
           movieData[n]["poster"],
           movieData[n]["genre"],
+          movieData[n]["userRating"],
+          movieData[n]["actors"],
+          movieData[n]["birth"],
         ]);
-
         break;
       }
     }
   }
+
   //////////////////////////////////////////////////
   var genre_cnt = [];
   for (var k = 0; k < genreData.length; k++) {
@@ -84,6 +89,14 @@ const ActorDetail = ({ match }) => {
         }
       }
     }
+  }
+  var movie_year = [];
+  for (var p = 0; p < movie_detail_data.length; p++) {
+    movie_year.push(movie_detail_data[p][5]);
+  }
+  var sameMovieActor = [];
+  for (var sa = 0; sa < movie_detail_data.length; sa++) {
+    sameMovieActor.push(movie_detail_data[sa][4]);
   }
   return (
     <Grid>
@@ -113,48 +126,61 @@ const ActorDetail = ({ match }) => {
               }}
             >
               <img
-                style={{ width: "90%" }}
+                style={{ width: "80%" }}
                 src={`https://j3b206.p.ssafy.io/static/img/actor/${userimg}`}
                 alt="배우 사진"
               />
             </Grid>
-            <Grid
-              item
-              xs={3}
-              // style={{
-              //   display: "flex",
-              //   justifyContent: "center",
-              //   alignItems: "center",
-              // }}
-            >
+            <Grid item container xs={9} style={{}}>
               <Grid>
-                <h3>{match.params.name}의 관상</h3>
-              </Grid>
+                <Grid>
+                  <h3>{match.params.name}의 관상</h3>
+                </Grid>
 
-              <Grid style={{ display: "inline-block" }}>
-                {face_list.map((data, index) => {
-                  return <span>{data}</span>;
-                })}
+                <Grid style={{ display: "inline-block" }}>
+                  {face_list.map((data, index) => {
+                    return <span>{data}</span>;
+                  })}
+                </Grid>
               </Grid>
-            </Grid>
-            <Grid
-              item
-              xs={6}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <GenrePiechart xs={12} genre_cnt={genre_cnt} />
+              <br />
+              <Grid>
+                <Grid
+                  item
+                  style={{
+                    display: "flex",
+                    // justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Grid xs={6}>
+                    <ActorPieChart xs={12} sameMovieActor={sameMovieActor} />
+                  </Grid>
+                  <Grid xs={6}>
+                    <GenrePiechart xs={12} genre_cnt={genre_cnt} />
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
+
+        <Grid
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Grid xs={11}>
+            <MovieYearBarChart movie_year={movie_year} />
+          </Grid>
+        </Grid>
         <Grid>
-          <Player
+          {/* <Player
             playsInline
             src={`https://j3b206.p.ssafy.io/static/img/actor/${uservideo}`}
-          />
+          /> */}
           <Grid>
             <h3 style={{ paddingLeft: "3vw" }}>출연 영화</h3>
           </Grid>

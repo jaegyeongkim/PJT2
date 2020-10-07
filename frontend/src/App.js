@@ -60,7 +60,8 @@ const App = () => {
   // 배우 데이터
 
   async function getActorDatas() {
-    Axios.get("https://j3b206.p.ssafy.io/api/actor/").then(function (res) {
+    Axios.get("https://j3b206.p.ssafy.io/api/actor2/").then(function (res) {
+      // Axios.get("https://j3b206.p.ssafy.io/api/actor3/").then(function (res) {
       setActorsData(res.data);
     });
   }
@@ -125,8 +126,12 @@ const App = () => {
           <Route path="/license" component={License} />
           <Route path="/signup-page" component={SignupPage} />
           <Route path="/contact-us" component={Contactus} />
-          <Route
+          {/* <Route
             path="/category-result/:gender/:cat1/:cat2/:cat3/:cat4/:cat5"
+            component={CategoryResult}
+          /> */}
+          <Route
+            path="/category-result/:gender/:cat1/:cat2/:cat3/:cat4/:cat5/:cat6/:cat7/:cat8/:cat9/:cat10/:cat11/:cat12"
             component={CategoryResult}
           />
 
