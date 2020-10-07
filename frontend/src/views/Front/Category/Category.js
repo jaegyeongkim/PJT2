@@ -241,6 +241,11 @@ const Category = (props) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          // backgroundImage:
+          //   "url(https://j3b206.p.ssafy.io/static/img/main_img/main1.jpg)",
+          // backgroundPosition: "center",
+          // backgroundSize: "cover",
+          // backgroundRepeat: "no-repeat",
         }}
         className={classNames(classes.main, classes.mainRaised)}
       >
@@ -264,11 +269,6 @@ const Category = (props) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                backgroundImage:
-                  "url(https://j3b206.p.ssafy.io/static/img/main_img/main1.jpg)",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
               }}
             >
               <Grid item>
@@ -276,9 +276,9 @@ const Category = (props) => {
                 <br />
                 <br />
                 <br />
+                {/* <br />
                 <br />
-                <br />
-                <br />
+                <br /> */}
                 <h3 style={{ textAlign: "center" }}>어떤 이미지의</h3>
                 <h3 style={{ textAlign: "center" }}>인물을 찾으시나요?</h3>
                 <h5>최대 3개의 키워드를 선택해보세요.</h5>
@@ -316,6 +316,10 @@ const Category = (props) => {
                 >
                   <Grid onClick={submitCoronationData}>
                     <Button color="primary">선택 완료</Button>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                   </Grid>
                 </Grid>
               </Grid>
