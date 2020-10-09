@@ -34,8 +34,8 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <Link
-                style={{ color: "inherit" }}
-                color="transparent"
+                // style={{ color: "inherit" }}
+                // color="transparent"
                 to="/about-us"
                 className={classes.block}
               >
@@ -56,6 +56,18 @@ export default function Footer(props) {
                 </Button>
               </Link>
             </ListItem>
+            <ListItem className={classes.inlineBlock}>
+              <Link
+                style={{ color: "inherit" }}
+                color="transparent"
+                to="/contact-us"
+                className={classes.block}
+              >
+                <Button color="transparent" target="_blank">
+                  Contact us
+                </Button>
+              </Link>
+            </ListItem>
             {/* <ListItem className={classes.inlineBlock}>
               <a
                 href="https://www.creative-tim.com/license?ref=mkr-footer"
@@ -69,15 +81,7 @@ export default function Footer(props) {
         </div>
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=mkr-footer"
-            className={aClasses}
-            target="_blank"
-          >
-            Creative Tim
-          </a>{" "}
-          for a better web.
+          <Favorite className={classes.icon} /> by WithSmile for a better web.
         </div>
       </div>
     </footer>

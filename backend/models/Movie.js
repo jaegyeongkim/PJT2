@@ -18,15 +18,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
       },
       genre: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(200),
         allowNull: true,
       },
       birth: {
         type: DataTypes.STRING(20),
         allowNull: true,
       },
-      total_cnt: {
+      userRating: {
+        type: DataTypes.FLOAT(),
+        allowNull: true,
+      },
+      movie_cd: {
         type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      actors: {
+        type: DataTypes.STRING(200),
         allowNull: true,
       },
     },

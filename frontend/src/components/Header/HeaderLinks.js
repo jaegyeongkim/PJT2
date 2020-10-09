@@ -24,6 +24,7 @@ const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
+  const user = JSON.parse(sessionStorage.getItem("user"));
   return (
     <List className={classes.list}>
       {/* <ListItem className={classes.listItem}>
@@ -49,7 +50,21 @@ export default function HeaderLinks(props) {
           ]}
         />
       </ListItem> */}
-
+      <ListItem className={classes.listItem}>
+        <Link style={{ color: "inherit" }} color="transparent" to="/apply-page">
+          {user ? (
+            <Button
+              color="transparent"
+              target="_blank"
+              className={classes.navLink}
+            >
+              등록하기
+            </Button>
+          ) : (
+            <></>
+          )}
+        </Link>
+      </ListItem>
       <ListItem className={classes.listItem}>
         <Link
           style={{ color: "inherit" }}
@@ -67,13 +82,23 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Link style={{ color: "inherit" }} color="transparent" to="/login-page">
-          <Button
-            color="transparent"
-            target="_blank"
-            className={classes.navLink}
-          >
-            Login / Logout
-          </Button>
+          {user ? (
+            <Button
+              color="transparent"
+              target="_blank"
+              className={classes.navLink}
+            >
+              Logout
+            </Button>
+          ) : (
+            <Button
+              color="transparent"
+              target="_blank"
+              className={classes.navLink}
+            >
+              Login
+            </Button>
+          )}
         </Link>
       </ListItem>
 

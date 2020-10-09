@@ -1,0 +1,574 @@
+[
+	{
+		"id": 1,
+		"character": ""
+	},
+	{
+		"id": 2,
+		"character": "가난"
+	},
+	{
+		"id": 3,
+		"character": "가정분란"
+	},
+	{
+		"id": 4,
+		"character": "간교"
+	},
+	{
+		"id": 5,
+		"character": "간사"
+	},
+	{
+		"id": 6,
+		"character": "간악"
+	},
+	{
+		"id": 7,
+		"character": "강인"
+	},
+	{
+		"id": 8,
+		"character": "강직"
+	},
+	{
+		"id": 9,
+		"character": "거짓"
+	},
+	{
+		"id": 10,
+		"character": "거침"
+	},
+	{
+		"id": 11,
+		"character": "건전"
+	},
+	{
+		"id": 12,
+		"character": "게으름"
+	},
+	{
+		"id": 13,
+		"character": "경솔"
+	},
+	{
+		"id": 14,
+		"character": "고난"
+	},
+	{
+		"id": 15,
+		"character": "고독"
+	},
+	{
+		"id": 16,
+		"character": "고생"
+	},
+	{
+		"id": 17,
+		"character": "고심"
+	},
+	{
+		"id": 18,
+		"character": "고집"
+	},
+	{
+		"id": 19,
+		"character": "곤란"
+	},
+	{
+		"id": 20,
+		"character": "공경"
+	},
+	{
+		"id": 21,
+		"character": "공정"
+	},
+	{
+		"id": 22,
+		"character": "관대"
+	},
+	{
+		"id": 23,
+		"character": "관직"
+	},
+	{
+		"id": 24,
+		"character": "괴팍"
+	},
+	{
+		"id": 25,
+		"character": "교활"
+	},
+	{
+		"id": 26,
+		"character": "굳셈"
+	},
+	{
+		"id": 27,
+		"character": "권모술수"
+	},
+	{
+		"id": 28,
+		"character": "권위"
+	},
+	{
+		"id": 29,
+		"character": "귀인"
+	},
+	{
+		"id": 30,
+		"character": "귀함"
+	},
+	{
+		"id": 31,
+		"character": "근심"
+	},
+	{
+		"id": 32,
+		"character": "기교"
+	},
+	{
+		"id": 33,
+		"character": "기만"
+	},
+	{
+		"id": 34,
+		"character": "기백"
+	},
+	{
+		"id": 35,
+		"character": "끈기"
+	},
+	{
+		"id": 36,
+		"character": "낭만"
+	},
+	{
+		"id": 37,
+		"character": "냉정"
+	},
+	{
+		"id": 38,
+		"character": "눈치"
+	},
+	{
+		"id": 39,
+		"character": "담력"
+	},
+	{
+		"id": 40,
+		"character": "대범"
+	},
+	{
+		"id": 41,
+		"character": "도둑"
+	},
+	{
+		"id": 42,
+		"character": "도박"
+	},
+	{
+		"id": 43,
+		"character": "도벽"
+	},
+	{
+		"id": 44,
+		"character": "도적"
+	},
+	{
+		"id": 45,
+		"character": "명망"
+	},
+	{
+		"id": 46,
+		"character": "무기력"
+	},
+	{
+		"id": 47,
+		"character": "문란"
+	},
+	{
+		"id": 48,
+		"character": "방랑"
+	},
+	{
+		"id": 49,
+		"character": "배신"
+	},
+	{
+		"id": 50,
+		"character": "배짱"
+	},
+	{
+		"id": 51,
+		"character": "복"
+	},
+	{
+		"id": 52,
+		"character": "부덕"
+	},
+	{
+		"id": 53,
+		"character": "부유"
+	},
+	{
+		"id": 54,
+		"character": "불신"
+	},
+	{
+		"id": 55,
+		"character": "불안"
+	},
+	{
+		"id": 56,
+		"character": "불효"
+	},
+	{
+		"id": 57,
+		"character": "뻔뻔함"
+	},
+	{
+		"id": 58,
+		"character": "사교적"
+	},
+	{
+		"id": 59,
+		"character": "사기"
+	},
+	{
+		"id": 60,
+		"character": "선함"
+	},
+	{
+		"id": 61,
+		"character": "섬세"
+	},
+	{
+		"id": 62,
+		"character": "성급"
+	},
+	{
+		"id": 63,
+		"character": "성실"
+	},
+	{
+		"id": 64,
+		"character": "소박"
+	},
+	{
+		"id": 65,
+		"character": "순진"
+	},
+	{
+		"id": 66,
+		"character": "승부욕"
+	},
+	{
+		"id": 67,
+		"character": "시기"
+	},
+	{
+		"id": 68,
+		"character": "신용"
+	},
+	{
+		"id": 69,
+		"character": "신의"
+	},
+	{
+		"id": 70,
+		"character": "신중"
+	},
+	{
+		"id": 71,
+		"character": "실패"
+	},
+	{
+		"id": 72,
+		"character": "아량"
+	},
+	{
+		"id": 73,
+		"character": "악함"
+	},
+	{
+		"id": 74,
+		"character": "어리석음"
+	},
+	{
+		"id": 75,
+		"character": "어짐"
+	},
+	{
+		"id": 76,
+		"character": "역마살"
+	},
+	{
+		"id": 77,
+		"character": "열정"
+	},
+	{
+		"id": 78,
+		"character": "영악"
+	},
+	{
+		"id": 79,
+		"character": "영웅"
+	},
+	{
+		"id": 80,
+		"character": "영특"
+	},
+	{
+		"id": 81,
+		"character": "예의"
+	},
+	{
+		"id": 82,
+		"character": "오락"
+	},
+	{
+		"id": 83,
+		"character": "온유"
+	},
+	{
+		"id": 84,
+		"character": "온화"
+	},
+	{
+		"id": 85,
+		"character": "옹졸"
+	},
+	{
+		"id": 86,
+		"character": "완고"
+	},
+	{
+		"id": 87,
+		"character": "욕심"
+	},
+	{
+		"id": 88,
+		"character": "용기"
+	},
+	{
+		"id": 89,
+		"character": "용맹"
+	},
+	{
+		"id": 90,
+		"character": "우애"
+	},
+	{
+		"id": 91,
+		"character": "우유부단"
+	},
+	{
+		"id": 92,
+		"character": "우직"
+	},
+	{
+		"id": 93,
+		"character": "위엄"
+	},
+	{
+		"id": 94,
+		"character": "유흥"
+	},
+	{
+		"id": 95,
+		"character": "음란"
+	},
+	{
+		"id": 96,
+		"character": "음험"
+	},
+	{
+		"id": 97,
+		"character": "의리"
+	},
+	{
+		"id": 98,
+		"character": "의심"
+	},
+	{
+		"id": 99,
+		"character": "인덕"
+	},
+	{
+		"id": 100,
+		"character": "인색"
+	},
+	{
+		"id": 101,
+		"character": "인심"
+	},
+	{
+		"id": 102,
+		"character": "인정"
+	},
+	{
+		"id": 103,
+		"character": "인품"
+	},
+	{
+		"id": 104,
+		"character": "자수성가"
+	},
+	{
+		"id": 105,
+		"character": "장수"
+	},
+	{
+		"id": 106,
+		"character": "재주"
+	},
+	{
+		"id": 107,
+		"character": "재치"
+	},
+	{
+		"id": 108,
+		"character": "적극"
+	},
+	{
+		"id": 109,
+		"character": "절제"
+	},
+	{
+		"id": 110,
+		"character": "정"
+	},
+	{
+		"id": 111,
+		"character": "정의"
+	},
+	{
+		"id": 112,
+		"character": "정조"
+	},
+	{
+		"id": 113,
+		"character": "정직"
+	},
+	{
+		"id": 114,
+		"character": "존경"
+	},
+	{
+		"id": 115,
+		"character": "지혜"
+	},
+	{
+		"id": 116,
+		"character": "질투"
+	},
+	{
+		"id": 117,
+		"character": "착실"
+	},
+	{
+		"id": 118,
+		"character": "책임"
+	},
+	{
+		"id": 119,
+		"character": "청렴"
+	},
+	{
+		"id": 120,
+		"character": "총명"
+	},
+	{
+		"id": 121,
+		"character": "추진력"
+	},
+	{
+		"id": 122,
+		"character": "출세"
+	},
+	{
+		"id": 123,
+		"character": "충성"
+	},
+	{
+		"id": 124,
+		"character": "충실"
+	},
+	{
+		"id": 125,
+		"character": "탐욕"
+	},
+	{
+		"id": 126,
+		"character": "통솔"
+	},
+	{
+		"id": 127,
+		"character": "편협"
+	},
+	{
+		"id": 128,
+		"character": "포악"
+	},
+	{
+		"id": 129,
+		"character": "포용"
+	},
+	{
+		"id": 130,
+		"character": "표리부동"
+	},
+	{
+		"id": 131,
+		"character": "행운"
+	},
+	{
+		"id": 132,
+		"character": "허약"
+	},
+	{
+		"id": 133,
+		"character": "허영"
+	},
+	{
+		"id": 134,
+		"character": "허풍"
+	},
+	{
+		"id": 135,
+		"character": "허황"
+	},
+	{
+		"id": 136,
+		"character": "현달"
+	},
+	{
+		"id": 137,
+		"character": "현명"
+	},
+	{
+		"id": 138,
+		"character": "호감"
+	},
+	{
+		"id": 139,
+		"character": "호쾌"
+	},
+	{
+		"id": 140,
+		"character": "호탕"
+	},
+	{
+		"id": 141,
+		"character": "화합"
+	},
+	{
+		"id": 142,
+		"character": "효심"
+	},
+	{
+		"id": 143,
+		"character": "흉"
+	}
+]

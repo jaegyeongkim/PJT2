@@ -1,0 +1,90 @@
+[
+	{
+		"id": 1,
+		"genre_name": "공포(호러)"
+	},
+	{
+		"id": 2,
+		"genre_name": "드라마"
+	},
+	{
+		"id": 3,
+		"genre_name": "가족"
+	},
+	{
+		"id": 4,
+		"genre_name": "애니메이션"
+	},
+	{
+		"id": 5,
+		"genre_name": "액션"
+	},
+	{
+		"id": 6,
+		"genre_name": "코미디"
+	},
+	{
+		"id": 7,
+		"genre_name": "다큐멘터리"
+	},
+	{
+		"id": 8,
+		"genre_name": "멜로/로맨스"
+	},
+	{
+		"id": 9,
+		"genre_name": "스릴러"
+	},
+	{
+		"id": 10,
+		"genre_name": "기타"
+	},
+	{
+		"id": 11,
+		"genre_name": "범죄"
+	},
+	{
+		"id": 12,
+		"genre_name": "뮤지컬"
+	},
+	{
+		"id": 13,
+		"genre_name": "사극"
+	},
+	{
+		"id": 14,
+		"genre_name": "어드벤처"
+	},
+	{
+		"id": 15,
+		"genre_name": "공연"
+	},
+	{
+		"id": 16,
+		"genre_name": "SF"
+	},
+	{
+		"id": 17,
+		"genre_name": "미스터리"
+	},
+	{
+		"id": 18,
+		"genre_name": "판타지"
+	},
+	{
+		"id": 19,
+		"genre_name": "전쟁"
+	},
+	{
+		"id": 20,
+		"genre_name": "성인물(에로)"
+	},
+	{
+		"id": 21,
+		"genre_name": "서부극(웨스턴)"
+	},
+	{
+		"id": 22,
+		"genre_name": ""
+	}
+]

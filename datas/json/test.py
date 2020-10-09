@@ -30,13 +30,13 @@ for data in json_data:
   dic1['movie'] = ''
 
   for m in data["filmos"]:
-    dic1['movie']+=m['movieCd'] + ','
+    dic1['movie']+=m['movieNm'] + '/'
   dic1['movie']=dic1['movie'][:-1]
 
   dic1['video'] = ''
 
   dic.append(dic1)
-with open('./test_movieCd.json', 'w', encoding='utf-8') as make_file:
+with open('./test_actor.json', 'w', encoding='utf-8') as make_file:
     json.dump(dic, make_file, ensure_ascii = False, indent='\t')
-with open('./test2_movieCd.json', 'w', encoding='utf-8') as make_file:
+with open('./test2_director.json', 'w', encoding='utf-8') as make_file:
     json.dump(dic2, make_file, ensure_ascii = False, indent='\t')

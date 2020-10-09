@@ -8,6 +8,7 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/introduce.js";
 import SectionBasics from "../../Components/Sections/SectionBasics";
+import { Height } from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
@@ -25,7 +26,7 @@ const Introduce = (props) => {
     actor.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <Grid>
+    <>
       <Header
         brand="The Casting"
         rightLinks={<HeaderLinks />}
@@ -33,64 +34,169 @@ const Introduce = (props) => {
         color="white"
       />
       <Grid
-        style={{ marginTop: "100px" }}
-        className={classNames(classes.main, classes.mainRaised)}
+        direction="column"
+        style={{ marginTop: "71px" }}
+        // className={classNames(classes.main, classes.mainRaised)}
       >
-        <Grid>
+        <Grid style={{ background: "white", height: "650px" }}>
           <Grid
-            item
-            container
+            direction="row"
             style={{
+              height: "650px",
               display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              padding: "0 100px",
             }}
           >
-            <Button onClick={executeScroll_director}>
-              <h3>감독이신가요?</h3>
-            </Button>
-            <Button onClick={executeScroll_actor}>
-              <h3>배우이신가요?</h3>
-            </Button>
-          </Grid>
-          <Grid>
-            <h5>
-              The Casting은 눈썹, 눈, 코, 입 관상을 이용해 찾으신는 이미지의
-              배우를 추천해드립니다.
-            </h5>
-          </Grid>
-
-          <Grid>
-            <h4 ref={director}>감독</h4>
-            <p>어떤 이미지의 배우를 찾으시나요?</p>
-            <p>The Casting은 생각하는 이미지의 배우를 추천해드립니다.</p>
-            <p>찾는 이미지를 골라 검색해보세요!</p>
-            <Link
-              style={{ color: "inherit" }}
-              color="transparent"
-              to="/category"
+            <Grid
+              style={{
+                height: "650px",
+                display: "flex",
+                alignItems: "center",
+                width: "50%",
+              }}
             >
-              <Button
-                color="transparent"
-                target="_blank"
-                className={classes.navLink}
-                size="lg"
-                simple
-              >
-                배우 추천 받아보기
-              </Button>
-            </Link>
-          </Grid>
-
-          <Grid>
-            <h4 ref={actor}>배우</h4>
-            <p>자신을 소개할 곳이 부족했나요?</p>
-            <p>자유롭게 사진을 고르고 감독이 찾을 수 있게 자신을 소개해봐요</p>
+              <h1 style={{ paddingRight: "30px", textAlign: "center" }}>
+                <strong>The Casting은</strong>
+                <hr
+                  style={{
+                    width: "10%",
+                    height: "5px",
+                    backgroundColor: "black",
+                  }}
+                />
+                <h3>
+                  배우의 얼굴을 관상 데이터와 비교하여 <br /> 이미지
+                  카테고리별로 배우를 추천해드립니다.
+                </h3>
+              </h1>
+            </Grid>
+            <Grid
+              style={{
+                height: "650px",
+                display: "flex",
+                alignItems: "center",
+                width: "50%",
+              }}
+            >
+              <img
+                style={{
+                  width: "100%",
+                  Height: "100%",
+                }}
+                src={`https://j3b206.p.ssafy.io/static/img/main_img/intro1.png`}
+                alt=""
+              />
+            </Grid>
           </Grid>
         </Grid>
+        <Grid style={{ background: "#FAF8F6", height: "650px" }}>
+          <Grid
+            direction="row"
+            style={{
+              height: "650px",
+              display: "flex",
+              padding: "0 100px",
+            }}
+          >
+            <Grid
+              style={{
+                height: "650px",
+                display: "flex",
+                alignItems: "center",
+                width: "50%",
+              }}
+            >
+              <img
+                style={{
+                  width: "80%",
+                  Height: "80%%",
+                }}
+                src={`https://j3b206.p.ssafy.io/static/img/main_img/intro2.jpg`}
+                alt=""
+              />
+            </Grid>
+            <Grid
+              style={{
+                height: "650px",
+                display: "flex",
+                alignItems: "center",
+                width: "50%",
+              }}
+            >
+              <h1 style={{ paddingRight: "30px", textAlign: "center" }}>
+                <strong>
+                  조건에 맞게 검색 <br /> 빠르게 캐스팅
+                </strong>
+                <hr
+                  style={{
+                    width: "10%",
+                    height: "5px",
+                    backgroundColor: "black",
+                  }}
+                />
+                <h3>작품에 딱 맞는 배우들이 감독님을 기다리고 있습니다.</h3>
+              </h1>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid style={{ background: "white", height: "650px" }}>
+          <Grid
+            direction="row"
+            style={{
+              height: "650px",
+              display: "flex",
+              padding: "0 100px",
+            }}
+          >
+            <Grid
+              style={{
+                height: "650px",
+                display: "flex",
+                alignItems: "center",
+                width: "50%",
+              }}
+            >
+              <h1 style={{ paddingRight: "30px", textAlign: "center" }}>
+                <strong>
+                  영상 첨부도 안되는 <br /> PPT는 그만
+                </strong>
+                <hr
+                  style={{
+                    width: "10%",
+                    height: "5px",
+                    backgroundColor: "black",
+                  }}
+                />
+                <h3>
+                  The Casting에서 나만의 프로필을 제작하여
+                  <br />
+                  빠르고 간편하게 지원해보세요!
+                </h3>
+              </h1>
+            </Grid>
+            <Grid
+              style={{
+                height: "650px",
+                display: "flex",
+                alignItems: "center",
+                width: "50%",
+              }}
+            >
+              <img
+                style={{
+                  width: "80%",
+                  Height: "80%",
+                }}
+                src={`https://j3b206.p.ssafy.io/static/img/main_img/intro3.png`}
+                alt=""
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Footer />
       </Grid>
-      <Footer />
-    </Grid>
+    </>
   );
 };
 export default Introduce;

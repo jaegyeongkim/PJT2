@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 // nodejs library that concatenates classes
-import classNames from "classnames";
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
 
@@ -18,14 +17,11 @@ import Parallax from "components/Parallax/Parallax.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import styles from "assets/jss/material-kit-react/views/components.js";
 
-import { CommonContext } from "../SignupPage/CommonContext.js";
-
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
-  const { productDatas } = useContext(CommonContext);
   return (
     <div>
       <Header
@@ -61,7 +57,6 @@ export default function Components(props) {
                     simple
                   >
                     배우 추천 받아보기
-                    {productDatas}
                   </Button>
                 </Link>
                 <Link
